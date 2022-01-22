@@ -3,7 +3,6 @@
 
 ###########
 # Fundamental Config
-BOOTLOADER = qmk-dfu
 COMMAND_ENABLE = no
 CONSOLE_ENABLE = no
 EXTRAKEY_ENABLE = yes
@@ -14,7 +13,7 @@ TERMINAL_ENABLE = no
 VIA_ENABLE = no
 ifneq ($(PLATFORM),CHIBIOS)
     ifneq ($(strip $(LTO_SUPPORTED)), no)
-        LTO_ENABLE        = yes
+        LTO_ENABLE = yes
     endif
 endif
 

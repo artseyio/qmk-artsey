@@ -1,0 +1,18 @@
+{
+  "name": "QMK Development",
+  "image": "qmkfm/qmk_cli",
+  "runArgs": ["--security-opt", "label=disable"],
+  "mounts": [
+    "type=volume,source=qmk_firmware,target=/qmk_firmware",
+    "type=bind,source=${localWorkspaceFolder}/.build,target=/qmk_firmware/.build"
+  ],
+  "workspaceMount": "type=bind,source=${localWorkspaceFolder}/users/artsey,target=/qmk_firmware/users/artsey"
+  "workspaceFolder": "/qmk_firmware/users/artsey"
+  "extensions": [
+    "ms-vscode.cpptools",
+    "EditorConfig.EditorConfig"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  }
+}

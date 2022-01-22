@@ -2,6 +2,20 @@
 
 This repo contains the [QMK](https://qmk.fm/) ARTSEY implementation and pre-built firmware for boards that have been setup to use ARTSEY by the core ARTSEY development team.
 
+## Prebuilt Firmware
+
+`TODO`
+
+### Firmware Files
+
+`TODO`
+
+**We are NOT responsible for any failed firmware flashes!**
+
+## Adding ARTSEY Support
+
+See [DEVELOPMENT.md](DEVELOPMENT.md)
+
 ## Licensing
 
 Unless otherwise stated all source code is licensed under the [Apache 2 License](LICENSE-APACHE-2.0.txt).

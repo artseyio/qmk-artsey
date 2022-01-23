@@ -12,8 +12,10 @@
 #define PRODUCT         thepaintbrush
 #define DESCRIPTION     thepaintbrush
 
+/* Board layout */
 #define MATRIX_ROWS 2
 #define MATRIX_COLS 4
 #define UNUSED_PINS
 
+/* Prevent jitters in key presses */
 #define DEBOUNCE 5

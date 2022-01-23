@@ -23,9 +23,11 @@ VPATH += $(USER_PATH)/oled
 ##########
 # Set handedness for all build steps to avoid duplicate info in json files
 ifeq ($(strip $(ARTSEY_HAND)), left)
+ARTSEY_HAND_LEFT = yes
 OPT_DEFS += -DARTSEY_HAND_LEFT
 endif
-ifeq ($(strip $(ARTSEY_HAND)), rigit)
+ifeq ($(strip $(ARTSEY_HAND)), right)
+ARTSEY_HAND_RIGHT = yes
 OPT_DEFS += -DARTSEY_HAND_RIGHT
 endif
 

@@ -35,7 +35,7 @@ docker run --rm -it `
 ``` sh
 # PowerShell
 #     Use ` instead of \
-docker run --rm -it `
+docker run --rm -it \
   -v qmk_firmware:/qmk_firmware \
   qmkfm/qmk_cli /bin/bash
 

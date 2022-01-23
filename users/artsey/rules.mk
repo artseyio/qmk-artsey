@@ -20,17 +20,3 @@ endif
 ###########
 # ARTSEY Sources
 SRC += artsey.c
-
-###########
-# Boards
-ifeq ($(KEYBOARD), artsey/thepaintbrush)
-	OLED_ENABLE = yes
-    OLED_DRIVER = SSD1306
-endif
-
-###########
-# OLED
-ifeq ($(strip $(OLED_ENABLE)), yes)
-	DEFERRED_EXEC_ENABLE = yes
-	SRC += $(USER_PATH)/oled/oled.c
-endif

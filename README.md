@@ -16,6 +16,13 @@ This repo contains the [QMK](https://qmk.fm/) ARTSEY implementation and pre-buil
 
 See [DEVELOPMENT.md](DEVELOPMENT.md)
 
+## Inspiraion
+
+A lot of this work wouldn't be possible with outside inspiration. In no particular order:
+
+- [filterpaper's QMK userspace](https://github.com/filterpaper/qmk_userspace)
+- [sungo's QMK userspace](https://git.sr.ht/~sungo/qmk_userspace)
+
 ## Licensing
 
 Unless otherwise stated all source code is licensed under the [Apache 2 License](LICENSE-APACHE-2.0.txt).

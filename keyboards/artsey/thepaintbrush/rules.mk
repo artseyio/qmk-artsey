@@ -9,24 +9,24 @@ NKRO_ENABLE = yes
 SPACE_CADET_ENABLE = no
 TERMINAL_ENABLE = no
 VIA_ENABLE = no
-ifneq ($(PLATFORM),CHIBIOS)
-    ifneq ($(strip $(LTO_SUPPORTED)), no)
-        LTO_ENABLE = yes
-    endif
-endif
-
+LTO_ENABLE = no # We support arm qmk devices which are incompatabl with this avr specific option
 
 # Work around limitation with userland and the way we have 'dynamic' direct wiring
 #     This *should* live in config.h but KemoNine can't figure out how to check which keymap is in use at that level
+PINS_HAND_LEFT = -DDIRECT_PINS="{ { F7, F6, F5, F4 }, { B6, B2, B3, B1 } }"
+PINS_HAND_RIGHT = -DDIRECT_PINS="{ { F4, F5, F6, F7 }, { B1, B3, B2, B6 } }"
 ifeq ($(KEYBOARD), artsey/thepaintbrush)
 	ifeq ($(KEYMAP), left)
-		OPT_DEFS += -DDIRECT_PINS="{ { F7, F6, F5, F4 }, { B6, B2, B3, B1 } }"
-	else
-		ifeq ($(KEYMAP), right)
-			OPT_DEFS += -DDIRECT_PINS="{ { F4, F5, F6, F7 }, { B1, B3, B2, B6 } }"
-		else
-			# Intentional error so folks need to know handedness / side of pcb is important for the pin/map layout
-			OPT_DEFS += -DDIRECT_PINS="{ { 0, 0, 0, 0 }, { 0, 0, 0, 0 } }"
-		endif
+		OPT_DEFS += $(PINS_HAND_LEFT)
+	endif
+	ifeq ($(strip $(ARTSEY_HAND)), left)
+	   OPT_DEFS += $(PINS_HAND_LEFT)
+	endif
+
+	ifeq ($(KEYMAP), right)
+		OPT_DEFS += $(PINS_HAND_RIGHT)
+	endif
+	ifeq ($(strip $(ARTSEY_HAND)), right)
+	   OPT_DEFS += $(PINS_HAND_RIGHT)
 	endif
 endif

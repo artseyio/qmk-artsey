@@ -1,0 +1,17 @@
+{
+    "keyboard": "artsey/thepaintbrush",
+    "keymap": "left",
+    "layout": "LAYOUT",
+    "layers": [
+        [
+            "KC_S",
+            "KC_T",
+            "KC_R",
+            "KC_A",
+            "KC_O",
+            "KC_I",
+            "KC_Y",
+            "KC_E"
+        ]
+    ]
+}

@@ -43,6 +43,13 @@ ifeq ($(strip $(ARTSEY_HAND)), right)
 endif
 
 ##########
+# Pimoroni support
+ifeq ($(KEYBOARD), $(filter $(KEYBOARD), crkbd/rev1))
+	POINTING_DEVICE_ENABLE = yes
+	POINTING_DEVICE_DRIVER = pimoroni_trackball
+endif
+
+##########
 # OLED enable based on board support
 ifeq ($(KEYBOARD), $(filter $(KEYBOARD), artsey/thepaintbrush crkbd/rev1))
     OLED_ENABLE = yes

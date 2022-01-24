@@ -8,7 +8,7 @@ The below is a work in progress. Don't be surprised if there are major changes d
 
 ``` sh
 cd /qmk_firmware/users/artsey
-qmk -v compile -e ARTSEY_HAND=[left|right] keymaps/thepaintbrush.json
+qmk -v compile -e ARTSEY_SIZE=[std|big] -e ARTSEY_HAND=[left|right] keymaps/thepaintbrush.json
 ```
 
 ## Visual Studio Code

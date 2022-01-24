@@ -44,7 +44,7 @@ endif
 
 ##########
 # OLED enable based on board support
-ifeq ($(strip $(KEYBOARD)), artsey/thepaintbrush)
+ifeq ($(KEYBOARD), $(filter $(KEYBOARD), artsey/thepaintbrush crkbd/rev1))
     OLED_ENABLE = yes
     OPT_DEFS += -DOLED_ENABLE -DOLED_DRIVER=SSD1306
 	SRC += oled-icons.c oled-bongocat.c

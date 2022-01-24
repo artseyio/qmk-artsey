@@ -21,14 +21,25 @@ SRC += artsey.c
 VPATH += $(USER_PATH)/oled
 
 ##########
-# Set handedness for all build steps to avoid duplicate info in json files
+# Set size for all build steps
+ifeq ($(strip $(ARTSEY_SIZE)), std)
+	ARTSEY_SIZE_STD = yes
+	OPT_DEFS += -DARTSEY_SIZE_STD
+endif
+ifeq ($(strip $(ARTSEY_SIZE)), big)
+	ARTSEY_SIZE_BIG = yes
+	OPT_DEFS += -DARTSEY_SIZE_BIG
+endif
+
+##########
+# Set handedness for all build steps
 ifeq ($(strip $(ARTSEY_HAND)), left)
-ARTSEY_HAND_LEFT = yes
-OPT_DEFS += -DARTSEY_HAND_LEFT
+	ARTSEY_HAND_LEFT = yes
+	OPT_DEFS += -DARTSEY_HAND_LEFT
 endif
 ifeq ($(strip $(ARTSEY_HAND)), right)
-ARTSEY_HAND_RIGHT = yes
-OPT_DEFS += -DARTSEY_HAND_RIGHT
+	ARTSEY_HAND_RIGHT = yes
+	OPT_DEFS += -DARTSEY_HAND_RIGHT
 endif
 
 ##########

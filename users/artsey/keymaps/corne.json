@@ -1,8 +1,8 @@
 {
-    "keyboard": "artsey/thepaintbrush",
+    "keyboard": "crkbd/rev1",
     "keymap": "artsey",
     "layout": "ARTSEY_LAYOUT_WRAPPER",
     "layers": [
-        [ "ARTSEY_STD_LAYER_BASE" ]
+        [ "ARTSEY_BIG_LAYER_BASE" ]
     ]
 }

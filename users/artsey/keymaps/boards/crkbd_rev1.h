@@ -2,8 +2,6 @@
 // SPDX-License-Identifier: Apache-2.0
 #pragma once
 
-#include "_preprocessor_macros.h"
-
 #ifdef ARTSEY_HAND_LEFT
 #define BIG_LEADING_NONES
 #define BIG_BETWEEN_ROW_ONE_TWO_NONES KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,

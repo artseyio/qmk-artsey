@@ -9,6 +9,17 @@
 // #define COMBO_ONLY_FROM_LAYER LAYER_ID_BASE
 
 // //////////
+// Ensure 'master' is set to match handedness of artsey
+#ifdef ARTSEY_HAND_LEFT
+#define MASTER_LEFT
+#undef MASTER_RIGHT
+#endif
+#ifdef ARTSEY_HAND_RIGHT
+#undef MASTER_LEFT
+#define MASTER_RIGHT
+#endif
+
+// //////////
 // Key and layout wrapper macros - this is critical!
 //     keymap code for dynamic hand selection based on compile flag
 #include "keymaps/_layout.h"

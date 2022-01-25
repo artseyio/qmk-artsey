@@ -19,6 +19,7 @@
 // Board tuning so standard layout/map can be built programatically
 #ifdef KEYBOARD_crkbd_rev1
 #include "boards/crkbd_rev1.h"
+#include "artsey_layer_defenitions.h"'
 #endif
 
 // //////////
@@ -32,73 +33,14 @@
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT(__VA_ARGS__)
 #endif
 
-// Layer definitions
-#define ARTSEY_BIG_LAYER_BASE_LEFT \
-    BIG_LEADING_NONES \
-    KC_S,    KC_T,  KC_R,   KC_A,   KC_MINS, \
-    BIG_BETWEEN_ROW_ONE_TWO_NONES \
-    KC_O,    KC_I,  KC_Y,   KC_E,   KC_LSFT, \
-    BIG_BETWEEN_ROW_TWO_THREE_NONES \
-    KC_RCTL, KC_AT, KC_DEL, KC_EQL, KC_TAB, \
-    BIG_BETWEEN_ROW_THREE_THUMBS \
-                    MO(1),  KC_SPC, KC_ENT \
-    BIG_TRAILING_NONES
-#define ARTSEY_BIG_LAYER_BASE_RIGHT \
-    BIG_LEADING_NONES \
-    KC_MINS, KC_A,   KC_R,   KC_T,  KC_S, \
-    BIG_BETWEEN_ROW_ONE_TWO_NONES \
-    KC_LSFT, KC_E,   KC_Y,   KC_I,  KC_O, \
-    BIG_BETWEEN_ROW_TWO_THREE_NONES \
-    KC_TAB,  KC_EQL, KC_DEL, KC_AT, KC_RCTL, \
-    BIG_BETWEEN_ROW_THREE_THUMBS \
-    KC_ENT, KC_SPC, MO(1) \
-    BIG_TRAILING_NONES
-
 // Allow proper auto selection of std size via keymaps
 #ifdef ARTSEY_SIZE_STD
 // Allow proper auto selection of left / right via keymaps
 #ifdef ARTSEY_HAND_LEFT
-#define ARTSEY_STD_LAYER_BASE \
-KC_S,             KC_T,             KC_R,             KC_A,             \
-KC_O,             KC_I,             KC_Y,             KC_E
-
-#define ARTSEY_STD_LAYER_PARENS \
-KC_RCBR,          KC_LPRN,          KC_RPRN,          KC_TRNS,          \
-KC_LCBR,          KC_LBRC,          KC_RBRC,          KC_NO
-
-#define ARTSEY_STD_LAYER_NUM \
-KC_TRNS,          KC_3,             KC_2,             KC_1,             \
-KC_NO,            KC_6,             KC_5,             KC_4
-
-#define ARTSEY_STD_LAYER_NAV \
-KC_PGUP,          KC_HOME,          KC_UP,            KC_END,           \
-KC_PGDN,          KC_LEFT,          KC_DOWN,          KC_NO
-
-#define ARTSEY_STD_LAYER_SYM \
-KC_GRV,           KC_SCLN,          KC_SLSH,          KC_EXLM,          \
-KC_EQL,           KC_MINS,          KC_QUES,          KC_TRNS
-
+#define ARTSEY_STD_LAYER_BASE ARTSEY_STD_LAYER_BASE_LEFT
 #endif
 #ifdef ARTSEY_HAND_RIGHT
-#define ARTSEY_STD_LAYER_BASE \
-KC_A,             KC_R,             KC_T,             KC_S,             \
-KC_E,             KC_Y,             KC_I,             KC_O
-
-#define ARTSEY_STD_LAYER_PARENS \
-KC_TRNS,          KC_LPRN,          KC_RPRN,          KC_LCBR,          \
-KC_NO,            KC_LBRC,          KC_RBRC,          KC_RCBR
-
-#define ARTSEY_STD_LAYER_NUM \
-KC_1,             KC_2,             KC_3,             KC_TRNS,          \
-KC_4,             KC_5,             KC_6,             KC_NO
-
-#define ARTSEY_STD_LAYER_NAV \
-KC_HOME,          KC_UP,            KC_END,           KC_PGUP,          \
-KC_LEFT,          KC_DOWN,          KC_NO,            KC_PGDN
-
-#define ARTSEY_STD_LAYER_SYM \
-KC_EXLM,          KC_SLSH,          KC_SCLN,          KC_GRV,           \
-KC_TRNS,          KC_QUES,          KC_MINS,          KC_EQL
+#define ARTSEY_STD_LAYER_BASE ARTSEY_STD_LAYER_BASE_RIGHT
 #endif
 #endif
 

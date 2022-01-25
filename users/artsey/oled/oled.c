@@ -5,16 +5,30 @@
 #include "oled.h"
 #include "logo.h"
 
+uint32_t boot_logo_timer = 0;
+
+static void render_icon(void) {
+    oled_write_raw_P(ARTSEY_OLED_ICON, sizeof(ARTSEY_OLED_ICON));
+}
+
 static void render_logo(void) {
-//   oled_write_raw_P(raw_logo_1, sizeof(raw_logo_1));
-//   oled_set_cursor(0, 5);
-//   oled_write_raw_P(raw_logo_2, sizeof(raw_logo_2));
-    oled_write_raw_P(raw_logo_3, sizeof(raw_logo_3));
+    oled_write_raw_P(boot_abullet, sizeof(boot_abullet));
 }
 
 bool oled_task_user(void) {
-  render_logo();
-  return false;
+#ifdef ARTSEY_BOOT_LOGO
+    if (boot_logo_timer == 0) {
+        boot_logo_timer = timer_read32();
+    }
+    if (timer_elapsed32(boot_logo_timer) < ARTSEY_BOOT_LOGO_TIMEOUT) {
+        render_logo();
+    }
+    else {
+        oled_clear();
+        render_icon();
+    }
+#endif
+    return false;
 }
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {

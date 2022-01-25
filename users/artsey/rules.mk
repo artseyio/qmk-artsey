@@ -54,5 +54,16 @@ ifeq ($(KEYBOARD), $(filter $(KEYBOARD), artsey/thepaintbrush crkbd/rev1))
     OPT_DEFS += -DOLED_ENABLE -DOLED_DRIVER=SSD1306
 endif
 ifeq ($(OLED_ENABLE), yes)
+ifndef ARTSEY_BOOT_LOGO_TIMEOUT
+	ARTSEY_BOOT_LOGO_TIMEOUT = 2000
+endif
+ifndef ARTSEY_OLED_ICON
+	ARTSEY_OLED_ICON = badslime_1
+endif
 	SRC += oled/oled.c
+	OPT_DEFS += -DARTSEY_BOOT_LOGO_TIMEOUT=$(ARTSEY_BOOT_LOGO_TIMEOUT) -DARTSEY_OLED_ICON=icon_$(ARTSEY_OLED_ICON)
+ifeq ($(ARTSEY_BOOT_LOGO), no)
+else
+	OPT_DEFS += -DARTSEY_BOOT_LOGO
+endif
 endif

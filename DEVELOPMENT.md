@@ -8,7 +8,17 @@ The below is a work in progress. Don't be surprised if there are major changes d
 
 ``` sh
 cd /qmk_firmware/users/artsey
-qmk -v compile -e ARTSEY_SIZE=[std|big] -e ARTSEY_HAND=[left|right] keymaps/thepaintbrush.json
+# ARTSEY_SIZE is a required argument
+# ARTSEY_HAND is a required argument
+# ARTSEY_OLED_BOOT_LOGO is an optional argument. default: yes
+# ARTSEY_BOOT_LOGO_TIMEOUT is an optional timeout in miliseconds. default: 2000
+# ARTSEY_OLED_ICON is an optional icon to show on the status pages. default: badslime_1
+qmk -v compile -e ARTSEY_SIZE=[std|big] \
+               -e ARTSEY_HAND=[left|right] \
+               -e ARTSEY_OLED_BOOT_LOGO=[yes|no] \
+               -e ARTSEY_BOOT_LOGO_TIMEOUT=[ms] \
+               -e ARTSEY_OLED_ICON=[badslime_1|badslime_2]
+       keymaps/thepaintbrush.json
 ```
 
 ## Visual Studio Code

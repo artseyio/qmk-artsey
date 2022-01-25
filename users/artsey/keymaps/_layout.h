@@ -34,11 +34,45 @@
 
 // Layer definitions
 #define ARTSEY_STD_LAYER_BASE_LEFT \
-    KC_S, KC_T, KC_R, KC_A, \
-    KC_O, KC_I, KC_Y, KC_E
+KC_S,             KC_T,             KC_R,             KC_A,             \
+KC_O,             KC_I,             KC_Y,             KC_E
+
+#define ARTSEY_STD_LAYER_PARENS_LEFT \
+KC_RCBR,          KC_LPRN,          KC_RPRN,          KC_TRNS,          \
+KC_LCBR,          KC_LBRC,          KC_RBRC,          KC_NO
+
+#define ARTSEY_STD_LAYER_NUM_LEFT \
+KC_TRNS,          KC_3,             KC_2,             KC_1,             \
+KC_NO,            KC_6,             KC_5,             KC_4
+
+#define ARTSEY_STD_LAYER_NAV_LEFT\
+KC_PGUP,          KC_HOME,          KC_UP,            KC_END,           \
+KC_PGDN,          KC_LEFT,          KC_DOWN,          KC_NO
+
+#define ARTSEY_STD_LAYER_SYM_LEFT \
+KC_GRV,           KC_SCLN,          KC_SLSH,          KC_EXLM,          \
+KC_EQL,           KC_MINS,          KC_QUES,          KC_TRNS
+
 #define ARTSEY_STD_LAYER_BASE_RIGHT \
-    KC_A, KC_R, KC_T, KC_S, \
-    KC_E, KC_Y, KC_I, KC_O
+KC_A,             KC_R,             KC_T,             KC_S,             \
+KC_E,             KC_Y,             KC_I,             KC_O
+
+#define ARTSEY_STD_LAYER_PARENS_RIGHT \
+KC_TRNS,          KC_LPRN,          KC_RPRN,          KC_LCBR,          \
+KC_NO,            KC_LBRC,          KC_RBRC,          KC_RCBR
+
+#define ARTSEY_STD_LAYER_NUM_RIGHT \
+KC_1,             KC_2,             KC_3,             KC_TRNS,          \
+KC_4,             KC_5,             KC_6,             KC_NO
+
+#define ARTSEY_STD_LAYER_NAV_RIGHT\
+KC_HOME,          KC_UP,            KC_END,           KC_PGUP,          \
+KC_LEFT,          KC_DOWN,          KC_NO,            KC_PGDN
+
+#define ARTSEY_STD_LAYER_SYM_RIGHT \
+KC_EXLM,          KC_SLSH,          KC_SCLN,          KC_GRV,           \
+KC_TRNS,          KC_QUES,          KC_MINS,          KC_EQL
+
 #define ARTSEY_BIG_LAYER_BASE_LEFT \
     BIG_LEADING_NONES \
     KC_S,    KC_T,  KC_R,   KC_A,   KC_MINS, \

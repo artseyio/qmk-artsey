@@ -4,7 +4,6 @@
 ###########
 # Fundamental Config
 COMBO_ENABLE = yes
-COMBO_ENABLE = no
 COMMAND_ENABLE = no
 CONSOLE_ENABLE = no
 EXTRAKEY_ENABLE = yes

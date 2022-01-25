@@ -6,9 +6,10 @@
 #include "logo.h"
 
 static void render_logo(void) {
-  oled_write_raw_P(raw_logo_1, sizeof(raw_logo_1));
-  oled_set_cursor(0, 5);
-  oled_write_raw_P(raw_logo_2, sizeof(raw_logo_2));
+//   oled_write_raw_P(raw_logo_1, sizeof(raw_logo_1));
+//   oled_set_cursor(0, 5);
+//   oled_write_raw_P(raw_logo_2, sizeof(raw_logo_2));
+    oled_write_raw_P(raw_logo_3, sizeof(raw_logo_3));
 }
 
 bool oled_task_user(void) {

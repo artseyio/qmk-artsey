@@ -18,7 +18,6 @@ LTO_ENABLE = no # We support arm qmk devices so disable this
 ###########
 # ARTSEY Sources
 SRC += artsey.c
-VPATH += $(USER_PATH)/oled
 
 ##########
 # Set size for all build steps
@@ -54,16 +53,7 @@ endif
 ifeq ($(KEYBOARD), $(filter $(KEYBOARD), artsey/thepaintbrush crkbd/rev1))
     OLED_ENABLE = yes
     OPT_DEFS += -DOLED_ENABLE -DOLED_DRIVER=SSD1306
-	SRC += oled-icons.c oled-bongocat.c
 endif
-
-##########
-# Select right/left bongocat based on handedness
-ifeq ($(strip $(OLED_ENABLE)), yes)
-	ifeq ($(strip $(ARTSEY_HAND)), left)
-		OPT_DEFS += -DLEFTCAT
-	endif
-	ifeq ($(strip $(ARTSEY_HAND)), right)
-		OPT_DEFS += -DRIGHTCAT
-	endif
+ifeq ($(OLED_ENABLE), yes)
+	SRC += oled/oled.c
 endif

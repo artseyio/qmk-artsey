@@ -27,12 +27,7 @@
 // //////////
 // OLED
 #ifdef OLED_ENABLE
-#   define OLED_BRIGHTNESS 255
-// TODO These need to be changed and fixed in bongo cat or whatever our oled implementation becomes
-#define CMK 1
-#define NUM 2
-#define SYM 3
-#define FNC 4
+#define OLED_BRIGHTNESS 127 // Max: 255
 #endif
 
 // ////////

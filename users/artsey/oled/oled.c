@@ -24,8 +24,10 @@ bool oled_task_user(void) {
         render_logo();
     }
     else {
+#endif
         oled_clear();
         render_icon();
+#ifdef ARTSEY_BOOT_LOGO
     }
 #endif
     return false;

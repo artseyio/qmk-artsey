@@ -27,6 +27,7 @@
 // //////////
 // OLED
 #ifdef OLED_ENABLE
+#undef OLED_BRIGHTNESS
 #define OLED_BRIGHTNESS 127 // Max: 255
 #endif
 

@@ -1,7 +1,6 @@
 // Copyright (c) 2021 Mike "KemoNine" Crosson
 // SPDX-License-Identifier: Apache-2.0
 #pragma once
-#include "layers.h"
 
 // //////////
 // ARTSEY layer ids (needed everywhere)
@@ -22,6 +21,10 @@
 #endif
 
 // //////////
+// Include layers last so all overrides and ids are set prior to processing
+#include "layers.h"
+
+// //////////
 // Keymap generation stuff to use left/right handedness based on qmk compile env selection
 // Standard ARTSEY layer definitions
 
@@ -37,10 +40,11 @@
 // Allow proper auto selection of left / right via keymaps
 #ifdef ARTSEY_HAND_LEFT
 #define ARTSEY_STD_LAYER_BASE ARTSEY_STD_LAYER_BASE_LEFT
-#define ARTSEY_STD_LAYER_NUM ARTSEY_STD_LAYER_NUM_LEFT
+#define ARTSEY_STD_LAYER_NUM ARTSEY_BIG_LAYER_NUM_LEFT
 #endif
 #ifdef ARTSEY_HAND_RIGHT
 #define ARTSEY_STD_LAYER_BASE ARTSEY_STD_LAYER_BASE_RIGHT
+#define ARTSEY_STD_LAYER_NUM ARTSEY_STD_LAYER_NUM_RIGHT
 #endif
 #endif
 
@@ -49,8 +53,10 @@
 // Allow proper auto selection of left / right via keymaps
 #ifdef ARTSEY_HAND_LEFT
 #define ARTSEY_BIG_LAYER_BASE ARTSEY_BIG_LAYER_BASE_LEFT
+#define ARTSEY_STD_LAYER_NUM ARTSEY_BIG_LAYER_NUM_LEFT
 #endif
 #ifdef ARTSEY_HAND_RIGHT
 #define ARTSEY_BIG_LAYER_BASE ARTSEY_BIG_LAYER_BASE_RIGHT
+#define ARTSEY_STD_LAYER_NUM ARTSEY_BIG_LAYER_NUM_RIGHT
 #endif
 #endif

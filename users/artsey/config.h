@@ -22,7 +22,7 @@
 // //////////
 // Key and layout wrapper macros - this is critical!
 //     keymap code for dynamic hand selection based on compile flag
-#include "keymaps/_layout.h"
+#include "layout/_layout.h"
 
 // //////////
 // OLED

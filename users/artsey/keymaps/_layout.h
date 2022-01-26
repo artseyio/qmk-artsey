@@ -1,6 +1,7 @@
 // Copyright (c) 2021 Mike "KemoNine" Crosson
 // SPDX-License-Identifier: Apache-2.0
 #pragma once
+#include "layers.h"
 
 // //////////
 // ARTSEY layer ids (needed everywhere)
@@ -19,7 +20,7 @@
 // Board tuning so standard layout/map can be built programatically
 #ifdef KEYBOARD_crkbd_rev1
 #include "boards/crkbd_rev1.h"
-#include "artsey_layer_defenitions.h"'
+#include "artsey_layer_defenitions.h"
 #endif
 
 // //////////

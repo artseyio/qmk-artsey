@@ -3,7 +3,7 @@
 
 #include QMK_KEYBOARD_H
 #include "artsey.h"
-#include "combos.h"
+#include "keymaps/combos.h"
 
 void keyboard_post_init_user(void) {
 #ifdef POINTING_DEVICE_ENABLE

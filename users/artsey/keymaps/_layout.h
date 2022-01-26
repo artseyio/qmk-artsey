@@ -6,15 +6,14 @@
 // //////////
 // ARTSEY layer ids (needed everywhere)
 #define LAYER_ID_GLOBAL -1
-#define LAYER_ID_BASE 0
-#define LAYER_ID_NUMBERS 1
-#define LAYER_ID_SYMBOLS 2
-#define LAYER_ID_PARENTHETICALS 3
-#define LAYER_ID_NAVIGATION 4
-#define LAYER_ID_BT_SEL 5
-#define LAYER_ID_CUSTOM 6
-#define LAYER_ID_BIG_SYM 7
-#define LAYER_ID_BIG_FUNCTION 8
+#define BASE 0
+#define NUM 1
+#define SYM 2
+#define PAR 3
+#define NAV 4
+#define CUS 5
+#define BIG_SYM 6
+#define BIG_FUN 7
 
 // //////////
 // Board tuning so standard layout/map can be built programatically
@@ -38,6 +37,7 @@
 // Allow proper auto selection of left / right via keymaps
 #ifdef ARTSEY_HAND_LEFT
 #define ARTSEY_STD_LAYER_BASE ARTSEY_STD_LAYER_BASE_LEFT
+#define ARTSEY_STD_LAYER_NUM ARTSEY_STD_LAYER_NUM_LEFT
 #endif
 #ifdef ARTSEY_HAND_RIGHT
 #define ARTSEY_STD_LAYER_BASE ARTSEY_STD_LAYER_BASE_RIGHT

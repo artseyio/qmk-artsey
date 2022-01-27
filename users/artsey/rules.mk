@@ -12,7 +12,14 @@ NKRO_ENABLE = yes
 SPACE_CADET_ENABLE = no
 TERMINAL_ENABLE = no
 VIA_ENABLE = no
-LTO_ENABLE = no # We support arm qmk devices so disable this
+
+##########
+# Enable LTO if possible (graphics on avr mainly)
+ifneq ($(PLATFORM),CHIBIOS)
+    ifneq ($(strip $(LTO_SUPPORTED)), no)
+        LTO_ENABLE = yes
+    endif
+endif
 
 ###########
 # ARTSEY Sources

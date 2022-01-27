@@ -56,7 +56,7 @@ endif
 
 ##########
 # OLED enable based on board support
-ifeq ($(KEYBOARD), $(filter $(KEYBOARD), artsey/thepaintbrush crkbd/rev1))
+ifeq ($(KEYBOARD), $(filter $(KEYBOARD), artsey/thepaintbrush crkbd/rev1 ristretto))
     OLED_ENABLE = yes
     OPT_DEFS += -DOLED_ENABLE -DOLED_DRIVER=SSD1306
 endif

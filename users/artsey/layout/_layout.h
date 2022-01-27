@@ -13,6 +13,9 @@
 #ifdef KEYBOARD_gergo
 #include "boards/gergo.h"
 #endif
+#ifdef KEYBOARD_ristretto
+#include "boards/ristretto.h"
+#endif
 
 // //////////
 // Include layers last so all overrides and ids are set prior to processing

@@ -1,0 +1,66 @@
+name: Build
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: qmkfm/qmk_cli
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - layout: artsey_thepaintbrush
+            hand: right
+            size: std
+          - layout: crkbd_rev1
+            hand: left
+            size: big
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cache - QMK Source
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-qmk_firmware
+        with:
+          path: /qmk_firmware
+          key: ${{ env.cache-name }}-${{ matrix.layout }}-${{ matrix.size }}-${{ matrix.hand }}
+      - name: Update QMK Sources
+        run: |
+            if [ -d /qmk_firmware/.git ]; 
+            then 
+                cd /qmk_firmware;
+                git pull; 
+            else 
+                git clone https://github.com/qmk/qmk_firmware.git /qmk_firmware/; 
+            fi
+            if [ ! -d /qmk_firmware/keyboards/artsey ];
+            then
+                ln -s "${GITHUB_WORKSPACE}/keyboards/artsey" /qmk_firmware/keyboards/artsey;
+                echo "Created keyboards/artsey symlink";
+            fi
+            if [ ! -d /qmk_firmware/users/artsey ];
+            then
+                ln -s "${GITHUB_WORKSPACE}/users/artsey" /qmk_firmware/users/artsey;
+                echo "Created users/artsey symlink";
+            fi
+            qmk setup -y;
+      - name: QMK Clean
+        run: qmk clean
+      - name: QMK Build
+        run: |
+            cd /qmk_firmware/users/artsey
+            qmk compile -e ARTSEY_SIZE=${{ matrix.size }} -e ARTSEY_HAND=${{ matrix.hand }} layout/${{ matrix.layout }}.json
+      - name: Debug - ls build artifact folder
+        run: ls /qmk_firmware/.build
+      - name: Prep artifacts
+        run: cp /qmk_firmware/.build/${{ matrix.layout }}_artsey.hex /qmk_firmware/.build/artsey-${{ matrix.layout }}-${{ matrix.size }}-${{ matrix.hand }}.hex 
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: "artsey-${{ matrix.layout }}-${{ matrix.size }}-${{ matrix.hand }}.hex"
+          path: "/qmk_firmware/.build/artsey-${{ matrix.layout }}-${{ matrix.size }}-${{ matrix.hand }}.hex"
+          if-no-files-found: error
+          retention-days: 14

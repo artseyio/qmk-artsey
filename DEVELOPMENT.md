@@ -18,7 +18,7 @@ qmk -v compile -e ARTSEY_SIZE=[std|big] \
                -e ARTSEY_OLED_BOOT_LOGO=[yes|no] \
                -e ARTSEY_BOOT_LOGO_TIMEOUT=[ms] \
                -e ARTSEY_OLED_ICON=[badslime_1|badslime_2]
-       keymaps/thepaintbrush.json
+       keymaps/[board.json]
 ```
 
 ## Visual Studio Code

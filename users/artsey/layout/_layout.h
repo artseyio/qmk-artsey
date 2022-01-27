@@ -10,6 +10,9 @@
 #ifdef KEYBOARD_crkbd_rev1
 #include "boards/crkbd_rev1.h"
 #endif
+#ifdef KEYBOARD_gergo
+#include "boards/gergo.h"
+#endif
 
 // //////////
 // Include layers last so all overrides and ids are set prior to processing
@@ -22,6 +25,9 @@
 // Artsey layout wrapper
 #ifdef KEYBOARD_crkbd_rev1
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_split_3x5_3(__VA_ARGS__)
+#endif
+#ifdef KEYBOARD_gergo
+#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_gergo(__VA_ARGS__)
 #else
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT(__VA_ARGS__)
 #endif

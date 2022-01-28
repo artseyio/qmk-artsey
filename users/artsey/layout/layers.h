@@ -64,9 +64,9 @@ KC_MS_L,          KC_MS_D,          KC_MS_R,          KC_WH_D
 
 #define ARTSEY_BIG_LAYER_BASE_LEFT \
 BIG_LEADING_NONES \
-KC_S,             KC_T,             KC_R,             KC_A,             KC_MINS,          \
+LT(NUM, KC_S),             KC_T,             KC_R,             LT(PAR, KC_A),             KC_MINS,          \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-KC_O,             KC_I,             KC_Y,             KC_E,             KC_LSFT,          \
+LT(CUS, KC_O),             KC_I,             KC_Y,             LT(SYM, KC_E),             KC_LSFT,          \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
 LALT_T(KC_LCTL),  KC_AT,            KC_DEL,           KC_EQL,           KC_TAB,           \
 BIG_BETWEEN_ROW_THREE_THUMBS \
@@ -164,9 +164,9 @@ BIG_TRAILING_NONES
 
 #define ARTSEY_BIG_LAYER_BASE_RIGHT \
 BIG_LEADING_NONES \
-KC_MINS,          KC_A,             KC_R,             KC_T,             KC_S,             \
+KC_MINS,          LT(PAR, KC_A),             KC_R,             KC_T,             LT(NUM, KC_S),             \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-KC_LSFT,          KC_E,             KC_Y,             KC_I,             KC_O,             \
+KC_LSFT,          LT(SYM, KC_E),             KC_Y,             KC_I,             LT(CUS, KC_O),             \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
 KC_TAB,           KC_EQL,           KC_DEL,           KC_AT,            KC_LCTL,          \
 BIG_BETWEEN_ROW_THREE_THUMBS \

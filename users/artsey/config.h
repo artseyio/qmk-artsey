@@ -3,6 +3,7 @@
 
 #pragma once
 
+#define EXTRA_LONG_COMBOS
 // //////////
 // Combos Config
 // #define EXTRA_EXTRA_LONG_COMBOS

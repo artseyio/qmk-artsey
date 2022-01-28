@@ -8,9 +8,9 @@
 
 #define ARTSEY_STD_LAYER_BASE_LEFT \
 LT(NUM, KC_S),    KC_T,             KC_R,             LT(PAR, KC_A),    \
-LT(CUS, KC_O),    KC_I,             KC_Y,             LT(SYM, KC_S)
+LT(CUS, KC_O),    KC_I,             KC_Y,             LT(SYM, KC_E)
 
-#define ARTSEY_STD_LAYER_PAR_LEFT \
+#define ARTSEY_STD_LAYER_PAR_LEFT                                       \
 KC_RCBR,          KC_LPRN,          KC_RPRN,          KC_TRNS,          \
 KC_LCBR,          KC_LBRC,          KC_RBRC,          KC_NO
 
@@ -36,7 +36,7 @@ KC_WH_D,          KC_MS_L,          KC_MS_D,          KC_MS_R
 
 #define ARTSEY_STD_LAYER_BASE_RIGHT \
 LT(PAR, KC_A),    KC_R,             KC_T,             LT(NUM, KC_S),    \
-LT(SYM, KC_S),    KC_Y,             KC_I,             LT(CUS, KC_O)
+LT(SYM, KC_E),    KC_Y,             KC_I,             LT(CUS, KC_O)
 
 #define ARTSEY_STD_LAYER_PAR_RIGHT \
 KC_TRNS,          KC_LPRN,          KC_RPRN,          KC_LCBR,          \

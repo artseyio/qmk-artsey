@@ -1,6 +1,4 @@
 #pragma once
-#include "layer_names.h"
-
 enum combos {
 AR_F,
 AS_W,
@@ -46,42 +44,42 @@ COMBO_LENGTH
 
 uint16_t COMBO_LEN = COMBO_LENGTH;
 
-const uint16_t PROGMEM ar_combo[] = {KC_A, KC_R,  COMBO_END};
-const uint16_t PROGMEM as_combo[] = {KC_A, KC_S,  COMBO_END};
+const uint16_t PROGMEM ar_combo[] = {LT(PAR, KC_A),KC_R,  COMBO_END};
+const uint16_t PROGMEM as_combo[] = {LT(PAR, KC_A),LT(NUM, KC_S), COMBO_END};
 const uint16_t PROGMEM rt_combo[] = {KC_R, KC_T,  COMBO_END};
-const uint16_t PROGMEM rs_combo[] = {KC_R, KC_S,  COMBO_END};
-const uint16_t PROGMEM ts_combo[] = {KC_T, KC_S,  COMBO_END};
-const uint16_t PROGMEM art_combo[] = {KC_A, KC_R, KC_T,  COMBO_END};
-const uint16_t PROGMEM ats_combo[] = {KC_A, KC_T, KC_S,  COMBO_END};
-const uint16_t PROGMEM rts_combo[] = {KC_R, KC_T, KC_S,  COMBO_END};
-const uint16_t PROGMEM ey_combo[] = {KC_E, KC_Y,  COMBO_END};
-const uint16_t PROGMEM ei_combo[] = {KC_E, KC_I,  COMBO_END};
-const uint16_t PROGMEM eo_combo[] = {KC_E, KC_O,  COMBO_END};
+const uint16_t PROGMEM rs_combo[] = {KC_R, LT(NUM, KC_S), COMBO_END};
+const uint16_t PROGMEM ts_combo[] = {KC_T, LT(NUM, KC_S), COMBO_END};
+const uint16_t PROGMEM art_combo[] = {LT(PAR, KC_A),KC_R, KC_T,  COMBO_END};
+const uint16_t PROGMEM ats_combo[] = {LT(PAR, KC_A),KC_T, LT(NUM, KC_S), COMBO_END};
+const uint16_t PROGMEM rts_combo[] = {KC_R, KC_T, LT(NUM, KC_S), COMBO_END};
+const uint16_t PROGMEM ey_combo[] = {LT(SYM, KC_E),KC_Y,  COMBO_END};
+const uint16_t PROGMEM ei_combo[] = {LT(SYM, KC_E),KC_I,  COMBO_END};
+const uint16_t PROGMEM eo_combo[] = {LT(SYM, KC_E),LT(CUS, KC_O), COMBO_END};
 const uint16_t PROGMEM yi_combo[] = {KC_Y, KC_I,  COMBO_END};
-const uint16_t PROGMEM yo_combo[] = {KC_Y, KC_O,  COMBO_END};
-const uint16_t PROGMEM io_combo[] = {KC_I, KC_O,  COMBO_END};
-const uint16_t PROGMEM eyi_combo[] = {KC_E, KC_Y, KC_I,  COMBO_END};
-const uint16_t PROGMEM eio_combo[] = {KC_E, KC_I, KC_O,  COMBO_END};
-const uint16_t PROGMEM yio_combo[] = {KC_Y, KC_I, KC_O,  COMBO_END};
-const uint16_t PROGMEM arts_combo[] = {KC_A, KC_R, KC_T, KC_S,  COMBO_END};
-const uint16_t PROGMEM ayi_combo[] = {KC_A, KC_Y, KC_I,  COMBO_END};
-const uint16_t PROGMEM ay_combo[] = {KC_A, KC_Y,  COMBO_END};
-const uint16_t PROGMEM ai_combo[] = {KC_A, KC_I,  COMBO_END};
-const uint16_t PROGMEM ao_combo[] = {KC_A, KC_O,  COMBO_END};
-const uint16_t PROGMEM eir_combo[] = {KC_E, KC_I, KC_R,  COMBO_END};
-const uint16_t PROGMEM tay_combo[] = {KC_T, KC_A, KC_Y,  COMBO_END};
-const uint16_t PROGMEM ora_combo[] = {KC_O, KC_R, KC_A,  COMBO_END};
-const uint16_t PROGMEM ae_combo[] = {KC_A, KC_E,  COMBO_END};
-const uint16_t PROGMEM otra_combo[] = {KC_O, KC_T, KC_R, KC_A,  COMBO_END};
-const uint16_t PROGMEM se_combo[] = {KC_S, KC_E,  COMBO_END};
-const uint16_t PROGMEM sy_combo[] = {KC_S, KC_Y,  COMBO_END};
-const uint16_t PROGMEM si_combo[] = {KC_S, KC_I,  COMBO_END};
-const uint16_t PROGMEM stre_combo[] = {KC_S, KC_T, KC_R, KC_E,  COMBO_END};
+const uint16_t PROGMEM yo_combo[] = {KC_Y, LT(CUS, KC_O), COMBO_END};
+const uint16_t PROGMEM io_combo[] = {KC_I, LT(CUS, KC_O), COMBO_END};
+const uint16_t PROGMEM eyi_combo[] = {LT(SYM, KC_E),KC_Y, KC_I,  COMBO_END};
+const uint16_t PROGMEM eio_combo[] = {LT(SYM, KC_E),KC_I, LT(CUS, KC_O), COMBO_END};
+const uint16_t PROGMEM yio_combo[] = {KC_Y, KC_I, LT(CUS, KC_O), COMBO_END};
+const uint16_t PROGMEM arts_combo[] = {LT(PAR, KC_A),KC_R, KC_T, LT(NUM, KC_S), COMBO_END};
+const uint16_t PROGMEM ayi_combo[] = {LT(PAR, KC_A),KC_Y, KC_I,  COMBO_END};
+const uint16_t PROGMEM ay_combo[] = {LT(PAR, KC_A),KC_Y,  COMBO_END};
+const uint16_t PROGMEM ai_combo[] = {LT(PAR, KC_A),KC_I,  COMBO_END};
+const uint16_t PROGMEM ao_combo[] = {LT(PAR, KC_A),LT(CUS, KC_O), COMBO_END};
+const uint16_t PROGMEM eir_combo[] = {LT(SYM, KC_E),KC_I, KC_R,  COMBO_END};
+const uint16_t PROGMEM tay_combo[] = {KC_T, LT(PAR, KC_A),KC_Y,  COMBO_END};
+const uint16_t PROGMEM ora_combo[] = {LT(CUS, KC_O),KC_R, LT(PAR, KC_A), COMBO_END};
+const uint16_t PROGMEM ae_combo[] = {LT(PAR, KC_A),LT(SYM, KC_E), COMBO_END};
+const uint16_t PROGMEM otra_combo[] = {LT(CUS, KC_O),KC_T, KC_R, LT(PAR, KC_A), COMBO_END};
+const uint16_t PROGMEM se_combo[] = {LT(NUM, KC_S),LT(SYM, KC_E), COMBO_END};
+const uint16_t PROGMEM sy_combo[] = {LT(NUM, KC_S),KC_Y,  COMBO_END};
+const uint16_t PROGMEM si_combo[] = {LT(NUM, KC_S),KC_I,  COMBO_END};
+const uint16_t PROGMEM stre_combo[] = {LT(NUM, KC_S),KC_T, KC_R, LT(SYM, KC_E), COMBO_END};
 const uint16_t PROGMEM ti_combo[] = {KC_T, KC_I,  COMBO_END};
 const uint16_t PROGMEM ry_combo[] = {KC_R, KC_Y,  COMBO_END};
-const uint16_t PROGMEM oiye_combo[] = {KC_O, KC_I, KC_Y, KC_E,  COMBO_END};
-const uint16_t PROGMEM oiya_combo[] = {KC_O, KC_I, KC_Y, KC_A,  COMBO_END};
-const uint16_t PROGMEM re_combo[] = {KC_R, KC_E,  COMBO_END};
+const uint16_t PROGMEM oiye_combo[] = {LT(CUS, KC_O),KC_I, KC_Y, LT(SYM, KC_E), COMBO_END};
+const uint16_t PROGMEM oiya_combo[] = {LT(CUS, KC_O),KC_I, KC_Y, LT(PAR, KC_A), COMBO_END};
+const uint16_t PROGMEM re_combo[] = {KC_R, LT(SYM, KC_E), COMBO_END};
 const uint16_t PROGMEM ir_combo[] = {KC_I, KC_R,  COMBO_END};
 const uint16_t PROGMEM nav_base_combo[] = {KC_LEFT, KC_UP, KC_RGHT, COMBO_END};
 const uint16_t PROGMEM mse_base_combo[] = {KC_BTN2, KC_MS_D, KC_BTN1,  COMBO_END};

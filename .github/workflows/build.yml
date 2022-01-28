@@ -82,3 +82,38 @@ jobs:
           path: "/qmk_firmware/.build/artsey-${{ matrix.layout }}-${{ matrix.size }}-${{ matrix.hand }}.hex"
           if-no-files-found: error
           retention-days: 14
+  release:
+    runs-on: ubuntu-latest
+    name: Create Release
+    needs: build
+    steps:
+      - name: Get current date/time
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y%m%d-%H%M')"
+      - name: Generate release text
+        id: release_text
+        run: >
+          echo "::set-output name=release_text::$(echo '<b>Precompiled firmware files for ARTSEY</b><br><br>
+          Download a firmware file by expanding "Assets", right clicking, and choosing "Save File As" or "Save Link As".
+          <br>${{ github.event.inputs.releaseBody }}
+          <br>Released on ${{ steps.date.outputs.date }}.
+          <br><br>${{ steps.docker_build.outputs.commits }}')"
+      - name: Download build artifacts for release
+        uses: actions/download-artifact@v2
+        with:
+          path: release
+      - name: List files to include in release
+        if: always()
+        run: ls -R release/
+      - name: Create release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "release/*"
+          allowUpdates: false
+          artifactErrorsFailBuild: true
+          commit: main
+          tag: ${{ steps.date.outputs.date }}
+          body: ${{ steps.release_text.outputs.release_text }}
+          name: ${{ steps.date.outputs.date }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          prerelease: true

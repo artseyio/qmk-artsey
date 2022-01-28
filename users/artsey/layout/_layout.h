@@ -16,7 +16,9 @@
 #ifdef KEYBOARD_ristretto
 #include "boards/ristretto.h"
 #endif
-
+#ifdef KEYBOARD_draculad
+#include "boards/draculad.h"
+#endif
 // //////////
 // Include layers last so all overrides and ids are set prior to processing
 #include "layers.h"

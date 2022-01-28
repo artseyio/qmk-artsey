@@ -26,6 +26,19 @@ AI_DOT,
 AO_SLSH,
 EIR_TGN,
 TAY_TGM,
+ORA_ESC,
+AE_ENT,
+OTRA_TAB,
+SE_OSC,
+SY_OSG,
+SI_OSA,
+STRE_OSS,
+TI_EXLM,
+RY_SL,
+OIYE_SPC,
+OIYA_CAPS,
+RE_BSPC,
+IR_DEL,
 NAV_BASE,
 MSE_BASE,
 COMBO_LENGTH
@@ -57,10 +70,23 @@ const uint16_t PROGMEM ai_combo[] = {KC_A, KC_I,  COMBO_END};
 const uint16_t PROGMEM ao_combo[] = {KC_A, KC_O,  COMBO_END};
 const uint16_t PROGMEM eir_combo[] = {KC_E, KC_I, KC_R,  COMBO_END};
 const uint16_t PROGMEM tay_combo[] = {KC_T, KC_A, KC_Y,  COMBO_END};
-const uint16_t PROGMEM nav_base_combo[] = {KC_LEFT, KC_UP, KC_RIGHT,  COMBO_END};
-const uint16_t PROGMEM mse_base_combo[] = {KC_BTN2, KC_MS_D, KC_BTN2,  COMBO_END};
+const uint16_t PROGMEM ora_combo[] = {KC_O, KC_R, KC_A,  COMBO_END};
+const uint16_t PROGMEM ae_combo[] = {KC_A, KC_E,  COMBO_END};
+const uint16_t PROGMEM otra_combo[] = {KC_O, KC_T, KC_R, KC_A,  COMBO_END};
+const uint16_t PROGMEM se_combo[] = {KC_S, KC_E,  COMBO_END};
+const uint16_t PROGMEM sy_combo[] = {KC_S, KC_Y,  COMBO_END};
+const uint16_t PROGMEM si_combo[] = {KC_S, KC_I,  COMBO_END};
+const uint16_t PROGMEM stre_combo[] = {KC_S, KC_T, KC_R, KC_E,  COMBO_END};
+const uint16_t PROGMEM ti_combo[] = {KC_T, KC_I,  COMBO_END};
+const uint16_t PROGMEM ry_combo[] = {KC_R, KC_Y,  COMBO_END};
+const uint16_t PROGMEM oiye_combo[] = {KC_O, KC_I, KC_Y, KC_E,  COMBO_END};
+const uint16_t PROGMEM oiya_combo[] = {KC_O, KC_I, KC_Y, KC_A,  COMBO_END};
+const uint16_t PROGMEM re_combo[] = {KC_R, KC_E,  COMBO_END};
+const uint16_t PROGMEM ir_combo[] = {KC_I, KC_R,  COMBO_END};
+const uint16_t PROGMEM nav_base_combo[] = {KC_LEFT, KC_UP, KC_RGHT, COMBO_END};
+const uint16_t PROGMEM mse_base_combo[] = {KC_BTN2, KC_MS_D, KC_BTN1,  COMBO_END};
 
-combo_t key_combos[27] = {
+combo_t key_combos[COMBO_LENGTH] = {
 [AR_F] = COMBO(ar_combo, KC_F),
 [AS_W] = COMBO(as_combo, KC_W),
 [RT_G] = COMBO(rt_combo, KC_G),
@@ -85,6 +111,19 @@ combo_t key_combos[27] = {
 [AO_SLSH] = COMBO(ao_combo, KC_SLSH),
 [EIR_TGN] = COMBO(eir_combo, TG(NAV)),
 [TAY_TGM] = COMBO(tay_combo, TG(MSE)),
+[ORA_ESC] = COMBO(ora_combo, KC_ESC),
+[AE_ENT] = COMBO(ae_combo, KC_ENT),
+[OTRA_TAB] = COMBO(otra_combo, KC_TAB),
+[SE_OSC] = COMBO(se_combo, OSM(MOD_LCTL)),
+[SY_OSG] = COMBO(sy_combo, OSM(MOD_LGUI)),
+[SI_OSA] = COMBO(si_combo, OSM(MOD_LALT)),
+[STRE_OSS] = COMBO(stre_combo, OSM(MOD_LSFT)),
+[TI_EXLM] = COMBO(ti_combo, KC_EXLM),
+[RY_SL] = COMBO(ry_combo, KC_CAPS),
+[OIYE_SPC] = COMBO(oiye_combo, KC_SPC),
+[OIYA_CAPS] = COMBO(oiya_combo, KC_CAPS),
+[RE_BSPC] = COMBO(re_combo, KC_BSPC),
+[IR_DEL] = COMBO(ir_combo, KC_DEL),
 [NAV_BASE] = COMBO(nav_base_combo, TG(BASE)),
 [MSE_BASE] = COMBO(mse_base_combo, TG(BASE))
 };

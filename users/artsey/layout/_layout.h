@@ -13,6 +13,9 @@
 #ifdef KEYBOARD_gergo
 #include "boards/gergo.h"
 #endif
+#ifdef KEYBOARD_georgi
+#include "boards/georgi.h"
+#endif
 #ifdef KEYBOARD_ristretto
 #include "boards/ristretto.h"
 #endif
@@ -26,14 +29,14 @@
 // Standard ARTSEY layer definitions
 
 // Artsey layout wrapper
-#ifdef KEYBOARD_crkbd_rev1
+#if defined(KEYBOARD_crkbd_rev1)
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_split_3x5_3(__VA_ARGS__)
-#else
-#ifdef KEYBOARD_gergo
+#elif defined(KEYBOARD_gergo)
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_gergo(__VA_ARGS__)
+#elif defined(KEYBOARD_georgi)
+#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_georgi(__VA_ARGS__)
 #else
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT(__VA_ARGS__)
-#endif
 #endif
 
 // Allow proper auto selection of std size via keymaps

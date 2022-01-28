@@ -1,0 +1,14 @@
+{
+    "keyboard": "georgi",
+    "keymap": "artsey",
+    "layout": "ARTSEY_LAYOUT_WRAPPER",
+    "layers": [
+        [ "ARTSEY_STD_LAYER_BASE" ],
+        [ "ARTSEY_STD_LAYER_NUM" ],
+        [ "ARTSEY_STD_LAYER_SYM" ],
+        [ "ARTSEY_STD_LAYER_PAR" ],
+        [ "ARTSEY_STD_LAYER_NAV" ],
+        [ "ARTSEY_STD_LAYER_CUS" ],
+        [ "ARTSEY_STD_LAYER_MSE" ]
+    ]
+}

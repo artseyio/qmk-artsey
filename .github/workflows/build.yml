@@ -12,10 +12,28 @@ jobs:
       matrix:
         include:
           - layout: artsey_thepaintbrush
+            hand: left
+            size: std
+          - layout: artsey_thepaintbrush
             hand: right
             size: std
           - layout: crkbd_rev1
             hand: left
+            size: big
+          - layout: crkbd_rev1
+            hand: right
+            size: big
+          - layout: gergo
+            hand: left
+            size: big
+          - layout: gergo
+            hand: right
+            size: big
+          - layout: ristretto
+            hand: left
+            size: big
+          - layout: ristretto
+            hand: right
             size: big
     steps:
       - name: Checkout

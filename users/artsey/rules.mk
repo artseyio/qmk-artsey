@@ -49,7 +49,7 @@ endif
 
 ##########
 # Pimoroni support
-ifeq ($(KEYBOARD), $(filter $(KEYBOARD), crkbd/rev1))
+ifeq ($(KEYBOARD), $(filter $(KEYBOARD), crkbd/rev1 draculad))
 	POINTING_DEVICE_ENABLE = yes
 	POINTING_DEVICE_DRIVER = pimoroni_trackball
 endif

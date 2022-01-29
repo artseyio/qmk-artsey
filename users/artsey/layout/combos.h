@@ -39,6 +39,10 @@ RE_BSPC,
 IR_DEL,
 NAV_BASE,
 MSE_BASE,
+SEVEN,
+EIGHT,
+NINE,
+ZERO,
 COMBO_LENGTH
 };
 
@@ -83,6 +87,10 @@ const uint16_t PROGMEM re_combo[] = {KC_R, LT(SYM, KC_E), COMBO_END};
 const uint16_t PROGMEM ir_combo[] = {KC_I, KC_R,  COMBO_END};
 const uint16_t PROGMEM nav_base_combo[] = {KC_LEFT, KC_UP, KC_RGHT, COMBO_END};
 const uint16_t PROGMEM mse_base_combo[] = {KC_BTN2, KC_MS_D, KC_BTN1,  COMBO_END};
+const uint16_t PROGMEM seven_combo[] = {KC_1, KC_2,  COMBO_END};
+const uint16_t PROGMEM eight_combo[] = {KC_2, KC_3,  COMBO_END};
+const uint16_t PROGMEM nine_combo[] = {KC_4, KC_5,  COMBO_END};
+const uint16_t PROGMEM zero_combo[] = {KC_5, KC_6,  COMBO_END};
 
 combo_t key_combos[COMBO_LENGTH] = {
 [AR_F] = COMBO(ar_combo, KC_F),
@@ -123,5 +131,9 @@ combo_t key_combos[COMBO_LENGTH] = {
 [RE_BSPC] = COMBO(re_combo, KC_BSPC),
 [IR_DEL] = COMBO(ir_combo, KC_DEL),
 [NAV_BASE] = COMBO(nav_base_combo, TG(BASE)),
-[MSE_BASE] = COMBO(mse_base_combo, TG(BASE))
+[MSE_BASE] = COMBO(mse_base_combo, TG(BASE)),
+[SEVEN] = COMBO(seven_combo, KC_7),
+[EIGHT] = COMBO(eight_combo, KC_8),
+[NINE] = COMBO(nine_combo, KC_9),
+[ZERO] = COMBO(zero_combo, KC_0)
 };

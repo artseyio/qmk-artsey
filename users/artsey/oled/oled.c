@@ -61,6 +61,17 @@ static void render_status(void) {
             oled_write_ln_P(PSTR(" ???"), false);
             break;
     }
+
+    // oled_set_cursor(0, 8);
+    // oled_write_raw_P(icon_caps_lock_abullet, sizeof(icon_caps_lock_abullet));
+    // oled_set_cursor(8, 8);
+    // oled_write_raw_P(icon_scroll_lock_abullet, sizeof(icon_scroll_lock_abullet));
+    // oled_set_cursor(0, 10);
+    // oled_write_raw_P(icon_navigation_abullet, sizeof(icon_navigation_abullet));
+    // oled_set_cursor(8, 10);
+    // oled_write_raw_P(icon_mouse_abullet, sizeof(icon_mouse_abullet));
+    // oled_set_cursor(0, 12);
+    // oled_write_raw_P(icon_settings_abullet, sizeof(icon_settings_abullet));
 }
 
 bool oled_task_user(void) {

@@ -2,7 +2,7 @@
 
 ## Work In Progress
 
-The below is a work in progress. Don't be surprised if there are major changes during early development phases.
+The below is a work in progress. Don't be surprised if there are quirks in the information provided below.
 
 ## Compiling
 
@@ -18,7 +18,7 @@ qmk -v compile -e ARTSEY_SIZE=[std|big] \
                -e ARTSEY_OLED_BOOT_LOGO=[yes|no] \
                -e ARTSEY_BOOT_LOGO_TIMEOUT=[ms] \
                -e ARTSEY_OLED_ICON=[badslime_1|badslime_2]
-       keymaps/[board.json]
+       layout/[board.json]
 ```
 
 ## Visual Studio Code

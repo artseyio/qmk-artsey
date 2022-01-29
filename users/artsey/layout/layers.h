@@ -20,7 +20,7 @@ KC_NO,            KC_6,             KC_5,             KC_4
 
 #define ARTSEY_STD_LAYER_NAV_LEFT \
 KC_PGUP,          KC_HOME,          KC_UP,            KC_END,           \
-KC_PGDN,          KC_LEFT,          KC_DOWN,          KC_NO
+KC_PGDN,          KC_LEFT,          KC_DOWN,          KC_RIGHT
 
 #define ARTSEY_STD_LAYER_SYM_LEFT \
 KC_GRV,           KC_SCLN,          KC_SLSH,          KC_EXLM,          \
@@ -48,7 +48,7 @@ KC_4,             KC_5,             KC_6,             KC_NO
 
 #define ARTSEY_STD_LAYER_NAV_RIGHT \
 KC_HOME,          KC_UP,            KC_END,           KC_PGUP,          \
-KC_LEFT,          KC_DOWN,          KC_NO,            KC_PGDN
+KC_LEFT,          KC_DOWN,          KC_RIGHT,         KC_PGDN
 
 #define ARTSEY_STD_LAYER_SYM_RIGHT \
 KC_EXLM,          KC_SLSH,          KC_SCLN,          KC_GRV,           \
@@ -68,7 +68,7 @@ LT(NUM, KC_S),             KC_T,             KC_R,             LT(PAR, KC_A),   
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
 LT(CUS, KC_O),             KC_I,             KC_Y,             LT(SYM, KC_E),             KC_LSFT,          \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
-LALT_T(KC_LCTL),  KC_AT,            KC_DEL,           KC_EQL,           KC_TAB,           \
+LALT_T(KC_LCTL),           KC_AT,            KC_DEL,           KC_EQL,                    KC_TAB,           \
 BIG_BETWEEN_ROW_THREE_THUMBS \
 MO(BIG_SYM),      KC_SPC,           KC_ENT \
 BIG_TRAILING_NONES
@@ -77,7 +77,7 @@ BIG_TRAILING_NONES
 BIG_LEADING_NONES \
 KC_PGUP,          KC_HOME,          KC_UP,            KC_END,           KC_NO,            \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-KC_PGDN,          KC_LEFT,          KC_DOWN,          KC_NO,            KC_NO,            \
+KC_PGDN,          KC_LEFT,          KC_DOWN,          KC_RIGHT,         KC_NO,            \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
 KC_NO,            KC_NO,            KC_NO,            KC_NO,            KC_NO,            \
 BIG_BETWEEN_ROW_THREE_THUMBS \
@@ -168,7 +168,7 @@ KC_MINS,          LT(PAR, KC_A),             KC_R,             KC_T,            
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
 KC_LSFT,          LT(SYM, KC_E),             KC_Y,             KC_I,             LT(CUS, KC_O),             \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
-KC_TAB,           KC_EQL,           KC_DEL,           KC_AT,            KC_LCTL,          \
+KC_TAB,           KC_EQL,                    KC_DEL,           KC_AT,            KC_LCTL,          \
 BIG_BETWEEN_ROW_THREE_THUMBS \
 KC_ENT,           KC_SPC,           MO(BIG_SYM) \
 BIG_TRAILING_NONES
@@ -177,7 +177,7 @@ BIG_TRAILING_NONES
 BIG_LEADING_NONES \
 KC_HOME,          KC_UP,            KC_END,           KC_PGUP,          KC_NO,            \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-KC_LEFT,          KC_DOWN,          KC_NO,            KC_PGDN,          KC_NO,            \
+KC_LEFT,          KC_DOWN,          KC_RIGHT,         KC_PGDN,          KC_NO,            \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
 KC_NO,            KC_NO,            KC_NO,            KC_NO,            KC_NO,            \
 BIG_BETWEEN_ROW_THREE_THUMBS \

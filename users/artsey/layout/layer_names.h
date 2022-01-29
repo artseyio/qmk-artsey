@@ -1,12 +1,12 @@
 #pragma once
 
 #define LAYER_ID_GLOBAL -1
-#define BASE 0
-#define NUM 1
-#define SYM 2
-#define PAR 3
-#define NAV 4
-#define CUS 5
-#define MSE 6
-#define BIG_SYM 7
-#define BIG_FUN 8
+#define LAYER_ID_BASE 0
+#define LAYER_ID_NUMBERS 1
+#define LAYER_ID_SYMBOLS 2
+#define LAYER_ID_PARENTHETICALS 3
+#define LAYER_ID_NAVIGATION 4
+#define LAYER_ID_CUSTOM 5
+#define LAYER_ID_MOUSE 6
+#define LAYER_ID_BIG_SYM 7
+#define LAYER_ID_BIG_FUN 8

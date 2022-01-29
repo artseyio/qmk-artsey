@@ -7,7 +7,7 @@
 // Combos Config
 #include "layout/layer_names.h"
 #define EXTRA_LONG_COMBOS
-#define COMBO_ONLY_FROM_LAYER BASE
+#define COMBO_ONLY_FROM_LAYER LAYER_ID_BASE
 
 // //////////
 // One Shot Config (space/crtl/etc)

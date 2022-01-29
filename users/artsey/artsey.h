@@ -8,7 +8,10 @@
 #endif
 
 enum custom_keycodes {
-  OSM_CTRL = SAFE_RANGE
+OSM_CTRL = SAFE_RANGE,
+OSM_GUI,
+OSM_ALT,
+OSM_SHIFT
 #ifdef POINTING_DEVICE_ENABLE
   , // this is here due to the ifdef. it will cause build errors if removed
   BALL_HUI,              //cycles hue

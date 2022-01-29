@@ -22,6 +22,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 set_oneshot_mods(MOD_BIT(KC_LCTL));
             }
             break;
+        case OSM_GUI:
+            if (record->event.pressed) {
+                set_oneshot_mods(MOD_BIT(KC_LGUI));
+            }
+            break;
+        case OSM_ALT:
+            if (record->event.pressed) {
+                set_oneshot_mods(MOD_BIT(KC_LALT));
+            }
+            break;
+        case OSM_SHIFT:
+            if (record->event.pressed) {
+                set_oneshot_mods(MOD_BIT(KC_LSFT));
+            }
+            break;
 
 #ifdef POINTING_DEVICE_ENABLE
         case BALL_HUI:

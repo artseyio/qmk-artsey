@@ -122,4 +122,3 @@ jobs:
           body: ${{ steps.release_text.outputs.release_text }}
           name: ${{ steps.date.outputs.date }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          prerelease: true

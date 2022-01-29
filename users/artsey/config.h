@@ -3,11 +3,11 @@
 
 #pragma once
 
-#define EXTRA_LONG_COMBOS
 // //////////
 // Combos Config
-// #define EXTRA_EXTRA_LONG_COMBOS
-// #define COMBO_ONLY_FROM_LAYER LAYER_ID_BASE
+#include "layout/layer_names.h"
+#define EXTRA_LONG_COMBOS
+#define COMBO_ONLY_FROM_LAYER BASE
 
 // //////////
 // Ensure 'master' is set to match handedness of artsey

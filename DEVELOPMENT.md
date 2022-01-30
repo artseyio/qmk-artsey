@@ -2,7 +2,7 @@
 
 ## Work In Progress
 
-The below is a work in progress. Don't be surprised if there are quirks in the information provided below.
+The below is a work in progress. Don't be surprised if there are quirks in the information provided below. PRs are welcome.
 
 ## Compiling
 

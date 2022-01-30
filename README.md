@@ -10,6 +10,12 @@ The `Releases` area of this repository contains the latest builds of the QMK ART
 
 The firmware files are auto built for a variety of common boards as well as community requested/supported boards. Our builds do *NOT* override default mcu/bootloader/architecture. Please mind this fact if you've tweaked your board in any way relative to the official QMK sources.
 
+### Flashing
+
+We recommend Windows and OSX users download the pre-built hex files and use [QMK Toolbox](https://github.com/qmk/qmk_toolbox). 
+
+If you are on Linux, you'll need to use the `qmk flash` command with the same options as we use to compile. The compile options can be found in  `DEVELOPMENT.md` and are compatible with the `qmk flash` command. If there is an alternative thats easier to use, please let us know on Discord or GitHub Issue.
+
 **We are NOT responsible for any failed firmware flashes!**
 
 ## Adding ARTSEY Support

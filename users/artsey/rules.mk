@@ -48,6 +48,13 @@ ifeq ($(strip $(ARTSEY_HAND)), right)
 endif
 
 ##########
+# Set remix for all build steps
+ifeq ($(strip $(ARTSEY_REMIX)), yes)
+	ARTSEY_REMIX = yes
+	OPT_DEFS += -DARTSEY_REMIX
+endif
+
+##########
 # Pimoroni support
 ifeq ($(KEYBOARD), $(filter $(KEYBOARD), crkbd/rev1 draculad))
 	POINTING_DEVICE_ENABLE = yes

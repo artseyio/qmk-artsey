@@ -18,9 +18,13 @@ If you are on Linux, you'll need to use the `qmk flash` command with the same op
 
 **We are NOT responsible for any failed firmware flashes!**
 
-## Adding ARTSEY Support
+## Adding ARTSEY support to an existing qmk board
 
 See [DEVELOPMENT.md](DEVELOPMENT.md)
+
+## Tweaking and Remixing
+
+See [REMIXING.md]
 
 ## Inspiraion
 

@@ -18,7 +18,7 @@ static void render_logo(void) {
 static void render_status(void) {
     oled_set_cursor(0, 5);
     switch (get_highest_layer(layer_state)) {
-        case BASE:
+        case LAYER_ID_BASE:
 #ifdef ARTSEY_SIZE_STD
             oled_write_ln_P(PSTR(" ART"), false);
             oled_write_ln_P(PSTR(" SEY"), false);
@@ -28,31 +28,31 @@ static void render_status(void) {
             oled_write_ln_P(PSTR(" SEY*"), false);
 #endif
             break;
-        case NUM:
+        case LAYER_ID_NUMBERS:
             oled_write_ln_P(PSTR(" Num"), false);
             oled_write_ln_P(PSTR(" ber"), false);
             break;
-        case SYM:
+        case LAYER_ID_SYMBOLS:
             oled_write_ln_P(PSTR(" Sym"), false);
             oled_write_ln_P(PSTR(" bol"), false);
             break;
-        case PAR:
+        case LAYER_ID_PARENTHETICALS:
             oled_write_ln_P(PSTR(" Par"), false);
             oled_write_ln_P(PSTR("  en"), false);
             break;
-        case NAV:
+        case LAYER_ID_NAVIGATION:
             oled_write_ln_P(PSTR("Nav"), false);
             oled_write_ln_P("", false);
             break;
-        case CUS:
+        case LAYER_ID_CUSTOM:
             oled_write_ln_P(PSTR(" Cus"), false);
             oled_write_ln_P(PSTR(" tom"), false);
             break;
-        case BIG_SYM:
+        case LAYER_ID_BIG_SYM:
             oled_write_ln_P(PSTR("*Sym"), false);
             oled_write_ln_P(PSTR(" bol*"), false);
             break;
-        case BIG_FUN:
+        case LAYER_ID_BIG_FUN:
             oled_write_ln_P(PSTR("*Fun"), false);
             oled_write_ln_P(PSTR("  ct*"), false);
             break;

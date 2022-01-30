@@ -2,13 +2,14 @@
 
 // //////////
 // Board tuning so standard layout/map can be built programatically
+//
 #ifdef KEYBOARD_crkbd_rev1
 #include "boards/crkbd_rev1.h"
 #endif
 
 #define ARTSEY_STD_LAYER_BASE_LEFT \
-LT(NUM, KC_S),    KC_T,             KC_R,             LT(PAR, KC_A),    \
-LT(CUS, KC_O),    KC_I,             KC_Y,             LT(SYM, KC_E)
+LT(LAYER_ID_NUMBERS, KC_S),    KC_T,             KC_R,             LT(LAYER_ID_PARENTHETICALS, KC_A),    \
+LT(LAYER_ID_CUSTOM, KC_O),     KC_I,             KC_Y,             LT(LAYER_ID_SYMBOLS, KC_E)
 
 #define ARTSEY_STD_LAYER_PAR_LEFT                                       \
 KC_RCBR,          KC_LPRN,          KC_RPRN,          KC_TRNS,          \
@@ -35,8 +36,8 @@ KC_WH_U,          KC_BTN2,          KC_MS_U,          KC_BTN1,          \
 KC_WH_D,          KC_MS_L,          KC_MS_D,          KC_MS_R
 
 #define ARTSEY_STD_LAYER_BASE_RIGHT \
-LT(PAR, KC_A),    KC_R,             KC_T,             LT(NUM, KC_S),    \
-LT(SYM, KC_E),    KC_Y,             KC_I,             LT(CUS, KC_O)
+LT(LAYER_ID_PARENTHETICALS, KC_A),    KC_R,             KC_T,             LT(LAYER_ID_NUMBERS, KC_S),    \
+LT(LAYER_ID_SYMBOLS, KC_E),           KC_Y,             KC_I,             LT(LAYER_ID_CUSTOM, KC_O)
 
 #define ARTSEY_STD_LAYER_PAR_RIGHT \
 KC_TRNS,          KC_LPRN,          KC_RPRN,          KC_LCBR,          \
@@ -64,13 +65,13 @@ KC_MS_L,          KC_MS_D,          KC_MS_R,          KC_WH_D
 
 #define ARTSEY_BIG_LAYER_BASE_LEFT \
 BIG_LEADING_NONES \
-LT(NUM, KC_S),             KC_T,             KC_R,             LT(PAR, KC_A),             KC_MINS,          \
+LT(LAYER_ID_NUMBERS, KC_S),             KC_T,             KC_R,             LT(LAYER_ID_PARENTHETICALS, KC_A),      KC_MINS,          \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-LT(CUS, KC_O),             KC_I,             KC_Y,             LT(SYM, KC_E),             KC_LSFT,          \
+LT(LAYER_ID_CUSTOM, KC_O),              KC_I,             KC_Y,             LT(LAYER_ID_SYMBOLS, KC_E),             KC_LSFT,          \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
-LALT_T(KC_LCTL),           KC_AT,            KC_DEL,           KC_EQL,                    KC_TAB,           \
+LALT_T(KC_LCTL),                        KC_AT,            KC_DEL,           KC_EQL,                                 KC_TAB,           \
 BIG_BETWEEN_ROW_THREE_THUMBS \
-MO(BIG_SYM),      KC_SPC,           KC_ENT \
+MO(LAYER_ID_BIG_SYM),      KC_SPC,           KC_ENT \
 BIG_TRAILING_NONES
 
 #define ARTSEY_BIG_LAYER_NAV_LEFT \
@@ -164,13 +165,13 @@ BIG_TRAILING_NONES
 
 #define ARTSEY_BIG_LAYER_BASE_RIGHT \
 BIG_LEADING_NONES \
-KC_MINS,          LT(PAR, KC_A),             KC_R,             KC_T,             LT(NUM, KC_S),             \
+KC_MINS,          LT(LAYER_ID_PARENTHETICALS, KC_A),             KC_R,             KC_T,             LT(LAYER_ID_NUMBERS, KC_S),             \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-KC_LSFT,          LT(SYM, KC_E),             KC_Y,             KC_I,             LT(CUS, KC_O),             \
+KC_LSFT,          LT(LAYER_ID_SYMBOLS, KC_E),                    KC_Y,             KC_I,             LT(LAYER_ID_CUSTOM, KC_O),              \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
 KC_TAB,           KC_EQL,                    KC_DEL,           KC_AT,            KC_LCTL,          \
 BIG_BETWEEN_ROW_THREE_THUMBS \
-KC_ENT,           KC_SPC,           MO(BIG_SYM) \
+KC_ENT,           KC_SPC,           MO(LAYER_ID_BIG_SYM) \
 BIG_TRAILING_NONES
 
 #define ARTSEY_BIG_LAYER_NAV_RIGHT \

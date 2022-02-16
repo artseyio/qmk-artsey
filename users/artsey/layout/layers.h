@@ -10,7 +10,7 @@
 // /////////
 // User remixes / tweaks
 #ifdef ARTSEY_REMIX
-#include "remixes/remix_base_layers.h"
+#include "remixes/remix_layers.h"
 #endif
 
 #ifndef ARTSEY_STD_LAYER_BASE_LEFT

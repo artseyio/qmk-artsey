@@ -29,7 +29,7 @@
 
 // Artsey layout wrapper
 #ifdef KEYBOARD_crkbd_rev1
-#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_split_3x5_3(__VA_ARGS__)
+#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_split_3x6_3(__VA_ARGS__)
 #else
 #ifdef KEYBOARD_gergo
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_gergo(__VA_ARGS__)

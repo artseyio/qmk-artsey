@@ -5,6 +5,7 @@
   "mounts": [
     "type=bind,source=${localWorkspaceFolder}/.build,target=/qmk_firmware/.build",
     "type=bind,source=${localWorkspaceFolder}/keyboards/artsey,target=/qmk_firmware/keyboards/artsey",
+    "type=bind,source=${localWorkspaceFolder}/keyboards/faunchpad,target=/qmk_firmware/keyboards/faunchpad",
     "type=bind,source=${localWorkspaceFolder}/users/artsey,target=/qmk_firmware/users/artsey"
   ],
   "workspaceMount": "type=volume,source=qmk_firmware,target=/qmk_firmware",

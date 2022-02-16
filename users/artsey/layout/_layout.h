@@ -34,7 +34,11 @@
 #ifdef KEYBOARD_gergo
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_gergo(__VA_ARGS__)
 #else
+#ifdef KEYBOARD_faunchpad
+#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_faunch(__VA_ARGS__)
+#else
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT(__VA_ARGS__)
+#endif
 #endif
 #endif
 

@@ -35,6 +35,12 @@ jobs:
           - layout: ristretto
             hand: right
             size: big
+          - layout: faunchpad
+            hand: left
+            size: std
+          - layout: faunchpad
+            hand: right
+            size: std
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -58,6 +64,11 @@ jobs:
             then
                 ln -s "${GITHUB_WORKSPACE}/keyboards/artsey" /qmk_firmware/keyboards/artsey;
                 echo "Created keyboards/artsey symlink";
+            fi
+            if [ ! -d /qmk_firmware/keyboards/faunchpad ];
+            then
+                ln -s "${GITHUB_WORKSPACE}/keyboards/faunchpad" /qmk_firmware/keyboards/faunchpad;
+                echo "Created keyboards/faunchpad symlink";
             fi
             if [ ! -d /qmk_firmware/users/artsey ];
             then

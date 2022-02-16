@@ -39,7 +39,7 @@ KC_PGDN,          KC_LEFT,          KC_DOWN,          KC_RIGHT
 
 #ifndef ARTSEY_STD_LAYER_SYM_LEFT
 #define ARTSEY_STD_LAYER_SYM_LEFT \
-KC_GRV,           KC_SCLN,          KC_SLSH,          KC_EXLM,          \
+KC_GRV,           KC_SCLN,          KC_BSLS,          KC_EXLM,          \
 KC_EQL,           KC_MINS,          KC_QUES,          KC_TRNS
 #endif
 
@@ -81,7 +81,7 @@ KC_LEFT,          KC_DOWN,          KC_RIGHT,         KC_PGDN
 
 #ifndef ARTSEY_STD_LAYER_SYM_RIGHT
 #define ARTSEY_STD_LAYER_SYM_RIGHT \
-KC_EXLM,          KC_SLSH,          KC_SCLN,          KC_GRV,           \
+KC_EXLM,          KC_BSLS,          KC_SCLN,          KC_GRV,           \
 KC_TRNS,          KC_QUES,          KC_MINS,          KC_EQL
 #endif
 
@@ -139,7 +139,7 @@ BIG_TRAILING_NONES
 #ifndef ARTSEY_BIG_LAYER_SYM_LEFT
 #define ARTSEY_BIG_LAYER_SYM_LEFT \
 BIG_LEADING_NONES \
-KC_GRV,           KC_SCLN,          KC_SLSH,          KC_EXLM,          KC_NO,            \
+KC_GRV,           KC_SCLN,          KC_BSLS,          KC_EXLM,          KC_NO,            \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
 KC_EQL,           KC_MINS,          KC_QUES,          KC_TRNS,          KC_NO,            \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
@@ -193,7 +193,7 @@ BIG_TRAILING_NONES
 BIG_LEADING_NONES \
 KC_CIRC,          KC_LCBR,          KC_RCBR,          KC_HASH,          KC_GRV,           \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-KC_AMPR,          KC_LPRN,          KC_RPRN,          KC_DLR,           KC_SLSH,          \
+KC_AMPR,          KC_LPRN,          KC_RPRN,          KC_DLR,           KC_BSLS,          \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
 KC_ASTR,          KC_LBRC,          KC_RBRC,          KC_PERC,          KC_PIPE,          \
 BIG_BETWEEN_ROW_THREE_THUMBS \
@@ -256,7 +256,7 @@ BIG_TRAILING_NONES
 #ifndef ARTSEY_BIG_LAYER_SYM_RIGHT
 #define ARTSEY_BIG_LAYER_SYM_RIGHT \
 BIG_LEADING_NONES \
-KC_EXLM,          KC_SLSH,          KC_SCLN,          KC_GRV,           KC_NO,            \
+KC_EXLM,          KC_BSLS,          KC_SCLN,          KC_GRV,           KC_NO,            \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
 KC_TRNS,          KC_QUES,          KC_MINS,          KC_EQL,           KC_NO,            \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
@@ -310,7 +310,7 @@ BIG_TRAILING_NONES
 BIG_LEADING_NONES \
 KC_GRV,           KC_HASH,          KC_LCBR,          KC_RCBR,          KC_CIRC,          \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-KC_SLSH,          KC_DLR,           KC_LPRN,          KC_RPRN,          KC_AMPR,          \
+KC_BSLS,          KC_DLR,           KC_LPRN,          KC_RPRN,          KC_AMPR,          \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
 KC_PIPE,          KC_PERC,          KC_LBRC,          KC_RBRC,          KC_ASTR,          \
 BIG_BETWEEN_ROW_THREE_THUMBS \

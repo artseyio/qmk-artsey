@@ -3,6 +3,9 @@
     "keymap": "artsey",
     "layout": "ARTSEY_LAYOUT_WRAPPER",
     "layers": [
+        [ "ARTSEY_40P_LAYER_ANSI" ],
+        [ "ARTSEY_40P_LAYER_FUNCTION" ],
+        [ "ARTSEY_40P_LAYER_NAVIGATION" ],
         [ "ARTSEY_BIG_LAYER_BASE_LEFT" ],
         [ "ARTSEY_BIG_LAYER_NUM_LEFT" ],
         [ "ARTSEY_BIG_LAYER_SYM_LEFT" ],

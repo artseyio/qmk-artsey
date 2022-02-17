@@ -14,12 +14,14 @@ cd /qmk_firmware/users/artsey
 # ARTSEY_OLED_BOOT_LOGO is an optional argument. default: yes
 # ARTSEY_BOOT_LOGO_TIMEOUT is an optional timeout in miliseconds. default: 2000
 # ARTSEY_OLED_ICON is an optional icon to show on the status pages. default: badslime_1
-qmk -v compile -e ARTSEY_SIZE=[std|big] \
+# ARTSEY_PIMORONI is an option to turn on Pimoroni mini trackball support. default: no
+qmk -v compile -e ARTSEY_SIZE=[std|big|40p] \
                -e ARTSEY_HAND=[left|right] \
                -e ARTSEY_REMIX=[yes|no] \
                -e ARTSEY_OLED_BOOT_LOGO=[yes|no] \
                -e ARTSEY_BOOT_LOGO_TIMEOUT=[ms] \
                -e ARTSEY_OLED_ICON=[badslime_1|badslime_2]
+               -e ARTSEY_PIMORONI=[yes|no]
        layout/[board.json]
 ```
 

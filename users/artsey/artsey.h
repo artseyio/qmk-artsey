@@ -7,6 +7,10 @@
 #include "oled/oled.h"
 #endif
 
+#ifdef ARTSEY_SIZE_40P
+#include "layout/tap_dance.h"
+#endif
+
 enum custom_keycodes {
     OSM_CTRL = SAFE_RANGE,
     OSM_GUI,

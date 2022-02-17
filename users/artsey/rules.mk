@@ -35,6 +35,10 @@ ifeq ($(strip $(ARTSEY_SIZE)), big)
 	ARTSEY_SIZE_BIG = yes
 	OPT_DEFS += -DARTSEY_SIZE_BIG
 endif
+ifeq ($(strip $(ARTSEY_SIZE)), 40p)
+	ARTSEY_SIZE_40P = yes
+	OPT_DEFS += -DARTSEY_SIZE_40P
+endif
 
 ##########
 # Set handedness for all build steps
@@ -55,8 +59,15 @@ ifeq ($(strip $(ARTSEY_REMIX)), yes)
 endif
 
 ##########
+# Tap dance for 40% ARTSEY
+ifeq ($(ARTSEY_SIZE_40P), yes)
+	TAP_DANCE_ENABLE = yes
+	SRC += layout/tap_dance.c
+endif
+
+##########
 # Pimoroni support
-ifeq ($(KEYBOARD), $(filter $(KEYBOARD), crkbd/rev1 draculad))
+ifeq ($(ARTSEY_PIMORONI), yes)
 	POINTING_DEVICE_ENABLE = yes
 	POINTING_DEVICE_DRIVER = pimoroni_trackball
 endif

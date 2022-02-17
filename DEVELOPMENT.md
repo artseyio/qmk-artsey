@@ -36,7 +36,15 @@ qmk -v compile -e ARTSEY_SIZE=[std|big|40p] \
 ### KemoNine Builds
 
 ```
-
+root@d8949d0fe972:/qmk_firmware/users/artsey# 
+qmk clean && qmk -v compile 
+  -e OLED_BRIGHTNESS=64 \
+  -e PIMORONI_BRIGHTNESS=7 \
+  -e PIMORONI_RGB="255,165,0" \
+  -e ARTSEY_PIMORONI=yes \
+  -e ARTSEY_SIZE=[big|40p] \
+  -e ARTSEY_HAND=left \
+  layout/crkbd_rev1_40p.json
 ```
 
 ## Visual Studio Code

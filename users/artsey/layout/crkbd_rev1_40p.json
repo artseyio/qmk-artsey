@@ -4,6 +4,9 @@
     "layout": "ARTSEY_LAYOUT_WRAPPER",
     "layers": [
         [ "ARTSEY_BIG_LAYER_BASE" ],
+        [ "ARTSEY_40P_LAYER_ANSI" ],
+        [ "ARTSEY_40P_LAYER_FUNCTION" ],
+        [ "ARTSEY_40P_LAYER_NAVIGATION" ],
         [ "ARTSEY_BIG_LAYER_NUM" ],
         [ "ARTSEY_BIG_LAYER_SYM" ],
         [ "ARTSEY_BIG_LAYER_PAR" ],
@@ -11,9 +14,6 @@
         [ "ARTSEY_BIG_LAYER_CUS" ],
         [ "ARTSEY_BIG_LAYER_MSE" ],
         [ "ARTSEY_BIG_LAYER_BIG_SYM" ],
-        [ "ARTSEY_BIG_LAYER_BIG_FUN" ],
-        [ "ARTSEY_40P_LAYER_ANSI" ],
-        [ "ARTSEY_40P_LAYER_FUNCTION" ],
-        [ "ARTSEY_40P_LAYER_NAVIGATION" ]
+        [ "ARTSEY_BIG_LAYER_BIG_FUN" ]
     ]
 }

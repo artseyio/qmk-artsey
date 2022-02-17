@@ -5,6 +5,7 @@
 // //////////
 // ARTSEY layer ids (needed everywhere)
 #include "layer_names.h"
+
 // //////////
 // Board tuning so standard layout/map can be built programatically
 #ifdef KEYBOARD_crkbd_rev1
@@ -19,6 +20,7 @@
 #ifdef KEYBOARD_draculad
 #include "boards/draculad.h"
 #endif
+
 // //////////
 // Include layers last so all overrides and ids are set prior to processing
 #include "layers.h"

@@ -1,0 +1,25 @@
+{
+    "keyboard": "crkbd/rev1",
+    "keymap": "artsey",
+    "layout": "ARTSEY_LAYOUT_WRAPPER",
+    "layers": [
+        [ "ARTSEY_BIG_LAYER_BASE_LEFT" ],
+        [ "ARTSEY_BIG_LAYER_NUM_LEFT" ],
+        [ "ARTSEY_BIG_LAYER_SYM_LEFT" ],
+        [ "ARTSEY_BIG_LAYER_PAR_LEFT" ],
+        [ "ARTSEY_BIG_LAYER_NAV_LEFT" ],
+        [ "ARTSEY_BIG_LAYER_CUS_LEFT" ],
+        [ "ARTSEY_BIG_LAYER_MSE_LEFT" ],
+        [ "ARTSEY_BIG_LAYER_BIG_SYM_LEFT" ],
+        [ "ARTSEY_BIG_LAYER_BIG_FUN_LEFT" ],
+        [ "ARTSEY_BIG_LAYER_BASE_RIGHT" ],
+        [ "ARTSEY_BIG_LAYER_NUM_RIGHT" ],
+        [ "ARTSEY_BIG_LAYER_SYM_RIGHT" ],
+        [ "ARTSEY_BIG_LAYER_PAR_RIGHT" ],
+        [ "ARTSEY_BIG_LAYER_NAV_RIGHT" ],
+        [ "ARTSEY_BIG_LAYER_CUS_RIGHT" ],
+        [ "ARTSEY_BIG_LAYER_MSE_RIGHT" ],
+        [ "ARTSEY_BIG_LAYER_BIG_SYM_RIGHT" ],
+        [ "ARTSEY_BIG_LAYER_BIG_FUN_RIGHT" ]
+    ]
+}

@@ -66,6 +66,13 @@ ifeq ($(ARTSEY_SIZE_40P), yes)
 endif
 
 ##########
+# 5 column flag for 40% ARTSEY
+ifeq ($(KEYBOARD), $(filter $(KEYBOARD), artsey/thepaintbrush crkbd/rev1 ristretto))
+	ARTSEY_FIVE_COLUMN = yes
+	OPT_DEFS += -DARTSEY_FIVE_COLUMN
+endif
+
+##########
 # Pimoroni support
 ifeq ($(ARTSEY_PIMORONI), yes)
 	POINTING_DEVICE_ENABLE = yes

@@ -15,14 +15,28 @@ cd /qmk_firmware/users/artsey
 # ARTSEY_BOOT_LOGO_TIMEOUT is an optional timeout in miliseconds. default: 2000
 # ARTSEY_OLED_ICON is an optional icon to show on the status pages. default: badslime_1
 # ARTSEY_PIMORONI is an option to turn on Pimoroni mini trackball support. default: no
+# OLED_ENABLE turn on/off oled. default yes if main keybord project supports oled
+# OLED_BRIGHTNESS the brightness of the oled at startup if no user values set. default: 127 (50% brightness)
+# PIMORONI_BRIGHTNESS the brightness of the pimoroni trackball at startup if no user values set. default: 127 (50% brightness)
+# PIMORONI_RGBW the rgb code for the pimoroni trackball at startup if no user values set. default: 255,255,255 (white)
 qmk -v compile -e ARTSEY_SIZE=[std|big|40p] \
                -e ARTSEY_HAND=[left|right] \
                -e ARTSEY_REMIX=[yes|no] \
                -e ARTSEY_OLED_BOOT_LOGO=[yes|no] \
                -e ARTSEY_BOOT_LOGO_TIMEOUT=[ms] \
-               -e ARTSEY_OLED_ICON=[badslime_1|badslime_2]
-               -e ARTSEY_PIMORONI=[yes|no]
+               -e ARTSEY_OLED_ICON=[badslime_1|badslime_2] \
+               -e ARTSEY_PIMORONI=[yes|no] \
+               -e OLED_ENABLE=[yes|no] \
+               -e OLED_BRIGHTNESS=[0...255] \
+               -e PIMORONI_BRIGHTNESS=[0...255] \
+               -e PIMORONI_RGB="255,255,255" \
        layout/[board.json]
+```
+
+### KemoNine Builds
+
+```
+
 ```
 
 ## Visual Studio Code

@@ -7,7 +7,7 @@
 
 void keyboard_post_init_user(void) {
 #ifdef POINTING_DEVICE_ENABLE
-    pimoroni_trackball_set_rgbw(255, 255, 255, PIMORONI_BRIGHTNESS);
+    pimoroni_trackball_set_rgbw(PIMORONI_RGB, PIMORONI_BRIGHTNESS);
 #endif
 }
 

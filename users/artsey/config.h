@@ -40,7 +40,6 @@
 // ////////
 // Pimoroni trackball
 #ifdef POINTING_DEVICE_ENABLE
-#define PIMORONI_BRIGHTNESS 127
 #define POINTING_DEVICE_ROTATION_90
 #ifdef ARTSEY_HAND_LEFT
 #define TRACKBALL_LEFT

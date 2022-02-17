@@ -107,6 +107,11 @@ static void render_status(void) {
 }
 
 bool oled_task_user(void) {
+    // Don't do anything if the display is off
+    if (!is_oled_on()) {
+        return false;
+    }
+
 #ifdef ARTSEY_BOOT_LOGO
     if (boot_logo_timer == 0) {
         boot_logo_timer = timer_read32();

@@ -34,6 +34,7 @@ int dance_current(qk_tap_dance_state_t *state) {
 
     if (state->count == 2) return TD_DOUBLE_SINGLE_TAP;
     if (state->count == 3) return TD_TRIPLE_SINGLE_TAP;
+    if (state->count > 3) return TD_MULTI_SINGLE_TAP;
     else return TD_UNKNOWN; // Any number higher than the maximum state value you return above
 }
 
@@ -44,6 +45,12 @@ void dance_artsey_left_finished(qk_tap_dance_state_t *state, void *user_data) {
     td_state = dance_current(state);
     switch (td_state) {
         case TD_SINGLE_TAP:
+        case TD_DOUBLE_SINGLE_TAP:
+        case TD_TRIPLE_SINGLE_TAP:
+        case TD_MULTI_SINGLE_TAP:
+            for (uint8_t i=1; i<state->count; i++) {
+                tap_code(KC_T);
+            }
             register_code(KC_T);
             break;
         case TD_SINGLE_HOLD:
@@ -58,6 +65,9 @@ void dance_artsey_left_reset(qk_tap_dance_state_t *state, void *user_data) {
     td_state = dance_current(state);
     switch (td_state) {
         case TD_SINGLE_TAP:
+        case TD_DOUBLE_SINGLE_TAP:
+        case TD_TRIPLE_SINGLE_TAP:
+        case TD_MULTI_SINGLE_TAP:
             unregister_code(KC_T);
             break;
         default:
@@ -69,6 +79,12 @@ void dance_artsey_right_finished(qk_tap_dance_state_t *state, void *user_data) {
     td_state = dance_current(state);
     switch (td_state) {
         case TD_SINGLE_TAP:
+        case TD_DOUBLE_SINGLE_TAP:
+        case TD_TRIPLE_SINGLE_TAP:
+        case TD_MULTI_SINGLE_TAP:
+            for (uint8_t i=1; i<state->count; i++) {
+                tap_code(KC_Y);
+            }
             register_code(KC_Y);
             break;
         case TD_SINGLE_HOLD:
@@ -83,6 +99,9 @@ void dance_artsey_right_reset(qk_tap_dance_state_t *state, void *user_data) {
     td_state = dance_current(state);
     switch (td_state) {
         case TD_SINGLE_TAP:
+        case TD_DOUBLE_SINGLE_TAP:
+        case TD_TRIPLE_SINGLE_TAP:
+        case TD_MULTI_SINGLE_TAP:
             unregister_code(KC_Y);
             break;
         default:
@@ -94,6 +113,12 @@ void dance_40p_finished(qk_tap_dance_state_t *state, void *user_data) {
     td_state = dance_current(state);
     switch (td_state) {
         case TD_SINGLE_TAP:
+        case TD_DOUBLE_SINGLE_TAP:
+        case TD_TRIPLE_SINGLE_TAP:
+        case TD_MULTI_SINGLE_TAP:
+            for (uint8_t i=1; i<state->count; i++) {
+                tap_code(KC_MINUS);
+            }
             tap_code(KC_MINUS);
             break;
         case TD_SINGLE_HOLD:
@@ -108,6 +133,9 @@ void dance_40p_reset(qk_tap_dance_state_t *state, void *user_data) {
     td_state = dance_current(state);
     switch (td_state) {
         case TD_SINGLE_TAP:
+        case TD_DOUBLE_SINGLE_TAP:
+        case TD_TRIPLE_SINGLE_TAP:
+        case TD_MULTI_SINGLE_TAP:
             unregister_code(KC_MINUS);
             break;
         default:

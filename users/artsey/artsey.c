@@ -16,24 +16,33 @@ void keyboard_post_init_user(void) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case OSM_CTRL:
+        case LCK_SHIFT:
             if (record->event.pressed) {
-                set_oneshot_mods(get_oneshot_mods() | MOD_BIT(KC_LCTL));
+                if (get_mods() & MOD_MASK_SHIFT) {
+                    clear_mods();
+                }
+                else {
+                    register_mods(MOD_BIT(KC_LSFT));
+                }
+            }
+        case OSM_CTRL:
+            if (record->event.pressed) {i
+                add_oneshot_mods(MOD_BIT(KC_LCTL));
             }
             break;
         case OSM_GUI:
             if (record->event.pressed) {
-                set_oneshot_mods(get_oneshot_mods() | MOD_BIT(KC_LGUI));
+                add_oneshot_mods(MOD_BIT(KC_LGUI));
             }
             break;
         case OSM_ALT:
             if (record->event.pressed) {
-                set_oneshot_mods(get_oneshot_mods() | MOD_BIT(KC_LALT));
+                add_oneshot_mods(MOD_BIT(KC_LALT));
             }
             break;
         case OSM_SHIFT:
             if (record->event.pressed) {
-                set_oneshot_mods(get_oneshot_mods() | MOD_BIT(KC_LSFT));
+                add_oneshot_mods(MOD_BIT(KC_LSFT));
             }
             break;
 

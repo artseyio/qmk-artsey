@@ -7,12 +7,13 @@
 #define OSM_GUI 10001
 #define OSM_ALT 10002
 #define OSM_SHIFT 10003
+#define LCK_SHIFT 10004
 #ifdef POINTING_DEVICE_ENABLE
-#define BALL_HUI 10004
-#define BALL_WHT 10005
-#define BALL_DEC 10006
-#define BALL_SCR 10007
-#define BALL_NCL 10008
-#define BALL_RCL 10009
-#define BALL_MCL 10010
+#define BALL_HUI 20000
+#define BALL_WHT 20001
+#define BALL_DEC 20002
+#define BALL_SCR 20003
+#define BALL_NCL 20004
+#define BALL_RCL 20005
+#define BALL_MCL 20006
 #endif

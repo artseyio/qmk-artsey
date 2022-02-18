@@ -26,7 +26,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
             }
         case OSM_CTRL:
-            if (record->event.pressed) {i
+            if (record->event.pressed) {
                 add_oneshot_mods(MOD_BIT(KC_LCTL));
             }
             break;

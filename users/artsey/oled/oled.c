@@ -20,11 +20,11 @@ static void render_status(void) {
     switch (get_highest_layer(layer_state)) {
         case LAYER_ID_BASE:
 #ifdef ARTSEY_SIZE_STD
-            oled_write_ln_P(PSTR(" ART"), false);
-            oled_write_ln_P(PSTR(" SEY"), false);
+            oled_write_ln_P(PSTR(" ART "), false);
+            oled_write_ln_P(PSTR(" SEY "), false);
 #endif
 #ifdef ARTSEY_SIZE_BIG
-            oled_write_ln_P(PSTR("*ART"), false);
+            oled_write_ln_P(PSTR("*ART "), false);
             oled_write_ln_P(PSTR(" SEY*"), false);
 #endif
 #ifdef ARTSEY_SIZE_40P
@@ -33,36 +33,36 @@ static void render_status(void) {
 #endif
             break;
         case LAYER_ID_NUMBERS:
-            oled_write_ln_P(PSTR(" Num"), false);
-            oled_write_ln_P(PSTR(" ber"), false);
+            oled_write_ln_P(PSTR(" Num "), false);
+            oled_write_ln_P(PSTR(" ber "), false);
             break;
         case LAYER_ID_SYMBOLS:
-            oled_write_ln_P(PSTR(" Sym"), false);
-            oled_write_ln_P(PSTR(" bol"), false);
+            oled_write_ln_P(PSTR(" Sym "), false);
+            oled_write_ln_P(PSTR(" bol "), false);
             break;
         case LAYER_ID_PARENTHETICALS:
-            oled_write_ln_P(PSTR(" Par"), false);
-            oled_write_ln_P(PSTR("  en"), false);
+            oled_write_ln_P(PSTR(" Par "), false);
+            oled_write_ln_P(PSTR("  en "), false);
             break;
         case LAYER_ID_NAVIGATION:
-            oled_write_ln_P(PSTR("Nav"), false);
-            oled_write_ln_P("", false);
+            oled_write_ln_P(PSTR(" Nav "), false);
+            oled_write_ln_P(PSTR("     "), false);
             break;
         case LAYER_ID_MOUSE:
-            oled_write_ln_P(PSTR("Mou"), false);
-            oled_write_ln_P(" se", false);
+            oled_write_ln_P(PSTR(" Mou "), false);
+            oled_write_ln_P(PSTR("  se "), false);
             break;
         case LAYER_ID_CUSTOM:
-            oled_write_ln_P(PSTR(" Cus"), false);
-            oled_write_ln_P(PSTR(" tom"), false);
+            oled_write_ln_P(PSTR(" Cus "), false);
+            oled_write_ln_P(PSTR(" tom "), false);
             break;
 #ifdef ARTSEY_SIZE_BIG
         case LAYER_ID_BIG_SYM:
-            oled_write_ln_P(PSTR("*Sym"), false);
+            oled_write_ln_P(PSTR("*Sym "), false);
             oled_write_ln_P(PSTR(" bol*"), false);
             break;
         case LAYER_ID_BIG_FUN:
-            oled_write_ln_P(PSTR("*Fun"), false);
+            oled_write_ln_P(PSTR("*Fun "), false);
             oled_write_ln_P(PSTR("  ct*"), false);
             break;
 #endif
@@ -76,21 +76,21 @@ static void render_status(void) {
             oled_write_ln_P(PSTR("* ct*"), false);
             break;
         case LAYER_ID_40P_BASE:
-            oled_write_ln_P(PSTR("40%"), false);
-            oled_write_ln_P(PSTR("ANSI"), false);
+            oled_write_ln_P(PSTR(" 40% "), false);
+            oled_write_ln_P(PSTR(" ANSI"), false);
             break;
         case LAYER_ID_40P_FUNCTION:
-            oled_write_ln_P(PSTR("40%"), false);
-            oled_write_ln_P(PSTR("Fun"), false);
+            oled_write_ln_P(PSTR(" 40% "), false);
+            oled_write_ln_P(PSTR(" Fun "), false);
             break;
         case LAYER_ID_40P_NAVIGATION:
-            oled_write_ln_P(PSTR("40%"), false);
-            oled_write_ln_P(PSTR("Nav"), false);
+            oled_write_ln_P(PSTR(" 40% "), false);
+            oled_write_ln_P(PSTR(" Nav "), false);
             break;
 #endif
         default:
-            oled_write_ln_P(PSTR(" ???"), false);
-            oled_write_ln_P(PSTR(" ???"), false);
+            oled_write_ln_P(PSTR(" ??? "), false);
+            oled_write_ln_P(PSTR(" ??? "), false);
             break;
     }
 

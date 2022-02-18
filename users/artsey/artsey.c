@@ -18,22 +18,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case OSM_CTRL:
             if (record->event.pressed) {
-                set_oneshot_mods(MOD_BIT(KC_LCTL));
+                set_oneshot_mods(get_oneshot_mods() | MOD_BIT(KC_LCTL));
             }
             break;
         case OSM_GUI:
             if (record->event.pressed) {
-                set_oneshot_mods(MOD_BIT(KC_LGUI));
+                set_oneshot_mods(get_oneshot_mods() | MOD_BIT(KC_LGUI));
             }
             break;
         case OSM_ALT:
             if (record->event.pressed) {
-                set_oneshot_mods(MOD_BIT(KC_LALT));
+                set_oneshot_mods(get_oneshot_mods() | MOD_BIT(KC_LALT));
             }
             break;
         case OSM_SHIFT:
             if (record->event.pressed) {
-                set_oneshot_mods(MOD_BIT(KC_LSFT));
+                set_oneshot_mods(get_oneshot_mods() | MOD_BIT(KC_LSFT));
             }
             break;
 

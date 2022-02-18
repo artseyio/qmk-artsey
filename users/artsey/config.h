@@ -36,13 +36,6 @@
 //     keymap code for dynamic hand selection based on compile flag
 #include "layout/_layout.h"
 
-// //////////
-// OLED
-#ifdef OLED_ENABLE
-#undef OLED_BRIGHTNESS
-#define OLED_BRIGHTNESS 127 // Max: 255
-#endif
-
 // ////////
 // Pimoroni trackball
 #ifdef POINTING_DEVICE_ENABLE

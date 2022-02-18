@@ -95,11 +95,17 @@ endif
 
 ##########
 # OLED enable based on board support
+ifndef OLED_ENABLE
 ifeq ($(KEYBOARD), $(filter $(KEYBOARD), artsey/thepaintbrush crkbd/rev1 ristretto))
     OLED_ENABLE = yes
-    OPT_DEFS += -DOLED_ENABLE -DOLED_DRIVER=SSD1306
+else
+	OLED_ENABLE = no
+endif
 endif
 ifeq ($(OLED_ENABLE), yes)
+ifndef OLED_BRIGHTNESS
+	OLED_BRIGHTNESS = 127
+endif
 ifndef ARTSEY_BOOT_LOGO_TIMEOUT
 	ARTSEY_BOOT_LOGO_TIMEOUT = 2000
 endif
@@ -107,9 +113,12 @@ ifndef ARTSEY_OLED_ICON
 	ARTSEY_OLED_ICON = badslime_1
 endif
 	SRC += oled/oled.c
-	OPT_DEFS += -DARTSEY_BOOT_LOGO_TIMEOUT=$(ARTSEY_BOOT_LOGO_TIMEOUT) -DARTSEY_OLED_ICON=icon_$(ARTSEY_OLED_ICON)
+	OPT_DEFS += -DOLED_ENABLE -DOLED_BRIGHTNESS=$(OLED_BRIGHTNESS) -DARTSEY_BOOT_LOGO_TIMEOUT=$(ARTSEY_BOOT_LOGO_TIMEOUT) -DARTSEY_OLED_ICON=icon_$(ARTSEY_OLED_ICON)
 ifeq ($(ARTSEY_BOOT_LOGO), no)
 else
 	OPT_DEFS += -DARTSEY_BOOT_LOGO
+endif
+ifeq ($(KEYBOARD), $(filter $(KEYBOARD), artsey/thepaintbrush crkbd/rev1 ristretto))
+    OPT_DEFS += -DOLED_DRIVER=SSD1306
 endif
 endif

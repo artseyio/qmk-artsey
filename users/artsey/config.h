@@ -10,9 +10,15 @@
 #define EXTRA_LONG_COMBOS
 
 // //////////
+// 40% ARTSEY tap dance stuff
+#ifdef ARTSEY_SIZE_40P
+#define TAPPING_TERM_PER_KEY
+#endif
+
+// //////////
 // One Shot Config (space/crtl/etc)
 #define ONESHOT_TAP_TOGGLE 5  /* Tapping this number of times holds the key until tapped once again. */
-#define ONESHOT_TIMEOUT 5000  /* Time (in ms) before the one shot key is released */
+#define ONESHOT_TIMEOUT 2500  /* Time (in ms) before the one shot key is released */
 
 // //////////
 // Ensure 'master' is set to match handedness of artsey

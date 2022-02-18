@@ -52,6 +52,13 @@ ifeq ($(strip $(ARTSEY_HAND)), right)
 endif
 
 ##########
+# User tunable timings
+ifndef TAPPING_TERM
+	TAPPING_TERM = 200
+endif
+OPT_DEFS += -DTAPPING_TERM=$(TAPPING_TERM)
+
+##########
 # Set remix for all build steps
 ifeq ($(strip $(ARTSEY_REMIX)), yes)
 	ARTSEY_REMIX = yes

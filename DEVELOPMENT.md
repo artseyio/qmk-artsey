@@ -19,6 +19,7 @@ cd /qmk_firmware/users/artsey
 # OLED_BRIGHTNESS the brightness of the oled at startup if no user values set. default: 127 (50% brightness)
 # PIMORONI_BRIGHTNESS the brightness of the pimoroni trackball at startup if no user values set. default: 127 (50% brightness)
 # PIMORONI_RGBW the rgb code for the pimoroni trackball at startup if no user values set. default: 255,255,255 (white)
+# TAPPING_TERM the timeout for tap dances (40% artsey only). in miliseconds ; default: 200
 qmk -v compile -e ARTSEY_SIZE=[std|big|40p] \
                -e ARTSEY_HAND=[left|right] \
                -e ARTSEY_REMIX=[yes|no] \
@@ -30,6 +31,7 @@ qmk -v compile -e ARTSEY_SIZE=[std|big|40p] \
                -e OLED_BRIGHTNESS=[0...255] \
                -e PIMORONI_BRIGHTNESS=[0...255] \
                -e PIMORONI_RGB="255,255,255" \
+               -e TAPPING_TERM=200 \
        layout/[board.json]
 ```
 

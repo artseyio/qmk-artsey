@@ -3,17 +3,16 @@
 
 #include QMK_KEYBOARD_H
 #include "artsey.h"
-#include "layout/combos.h"
+
+#ifdef POINTING_DEVICE_ENABLE
+#include "layout/pimoroni.h"
+#endif
 
 void keyboard_post_init_user(void) {
 #ifdef POINTING_DEVICE_ENABLE
     pimoroni_trackball_set_rgbw(PIMORONI_RGB, PIMORONI_BRIGHTNESS);
 #endif
 }
-
-#ifdef POINTING_DEVICE_ENABLE
-#include "layout/pimoroni.h"
-#endif
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {

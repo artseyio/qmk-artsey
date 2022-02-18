@@ -46,8 +46,12 @@ qmk clean && qmk -v compile \
   -e ARTSEY_PIMORONI=yes \
   -e ARTSEY_SIZE=[big|40p] \
   -e ARTSEY_HAND=left \
-  layout/crkbd_rev1_40p.json
+  layout/crkbd_rev1_40p.json 2>&1 | tee ../../.build/build.log
 ```
+
+## Remixing
+
+Start with `layouts/_layout.h` and follow the code from there.
 
 ## Visual Studio Code
 

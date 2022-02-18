@@ -2,9 +2,35 @@
 // SPDX-License-Identifier: Apache-2.0
 #pragma once
 
+// /////////
+// User remixes / tweaks -- these take precidence above all else
+#ifdef ARTSEY_REMIX
+#include "remixes/remix_globals.h"
+#endif
+
 // //////////
 // ARTSEY layer ids (needed everywhere)
-#include "layer_names.h"
+#include "layer_ids.h"
+
+// //////////
+// Keycode definitons (needed everywhere)
+#include "layout/keycodes.h"
+
+// //////////
+// Combo definitons
+// are included in ../artsey.h due to build system limitations
+
+// //////////
+// Tap dance for 40%
+#ifdef ARTSEY_SIZE_40P
+#include "tap_dance.h"
+#endif
+
+// //////////
+// Pimoroni stuff
+#ifdef POINTING_DEVICE_ENABLE
+#include "layout/pimoroni.h"
+#endif
 
 // //////////
 // Board tuning so standard layout/map can be built programatically

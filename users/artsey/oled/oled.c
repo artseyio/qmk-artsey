@@ -2,6 +2,11 @@
 // SPDX-License-Identifier: Apache-2.0
 
 #include QMK_KEYBOARD_H
+
+// //////////
+// ARTSEY layer ids (needed everywhere)
+#include "../layout/layer_ids.h"
+
 #include "oled.h"
 #include "logo.h"
 

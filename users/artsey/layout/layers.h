@@ -1,23 +1,9 @@
+// Copyright (c) 2021 Mike "KemoNine" Crosson
+// SPDX-License-Identifier: Apache-2.0
 #pragma once
 
-// //////////
-// Tap dance for 40%
-#ifdef ARTSEY_SIZE_40P
-#include "tap_dance.h"
-#endif
-
-// //////////
-// Board tuning so standard layout/map can be built programatically
-//
-#ifdef KEYBOARD_crkbd_rev1
-#include "boards/crkbd_rev1.h"
-#endif
-#ifdef KEYBOARD_draculad
-#include "boards/draculad.h"
-#endif
-
 // /////////
-// User remixes / tweaks
+// User remixes / tweaks -- these take precidence above all else
 #ifdef ARTSEY_REMIX
 #include "remixes/remix_layers.h"
 #endif
@@ -116,9 +102,9 @@ KC_MS_L,          KC_MS_D,          KC_MS_R,          KC_WH_D
 BIG_LEADING_NONES \
 LT(LAYER_ID_NUMBERS, KC_S),             KC_T,             KC_R,             LT(LAYER_ID_PARENTHETICALS, KC_A),      ARTSEY_MINUS,          \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-LT(LAYER_ID_CUSTOM, KC_O),              KC_I,             KC_Y,             LT(LAYER_ID_SYMBOLS, KC_E),             KC_LSFT,          \
+LT(LAYER_ID_CUSTOM, KC_O),              KC_I,             KC_Y,             LT(LAYER_ID_SYMBOLS, KC_E),             OSM_SHIFT,          \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
-LALT_T(KC_LCTL),                        KC_AT,            KC_DEL,           KC_EQL,                                 KC_TAB,           \
+LALT_T(OSM_CTRL),                        KC_AT,            KC_DEL,           KC_EQL,                                 KC_TAB,           \
 BIG_BETWEEN_ROW_THREE_THUMBS_NONES \
 MO(LAYER_ID_BIG_SYM),      KC_SPC,           KC_ENT \
 BIG_TRAILING_NONES
@@ -238,9 +224,9 @@ BIG_TRAILING_NONES
 BIG_LEADING_NONES \
 ARTSEY_MINUS,     LT(LAYER_ID_PARENTHETICALS, KC_A),             KC_R,             KC_T,             LT(LAYER_ID_NUMBERS, KC_S),             \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-KC_LSFT,          LT(LAYER_ID_SYMBOLS, KC_E),                    KC_Y,             KC_I,             LT(LAYER_ID_CUSTOM, KC_O),              \
+OSM_SHIFT,          LT(LAYER_ID_SYMBOLS, KC_E),                    KC_Y,             KC_I,             LT(LAYER_ID_CUSTOM, KC_O),              \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
-KC_TAB,           KC_EQL,                    KC_DEL,           KC_AT,            KC_LCTL,          \
+KC_TAB,           KC_EQL,                    KC_DEL,           KC_AT,            OSM_CTRL,          \
 BIG_BETWEEN_ROW_THREE_THUMBS_NONES \
 KC_ENT,           KC_SPC,           MO(LAYER_ID_BIG_SYM) \
 BIG_TRAILING_NONES
@@ -355,7 +341,7 @@ BIG_TRAILING_NONES
 BIG_LEADING_NONES \
 LT(LAYER_ID_NUMBERS, KC_S),             KC_T,             KC_R,             LT(LAYER_ID_PARENTHETICALS, KC_A),      KC_MINS,          \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-LT(LAYER_ID_CUSTOM, KC_O),              KC_I,             KC_Y,             LT(LAYER_ID_SYMBOLS, KC_E),             KC_LSFT,          \
+LT(LAYER_ID_CUSTOM, KC_O),              KC_I,             KC_Y,             LT(LAYER_ID_SYMBOLS, KC_E),             OSM_SHIFT,          \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
 LALT_T(KC_LCTL),                        KC_AT,            KC_DEL,           KC_EQL,                                 KC_TAB,           \
 BIG_BETWEEN_ROW_THREE_THUMBS_NONES \

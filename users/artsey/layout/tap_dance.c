@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 #include QMK_KEYBOARD_H
 #include "tap_dance.h"
-#include "layer_names.h"
+#include "layer_ids.h"
 
 // //////////////////
 // Config/setup/stubs

@@ -5,7 +5,7 @@
 
 // //////////
 // Combos Config
-#include "layout/layer_names.h"
+#include "layout/layer_ids.h"
 #define COMBO_ONLY_FROM_LAYER LAYER_ID_BASE
 #define EXTRA_LONG_COMBOS
 
@@ -31,11 +31,6 @@
 #define MASTER_RIGHT
 #endif
 
-// //////////
-// Key and layout wrapper macros - this is critical!
-//     keymap code for dynamic hand selection based on compile flag
-#include "layout/_layout.h"
-
 // ////////
 // Pimoroni trackball
 #ifdef POINTING_DEVICE_ENABLE
@@ -49,3 +44,7 @@
 #define POINTING_DEVICE_INVERT_Y
 #endif
 #endif
+
+// //////////
+// Most of artsey, the WHOLE layout, start here for remixes - this is critical!
+#include "layout/_layout.h"

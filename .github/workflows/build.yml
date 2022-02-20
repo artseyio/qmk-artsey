@@ -21,6 +21,12 @@ jobs:
           - layout: artsey_thepaintbrush
             hand: right
             size: std
+          - layout: faunchpad
+            hand: left
+            size: std
+          - layout: faunchpad
+            hand: right
+            size: std
           - layout: crkbd_rev1
             hand: left
             size: big
@@ -39,12 +45,36 @@ jobs:
           - layout: ristretto
             hand: right
             size: big
-          - layout: faunchpad
+          - layout: ferris_sweep
             hand: left
-            size: std
-          - layout: faunchpad
+            size: big
+          - layout: ferris_sweep
             hand: right
-            size: std
+            size: big
+          - layout: draculad
+            hand: left
+            size: big
+          - layout: draculad
+            hand: right
+            size: big
+          - layout: crkbd_rev1
+            hand: left
+            size: 40p
+          - layout: crkbd_rev1
+            hand: right
+            size: 40p
+          - layout: ferris_sweep
+            hand: left
+            size: 40p
+          - layout: ferris_sweep
+            hand: right
+            size: 40p
+          - layout: draculad
+            hand: left
+            size: 40p
+          - layout: draculad
+            hand: right
+            size: 40p
     steps:
       - name: Checkout
         uses: actions/checkout@v2

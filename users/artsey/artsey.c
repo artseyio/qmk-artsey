@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 #include QMK_KEYBOARD_H
+#include "g/keymap_combo.h"
 #include "artsey.h"
 
 #ifdef POINTING_DEVICE_ENABLE

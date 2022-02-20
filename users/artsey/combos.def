@@ -5,7 +5,7 @@ COMB(combo_gui,                      OSM_GUI,                       KC_Y, LT(LAY
 COMB(combo_alt,                      OSM_ALT,                       KC_I, LT(LAYER_ID_NUMBERS, KC_S))
 COMB(combo_backspace,                KC_BSPC,                       LT(LAYER_ID_SYMBOLS, KC_E), KC_R)
 COMB(combo_delete,                   KC_DEL,                        KC_I, KC_R)
-COMB(combo_shift_lock,               KC_CAPS,                       KC_R, KC_Y)
+COMB(combo_shift_lock,               OSM_SHIFT,                     KC_R, KC_Y)
 COMB(combo_b,                        KC_B,                          LT(LAYER_ID_SYMBOLS, KC_E), LT(LAYER_ID_CUSTOM, KC_O))
 COMB(combo_c,                        KC_C,                          LT(LAYER_ID_SYMBOLS, KC_E), KC_Y)
 COMB(combo_n,                        KC_N,                          KC_I, LT(LAYER_ID_CUSTOM, KC_O))
@@ -20,7 +20,7 @@ COMB(combo_k,                        KC_K,                          KC_Y, LT(LAY
 COMB(combo_comma,                    KC_COMM,                       LT(LAYER_ID_PARENTHETICALS,KC_A), KC_Y)
 COMB(combo_period,                   KC_DOT,                        LT(LAYER_ID_PARENTHETICALS,KC_A), KC_I)
 COMB(combo_slash,                    KC_SLSH,                       LT(LAYER_ID_PARENTHETICALS,KC_A), LT(LAYER_ID_CUSTOM, KC_O))
-COMB(combo_exclamation,              KC_EXCL,                       KC_T, KC_I)
+COMB(combo_exclamation,              KC_EXLM,                       KC_T, KC_I)
 COMB(combo_seven,                    KC_7,                          KC_2, KC_1)
 COMB(combo_eight,                    KC_8,                          KC_3, KC_2)
 COMB(combo_nine,                     KC_9,                          KC_4, KC_5)
@@ -41,7 +41,7 @@ COMB(combo_single_quote,             KC_QUOT,                       LT(LAYER_ID_
 // 4 Key Combos
 COMB(combo_tab,                      KC_TAB,                        LT(LAYER_ID_PARENTHETICALS,KC_A), KC_R, KC_T, LT(LAYER_ID_CUSTOM, KC_O))
 COMB(combo_space,                    KC_SPACE,                      LT(LAYER_ID_SYMBOLS, KC_E), KC_Y, KC_I, LT(LAYER_ID_CUSTOM, KC_O))
-COMB(combo_shift,                    OSM_SHFT,                      LT(LAYER_ID_SYMBOLS, KC_E), KC_R, KC_T, LT(LAYER_ID_NUMBERS, KC_S))
+COMB(combo_shift,                    KC_LSFT,                       LT(LAYER_ID_SYMBOLS, KC_E), KC_R, KC_T, LT(LAYER_ID_NUMBERS, KC_S))
 COMB(combo_z,                        KC_Z,                          LT(LAYER_ID_PARENTHETICALS,KC_A), KC_R, KC_T, LT(LAYER_ID_NUMBERS, KC_S))
 COMB(combo_caps_lock,                KC_CAPS,                       LT(LAYER_ID_CUSTOM, KC_O), KC_I, KC_Y, LT(LAYER_ID_PARENTHETICALS,KC_A))
 // Big Artsey Combos

@@ -21,6 +21,10 @@ ifneq ($(PLATFORM),CHIBIOS)
     endif
 endif
 
+##########
+# Combo engine related
+VPATH += keyboards/gboards/
+
 ###########
 # ARTSEY Sources
 SRC += artsey.c
@@ -56,7 +60,11 @@ endif
 ifndef TAPPING_TERM
 	TAPPING_TERM = 200
 endif
-OPT_DEFS += -DTAPPING_TERM=$(TAPPING_TERM)
+ifndef COMBO_TERM
+	COMBO_TERM = 300
+endif
+OPT_DEFS += -DTAPPING_TERM=$(TAPPING_TERM) -DCOMBO_TERM=$(COMBO_TERM)
+
 
 ##########
 # Set remix for all build steps
@@ -74,9 +82,16 @@ endif
 
 ##########
 # 5 column flag for 40% ARTSEY
-ifeq ($(KEYBOARD), $(filter $(KEYBOARD), artsey/thepaintbrush crkbd/rev1 ristretto))
+ifeq ($(KEYBOARD), $(filter $(KEYBOARD), draculad ferris/sweep))
 	ARTSEY_FIVE_COLUMN = yes
 	OPT_DEFS += -DARTSEY_FIVE_COLUMN
+endif
+
+##########
+# 2 thumb flag
+ifeq ($(KEYBOARD), $(filter $(KEYBOARD), ferris/sweep))
+	ARTSEY_TWO_THUMB = yes
+	OPT_DEFS += -DARTSEY_TWO_THUMB
 endif
 
 ##########

@@ -18,7 +18,7 @@
 
 // //////////
 // Combo definitons
-// are included in ../artsey.h due to build system limitations
+// are included in ../combos.def ; use use the more advanced combo engine germ maintains (is built into qmk core sources)
 
 // //////////
 // Tap dance for 40%
@@ -45,6 +45,9 @@
 #endif
 #ifdef KEYBOARD_draculad
 #include "boards/draculad.h"
+#endif
+#ifdef KEYBOARD_ferris_sweep
+#include "boards/ferris_sweep.h"
 #endif
 
 // //////////

@@ -8,6 +8,7 @@
 #include "layout/layer_ids.h"
 #define COMBO_ONLY_FROM_LAYER LAYER_ID_BASE
 #define EXTRA_LONG_COMBOS
+#define COMBO_VARIABLE_LEN
 
 // //////////
 // 40% ARTSEY tap dance stuff

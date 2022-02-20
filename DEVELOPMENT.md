@@ -20,6 +20,7 @@ cd /qmk_firmware/users/artsey
 # PIMORONI_BRIGHTNESS the brightness of the pimoroni trackball at startup if no user values set. default: 127 (50% brightness)
 # PIMORONI_RGBW the rgb code for the pimoroni trackball at startup if no user values set. default: 255,255,255 (white)
 # TAPPING_TERM the timeout for tap dances (40% artsey only). in miliseconds ; default: 200
+# COMBO_TERM the timeout for combos (all artsey variations). in miliseconds ; default 300
 qmk -v compile -e ARTSEY_SIZE=[std|big|40p] \
                -e ARTSEY_HAND=[left|right] \
                -e ARTSEY_REMIX=[yes|no] \
@@ -32,6 +33,7 @@ qmk -v compile -e ARTSEY_SIZE=[std|big|40p] \
                -e PIMORONI_BRIGHTNESS=[0...255] \
                -e PIMORONI_RGB="255,255,255" \
                -e TAPPING_TERM=200 \
+               -e COMBO_TERM=300 \
        layout/[board.json]
 ```
 
@@ -39,12 +41,12 @@ qmk -v compile -e ARTSEY_SIZE=[std|big|40p] \
 
 ```
 root@d8949d0fe972:/qmk_firmware/users/artsey# 
-qmk clean && qmk -v compile \
+rm -rf ../../.build/* && qmk -v compile \
   -e OLED_BRIGHTNESS=64 \
   -e PIMORONI_BRIGHTNESS=7 \
   -e PIMORONI_RGB="255,165,0" \
-  -e ARTSEY_PIMORONI=yes \
-  -e ARTSEY_SIZE=[big|40p] \
+  -e ARTSEY_PIMORONI=no \
+  -e ARTSEY_SIZE=40p \
   -e ARTSEY_HAND=left \
   layout/crkbd_rev1_40p.json 2>&1 | tee ../../.build/build.log
 ```
@@ -52,6 +54,18 @@ qmk clean && qmk -v compile \
 ## Remixing
 
 Start with `layouts/_layout.h` and follow the code from there.
+
+### Combos
+
+Per the docs at [http://combos.gboards.ca/docs/combos/](http://combos.gboards.ca/docs/combos/):
+
+```
+inject.h
+
+Sometimes when you’re deep in combo shenanigans you need access to process_combo_event() that this decorator wraps. If you need to put something in there manually for debugging purposes or otherwise, create a file inject.h in your keymap directory. If this file exists all code in it will be inserted into process_combo_event()` after the decorator stuff.
+```
+
+Also see [http://combos.gboards.ca/docs/combos/](http://combos.gboards.ca/docs/manage/)
 
 ## Visual Studio Code
 

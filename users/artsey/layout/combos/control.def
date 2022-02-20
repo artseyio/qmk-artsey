@@ -1,0 +1,7 @@
+// Copyright (c) 2021 Mike "KemoNine" Crosson
+// SPDX-License-Identifier: Apache-2.0
+//   NAME                            RESULT                         TRIGGER
+COMB(combo_backspace,                KC_BSPC,                       LT(LAYER_ID_SYMBOLS, KC_E), KC_R)
+COMB(combo_delete,                   KC_DEL,                        KC_I, KC_R)
+COMB(combo_tab,                      KC_TAB,                        LT(LAYER_ID_PARENTHETICALS,KC_A), KC_R, KC_T, LT(LAYER_ID_CUSTOM, KC_O))
+COMB(combo_space,                    KC_SPACE,                      LT(LAYER_ID_SYMBOLS, KC_E), KC_Y, KC_I, LT(LAYER_ID_CUSTOM, KC_O))

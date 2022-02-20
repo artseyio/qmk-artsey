@@ -1,0 +1,8 @@
+// Copyright (c) 2021 Mike "KemoNine" Crosson
+// SPDX-License-Identifier: Apache-2.0
+//   NAME                            RESULT                         TRIGGER
+COMB(combo_comma,                    KC_COMM,                       LT(LAYER_ID_PARENTHETICALS,KC_A), KC_Y)
+COMB(combo_period,                   KC_DOT,                        LT(LAYER_ID_PARENTHETICALS,KC_A), KC_I)
+COMB(combo_slash,                    KC_SLSH,                       LT(LAYER_ID_PARENTHETICALS,KC_A), LT(LAYER_ID_CUSTOM, KC_O))
+COMB(combo_exclamation,              KC_EXLM,                       KC_T, KC_I)
+COMB(combo_single_quote,             KC_QUOT,                       LT(LAYER_ID_PARENTHETICALS,KC_A), KC_Y, KC_I)

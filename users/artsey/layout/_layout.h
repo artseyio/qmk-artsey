@@ -49,6 +49,9 @@
 #ifdef KEYBOARD_ferris_sweep
 #include "boards/ferris_sweep.h"
 #endif
+#ifdef KEYBOARD_minidox_rev1
+#include "boards/minidox_rev1.h"
+#endif
 
 // //////////
 // Include layers last so all overrides and ids are set prior to processing
@@ -68,7 +71,11 @@
 #ifdef KEYBOARD_faunchpad
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_faunch(__VA_ARGS__)
 #else
+#ifdef KEYBOARD_minidox_rev1
+#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_split_3x5_3(__VA_ARGS__)
+#else
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT(__VA_ARGS__)
+#endif
 #endif
 #endif
 #endif

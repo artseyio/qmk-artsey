@@ -3,6 +3,8 @@
 //   NAME                            RESULT                         TRIGGER
 COMB(combo_backspace_base,                KC_BSPC,                       LT(LAYER_ID_SYMBOLS, KC_E), KC_R)
 COMB(combo_delete_base,                   KC_DEL,                        KC_I, KC_R)
+COMB(combo_backspace_num,                KC_BSPC,                        KC_4, KC_2)
+COMB(combo_delete_num,                   KC_DEL,                         KC_6, KC_2)
 COMB(combo_tab_base,                      KC_TAB,                        LT(LAYER_ID_PARENTHETICALS,KC_A), KC_R, KC_T, LT(LAYER_ID_CUSTOM, KC_O))
 COMB(combo_space_base,                    KC_SPACE,                      LT(LAYER_ID_SYMBOLS, KC_E), KC_Y, KC_I, LT(LAYER_ID_CUSTOM, KC_O))
 

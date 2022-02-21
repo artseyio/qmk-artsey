@@ -1,7 +1,33 @@
 // Copyright (c) 2021 Mike "KemoNine" Crosson
 // SPDX-License-Identifier: Apache-2.0
 //   NAME                            RESULT                         TRIGGER
-COMB(combo_backspace,                KC_BSPC,                       LT(LAYER_ID_SYMBOLS, KC_E), KC_R)
-COMB(combo_delete,                   KC_DEL,                        KC_I, KC_R)
-COMB(combo_tab,                      KC_TAB,                        LT(LAYER_ID_PARENTHETICALS,KC_A), KC_R, KC_T, LT(LAYER_ID_CUSTOM, KC_O))
-COMB(combo_space,                    KC_SPACE,                      LT(LAYER_ID_SYMBOLS, KC_E), KC_Y, KC_I, LT(LAYER_ID_CUSTOM, KC_O))
+COMB(combo_backspace_base,                KC_BSPC,                       LT(LAYER_ID_SYMBOLS, KC_E), KC_R)
+COMB(combo_delete_base,                   KC_DEL,                        KC_I, KC_R)
+COMB(combo_tab_base,                      KC_TAB,                        LT(LAYER_ID_PARENTHETICALS,KC_A), KC_R, KC_T, LT(LAYER_ID_CUSTOM, KC_O))
+COMB(combo_space_base,                    KC_SPACE,                      LT(LAYER_ID_SYMBOLS, KC_E), KC_Y, KC_I, LT(LAYER_ID_CUSTOM, KC_O))
+
+COMB(combo_space_nav,                     KC_SPACE,                      KC_PGDN, KC_LEFT, KC_DOWN, KC_RIGHT)
+COMB(combo_tab_nav,                       KC_TAB,                        KC_PGDN, KC_HOME, KC_UP, KC_END)
+#ifdef ARTSEY_HAND_LEFT
+COMB(combo_backspace_nav,                 KC_BSPC,                       KC_UP, KC_RIGHT)
+COMB(combo_delete_nav,                    KC_DEL,                        KC_UP, KC_LEFT)
+#endif
+#ifdef ARTSEY_HAND_RIGHT
+COMB(combo_backspace_nav,                 KC_BSPC,                       KC_UP, KC_LEFT)
+COMB(combo_delete_nav,                    KC_DEL,                        KC_UP, KC_RIGHT)
+#endif
+
+#ifdef ARTSEY_SIZE_40P
+#ifdef ARTSEY_HAND_LEFT
+COMB(combo_backspace_base_40p,            KC_BSPC,                       LEFT_SYMBOLS, KC_E)
+COMB(combo_delete_base_40p,               KC_DEL,                        KC_S, KC_E)
+COMB(combo_tab_base_40p,                  KC_TAB,                        LEFT_CUSTOM, KC_W, KC_E, LEFT_PARENTHETICALS)
+COMB(combo_space_base_40p,                KC_SPACE,                      LEFT_CUSTOM,  KC_S, KC_D, LEFT_SYMBOLS)
+#endif
+#ifdef ARTSEY_HAND_RIGHT
+COMB(combo_backspace_base_40p,            KC_BSPC,                       RIGHT_SYMBOLS, KC_I)
+COMB(combo_delete_base_40p,               KC_DEL,                        KC_I, KC_L)
+COMB(combo_tab_base_40p,                  KC_TAB,                        RIGHT_PARENTHETICALS, KC_I, KC_O, RIGHT_CUSTOM)
+COMB(combo_space_base_40p,                KC_SPACE,                      RIGHT_SYMBOLS,        KC_K, KC_L, RIGHT_CUSTOM)
+#endif
+#endif

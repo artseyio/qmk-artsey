@@ -2,10 +2,11 @@
 // SPDX-License-Identifier: Apache-2.0
 //   NAME                            RESULT                         TRIGGER
 COMB(combo_layer_basenav,            TG(LAYER_ID_NAVIGATION),       KC_R, LT(LAYER_ID_SYMBOLS, KC_E), KC_I)
-COMB(combo_layer_navbase,            TG(LAYER_ID_BASE),             KC_UP, KC_LEFT, KC_RIGHT)
+COMB(combo_layer_navbase,            TG(LAYER_ID_NAVIGATION),       KC_UP, KC_LEFT, KC_RIGHT)
 COMB(combo_layer_basemse,            TG(LAYER_ID_MOUSE),            LT(LAYER_ID_PARENTHETICALS,KC_A), KC_T, KC_Y)
-COMB(combo_layer_msebase,            TG(LAYER_ID_BASE),             KC_BTN1, KC_BTN2, KC_MS_D)
+COMB(combo_layer_msebase,            TG(LAYER_ID_MOUSE),            KC_BTN1, KC_BTN2, KC_MS_D)
 
 #ifdef ARTSEY_SIZE_BIG
-COMB(combo_fun,                      TG(LAYER_ID_BIG_FUN),          OSM_SHIFT, KC_TAB)
+//TODO Turn this on AFTER figuring out how to toggle off / change enable combo
+//COMB(combo_layer_basefun,            TG(LAYER_ID_BIG_FUN),          OSM_SHIFT, KC_TAB)
 #endif

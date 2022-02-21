@@ -8,6 +8,8 @@
 #define OSM_ALT 10002
 #define OSM_SHIFT 10003
 #define LCK_SHIFT 10004
+#define FUN_1 10005
+#define FUN_2 10006
 #ifdef POINTING_DEVICE_ENABLE
 #define BALL_HUI 20000
 #define BALL_WHT 20001

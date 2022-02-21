@@ -7,6 +7,11 @@ COMB(combo_layer_basemse,            TG(LAYER_ID_MOUSE),            LT(LAYER_ID_
 COMB(combo_layer_msebase,            TG(LAYER_ID_MOUSE),            KC_BTN1, KC_BTN2, KC_MS_D)
 
 #ifdef ARTSEY_SIZE_BIG
-//TODO Turn this on AFTER figuring out how to toggle off / change enable combo
-//COMB(combo_layer_basefun,            TG(LAYER_ID_BIG_FUN),          OSM_SHIFT, KC_TAB)
+COMB(combo_layer_basefun,            TG(LAYER_ID_BIG_FUN),          KC_MINUS, KC_TAB)
+COMB(combo_layer_funbase,            TG(LAYER_ID_BIG_FUN),          FUN_1, FUN_2)
+#endif
+
+#ifdef ARTSEY_SIZE_40p
+COMB(combo_layer_40pfun,             TG(LAYER_ID_BIG_FUN),          OSM_SHIFT, KC_TAB)
+COMB(combo_layer_fun40p,             TG(LAYER_ID_BIG_FUN),          OSM_SHIFT, KC_TAB)
 #endif

@@ -12,6 +12,9 @@ NKRO_ENABLE = yes
 SPACE_CADET_ENABLE = no
 TERMINAL_ENABLE = no
 VIA_ENABLE = no
+WPM_ENABLE = no
+ENCODER_ENABLE = no
+RGBLIGHT_ENABLE = no
 
 ##########
 # Enable LTO if possible (graphics on avr mainly)

@@ -23,6 +23,8 @@ cd /qmk_firmware/users/artsey
 # PIMORONI_RGBW the rgb code for the pimoroni trackball at startup if no user values set. default: 255,255,255 (white)
 # TAPPING_TERM the timeout for tap dances (40% artsey only). in miliseconds ; default: 200
 # COMBO_TERM the timeout for combos (all artsey variations). in miliseconds ; default 300
+# ENCODER_ENABLE whether or not to include encoder support. default: no ; uses just over 1k of rom space which is quite large
+# RGBLIGHT_ENABLE whether or not to turn on some underglow features. default: no ; uses a TON of rom space and we need a lot for 40% artsey to work
 qmk -v compile -e ARTSEY_SIZE=[std|big|40p] \
                -e ARTSEY_HAND=[left|right] \
                -e ARTSEY_REMIX=[yes|no] \
@@ -38,6 +40,8 @@ qmk -v compile -e ARTSEY_SIZE=[std|big|40p] \
                -e PIMORONI_RGB="255,255,255" \
                -e TAPPING_TERM=200 \
                -e COMBO_TERM=300 \
+              -e ENCODER_ENABLE=[yes|no] \
+              -e RGBLIGHT_ENABLE=[yes|no] \
        layout/[board.json]
 ```
 

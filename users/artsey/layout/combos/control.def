@@ -19,14 +19,22 @@ COMB(combo_delete_nav,                    KC_DEL,                        KC_UP, 
 
 #ifdef ARTSEY_SIZE_40P
 #ifdef ARTSEY_HAND_LEFT
+#ifdef ARTSEY_40P_ANSI_BACKSPACE
 COMB(combo_backspace_base_40p,            KC_BSPC,                       LEFT_SYMBOLS, KC_E)
+#endif
+#ifdef ARTSEY_40P_ANSI_DELETE
 COMB(combo_delete_base_40p,               KC_DEL,                        KC_S, KC_E)
+#endif
 COMB(combo_tab_base_40p,                  KC_TAB,                        LEFT_CUSTOM, KC_W, KC_E, LEFT_PARENTHETICALS)
 COMB(combo_space_base_40p,                KC_SPACE,                      LEFT_CUSTOM,  KC_S, KC_D, LEFT_SYMBOLS)
 #endif
 #ifdef ARTSEY_HAND_RIGHT
+#ifdef ARTSEY_40P_ANSI_BACKSPACE
 COMB(combo_backspace_base_40p,            KC_BSPC,                       RIGHT_SYMBOLS, KC_I)
+#endif
+#ifdef ARTSEY_40P_ANSI_DELETE
 COMB(combo_delete_base_40p,               KC_DEL,                        KC_I, KC_L)
+#endif
 COMB(combo_tab_base_40p,                  KC_TAB,                        RIGHT_PARENTHETICALS, KC_I, KC_O, RIGHT_CUSTOM)
 COMB(combo_space_base_40p,                KC_SPACE,                      RIGHT_SYMBOLS,        KC_K, KC_L, RIGHT_CUSTOM)
 #endif

@@ -72,6 +72,15 @@ ifeq ($(strip $(ARTSEY_REMIX)), yes)
 	ARTSEY_REMIX = yes
 	OPT_DEFS += -DARTSEY_REMIX
 endif
+ifeq ($(strip $(ARTSEY_40P_ANSI_BACKSPACE)), yes)
+	ARTSEY_40P_ANSI_BACKSPACE = yes
+	OPT_DEFS += -DARTSEY_40P_ANSI_BACKSPACE
+endif
+ifeq ($(strip $(ARTSEY_40P_ANSI_DELETE)), yes)
+	ARTSEY_40P_ANSI_DELETE = yes
+	OPT_DEFS += -DARTSEY_40P_ANSI_DELETE
+endif
+
 
 ##########
 # Tap dance for 40% ARTSEY

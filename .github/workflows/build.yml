@@ -39,12 +39,6 @@ jobs:
           - layout: gergo
             hand: right
             size: big
-          - layout: ristretto
-            hand: left
-            size: big
-          - layout: ristretto
-            hand: right
-            size: big
           - layout: ferris_sweep
             hand: left
             size: big

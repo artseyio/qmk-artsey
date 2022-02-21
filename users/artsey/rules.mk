@@ -25,6 +25,12 @@ ifneq ($(PLATFORM),CHIBIOS)
 endif
 
 ##########
+# Ristretto build fails w/o encdoder being enabld
+ifeq ($(KEYBOARD), $(filter $(KEYBOARD), ristretto))
+    ENCODER_ENABLE = yes
+endif
+
+##########
 # Combo engine related
 VPATH += keyboards/gboards/
 

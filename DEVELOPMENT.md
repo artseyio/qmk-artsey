@@ -17,6 +17,8 @@ cd /qmk_firmware/users/artsey
 # ARTSEY_PIMORONI is an option to turn on Pimoroni mini trackball support. default: no
 # OLED_ENABLE turn on/off oled. default yes if main keybord project supports oled
 # OLED_BRIGHTNESS the brightness of the oled at startup if no user values set. default: 127 (50% brightness)
+# ARTSEY_40P_ANSI_BACKSPACE enable or disable backspace on ansi 40% layer. default: off ; is a common letter combo that will be an issue for fast typists
+# ARTSEY_40P_ANSI_DELETE enable or disable delete on ansi 40% layer. default: off ; is a common letter combo that will be an issue for fast typists
 # PIMORONI_BRIGHTNESS the brightness of the pimoroni trackball at startup if no user values set. default: 127 (50% brightness)
 # PIMORONI_RGBW the rgb code for the pimoroni trackball at startup if no user values set. default: 255,255,255 (white)
 # TAPPING_TERM the timeout for tap dances (40% artsey only). in miliseconds ; default: 200
@@ -28,6 +30,8 @@ qmk -v compile -e ARTSEY_SIZE=[std|big|40p] \
                -e ARTSEY_BOOT_LOGO_TIMEOUT=[ms] \
                -e ARTSEY_OLED_ICON=[badslime_1|badslime_2] \
                -e ARTSEY_PIMORONI=[yes|no] \
+               -e ARTSEY_40P_ANSI_BACKSPACE=[yes|no] \
+               -e ARTSEY_40P_ANSI_DELETE=[yes|no] \
                -e OLED_ENABLE=[yes|no] \
                -e OLED_BRIGHTNESS=[0...255] \
                -e PIMORONI_BRIGHTNESS=[0...255] \

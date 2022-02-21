@@ -271,9 +271,9 @@ BIG_TRAILING_NONES
 
 #define ARTSEY_BIG_LAYER_BIG_FUN_LEFT \
 BIG_LEADING_NONES \
-KC_F4,            KC_F3,            KC_F2,            KC_F1,            FUN_1,          \
+KC_F4,            KC_F3,            KC_F2,            KC_F1,            KC_NO,          \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-KC_F8,            KC_F7,            KC_F6,            KC_F5,            KC_TRNS,          \
+KC_F8,            KC_F7,            KC_F6,            KC_F5,            FUN_1,          \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
 KC_F12,           KC_F11,           KC_F10,           KC_F9,            FUN_2,            \
 BIG_BETWEEN_ROW_THREE_THUMBS_NONES \

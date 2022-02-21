@@ -45,14 +45,24 @@ qmk -v compile -e ARTSEY_SIZE=[std|big|40p] \
 
 ```
 root@d8949d0fe972:/qmk_firmware/users/artsey# 
+# Corne (6 column) 40%
 rm -rf ../../.build/* && qmk -v compile \
-  -e OLED_BRIGHTNESS=64 \
-  -e PIMORONI_BRIGHTNESS=7 \
-  -e PIMORONI_RGB="255,165,0" \
-  -e ARTSEY_PIMORONI=no \
-  -e ARTSEY_SIZE=40p \
-  -e ARTSEY_HAND=left \
-  layout/crkbd_rev1_40p.json 2>&1 | tee ../../.build/build.log
+    -e OLED_BRIGHTNESS=64 \
+    -e PIMORONI_BRIGHTNESS=7 \
+    -e PIMORONI_RGB="255,165,0" \
+    -e ARTSEY_PIMORONI=no \
+    -e ARTSEY_EXCLAMATION=KC_SCLN \
+    -e ARTSEY_SIZE=40p \
+    -e ARTSEY_HAND=left \
+    layout/crkbd_rev1_40p.json
+
+# The Paintbrush
+rm -rf ../../.build/* && qmk -v compile \
+    -e OLED_BRIGHTNESS=64 \
+    -e ARTSEY_EXCLAMATION=KC_SCLN \
+    -e ARTSEY_SIZE=std \
+    -e ARTSEY_HAND=left \
+    layout/artsey_thepaintbrush.json
 ```
 
 ## Remixing

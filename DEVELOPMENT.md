@@ -11,6 +11,11 @@ cd /qmk_firmware/users/artsey
 # ARTSEY_SIZE is a required argument
 # ARTSEY_HAND is a required argument
 # ARTSEY_REMIX is an optional argument to tell us you have customizations to include
+# ARTSEY_EXCLAMATION allows swapping the exclamaion combo kecode to a simple keycode of your choosing
+# ARTSEY_TOG_USR_1 allows setting one of the extra keys on the toggle layer
+# ARTSEY_TOG_USR_2 allows setting one of the extra keys on the toggle layer
+# ARTSEY_TOG_USR_3 allows setting one of the extra keys on the toggle layer
+# ARTSEY_TOG_USR_4 allows setting one of the extra keys on the toggle layer
 # ARTSEY_OLED_BOOT_LOGO is an optional argument. default: yes
 # ARTSEY_BOOT_LOGO_TIMEOUT is an optional timeout in miliseconds. default: 2000
 # ARTSEY_OLED_ICON is an optional icon to show on the status pages. default: badslime_1

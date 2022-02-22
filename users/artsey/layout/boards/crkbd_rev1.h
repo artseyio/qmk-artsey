@@ -2,6 +2,14 @@
 // SPDX-License-Identifier: Apache-2.0
 #pragma once
 
+// /////////
+// User remixes / tweaks -- these take precidence above all else
+#if __has_include("../remixes/boards/crkbd_rev1.h")
+#include "../remixes/boards/crkbd_rev1.h"
+
+// //////////
+// Standard Definitions
+#else
 #ifdef ARTSEY_HAND_LEFT
 #ifdef ARTSEY_SIZE_40P
 #define F0P_LEADING_NONES
@@ -38,4 +46,6 @@
 #define BIG_BETWEEN_ROW_TWO_THREE_NONES KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
 #define BIG_BETWEEN_ROW_THREE_THUMBS_NONES KC_NO, KC_NO, KC_NO, KC_NO,
 #define BIG_TRAILING_NONES
+#endif
+
 #endif

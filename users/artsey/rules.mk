@@ -104,7 +104,7 @@ endif
 
 ##########
 # 5 column flag for 40% ARTSEY
-ifeq ($(KEYBOARD), $(filter $(KEYBOARD), draculad ferris/sweep minidox/rev1))
+ifeq ($(KEYBOARD), $(filter $(KEYBOARD), draculad ferris/sweep minidox/rev1 boardsource/microdox))
 	ARTSEY_FIVE_COLUMN = yes
 	OPT_DEFS += -DARTSEY_FIVE_COLUMN
 endif

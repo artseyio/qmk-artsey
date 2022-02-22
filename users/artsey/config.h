@@ -4,6 +4,10 @@
 #pragma once
 
 // //////////
+// RGB 'stuff' is unsupported
+#undef RGBLIGHT_ANIMATIONS
+
+// //////////
 // Combos Config
 #include "layout/layer_ids.h"
 #define EXTRA_LONG_COMBOS

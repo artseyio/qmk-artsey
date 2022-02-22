@@ -85,6 +85,22 @@ rm -rf ../../.build/* && qmk -v compile \
     layout/minidox_rev1.json
 ```
 
+## Microdox
+
+```
+# 40%
+rm -rf ../../.build/* && qmk -v compile \
+    -e ARTSEY_SIZE=40p \
+    -e ARTSEY_HAND=left \
+    layout/boardsource_microdox_40p.json
+    
+# Big
+rm -rf ../../.build/* && qmk -v compile \
+    -e ARTSEY_SIZE=big \
+    -e ARTSEY_HAND=left \
+    layout/boardsource_microdox.json
+```
+
 ## Remixing
 
 Start with `layouts/_layout.h` and follow the code from there.

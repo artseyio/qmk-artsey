@@ -51,6 +51,12 @@ jobs:
           - layout: draculad
             hand: right
             size: big
+          - layout: boardsource_microdox
+            hand: left
+            size: big
+          - layout: boardsource_microdox
+            hand: right
+            size: big
           - layout: crkbd_rev1
             hand: left
             size: 40p
@@ -67,6 +73,12 @@ jobs:
             hand: left
             size: 40p
           - layout: draculad
+            hand: right
+            size: 40p
+          - layout: boardsource_microdox
+            hand: left
+            size: 40p
+          - layout: boardsource_microdox
             hand: right
             size: 40p
     steps:

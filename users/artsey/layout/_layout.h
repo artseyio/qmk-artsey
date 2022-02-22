@@ -52,6 +52,9 @@
 #ifdef KEYBOARD_minidox_rev1
 #include "boards/minidox_rev1.h"
 #endif
+#ifdef KEYBOARD_boardsource_microdox
+#include "boards/boardsource_microdox.h"
+#endif
 
 // //////////
 // Include layers last so all overrides and ids are set prior to processing
@@ -74,7 +77,11 @@
 #ifdef KEYBOARD_minidox_rev1
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_split_3x5_3(__VA_ARGS__)
 #else
+#ifdef KEYBOARD_boardsource_microdox
+#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_split_3x5_3(__VA_ARGS__)
+#else
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT(__VA_ARGS__)
+#endif
 #endif
 #endif
 #endif

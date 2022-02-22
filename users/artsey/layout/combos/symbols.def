@@ -3,8 +3,8 @@
 #include "../shared_defines.h"
 
 //   NAME                            RESULT                         TRIGGER
-COMB(combo_comma,                    KC_COMM,                       LT(LAYER_ID_PARENTHETICALS,KC_A), KC_Y)
-COMB(combo_period,                   KC_DOT,                        LT(LAYER_ID_PARENTHETICALS,KC_A), KC_I)
+COMB(combo_period,                   KC_DOT,                        LT(LAYER_ID_PARENTHETICALS,KC_A), KC_Y)
+COMB(combo_comma,                    KC_COMM,                       LT(LAYER_ID_PARENTHETICALS,KC_A), KC_I)
 COMB(combo_slash,                    KC_SLSH,                       LT(LAYER_ID_PARENTHETICALS,KC_A), LT(LAYER_ID_CUSTOM, KC_O))
 COMB(combo_exclamation,              ARTSEY_EXCLAMATION,            KC_T, KC_I)
 COMB(combo_single_quote,             KC_QUOT,                       LT(LAYER_ID_PARENTHETICALS,KC_A), KC_Y, KC_I)

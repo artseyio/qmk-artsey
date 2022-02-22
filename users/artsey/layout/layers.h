@@ -54,6 +54,12 @@ KC_WH_U,          KC_BTN2,          KC_MS_U,          KC_BTN1,          \
 KC_WH_D,          KC_MS_L,          KC_MS_D,          KC_MS_R
 #endif
 
+#ifndef ARTSEY_STD_LAYER_TOG_LEFT
+#define ARTSEY_STD_LAYER_TOG_LEFT \
+ARTSEY_TOG_USR_2,          ARTSEY_TOG_USR_1,          LCK_ALT,          LCK_CTRL,          \
+ARTSEY_TOG_USR_4,          ARTSEY_TOG_USR_3,          LCK_GUI,          LCK_SHIFT
+#endif
+
 #ifndef ARTSEY_STD_LAYER_BASE_RIGHT
 #define ARTSEY_STD_LAYER_BASE_RIGHT \
 LT(LAYER_ID_PARENTHETICALS, KC_A),    KC_R,             KC_T,             LT(LAYER_ID_NUMBERS, KC_S),    \
@@ -94,6 +100,12 @@ KC_RSFT,          KC_PSCR,          KC_VOLD,          KC_TRNS
 #define ARTSEY_STD_LAYER_MSE_RIGHT \
 KC_BTN1,          KC_MS_U,          KC_BTN2,          KC_WH_U,          \
 KC_MS_L,          KC_MS_D,          KC_MS_R,          KC_WH_D
+#endif
+
+#ifndef ARTSEY_STD_LAYER_TOG_RIGHT
+#define ARTSEY_STD_LAYER_TOG_RIGHT \
+LCK_CTRL,          LCK_ALT,          ARTSEY_TOG_USR_1,          ARTSEY_TOG_USR_2,          \
+LCK_SHIFT,         LCK_GUI,          ARTSEY_TOG_USR_3,          ARTSEY_TOG_USR_4
 #endif
 
 #ifndef ARTSEY_BIG_LAYER_BASE_LEFT
@@ -240,6 +252,27 @@ BIG_BETWEEN_ROW_THREE_THUMBS_NONES \
 ARTSEY_BIG_LAYER_MSE_LEFT_THUMBS \
 BIG_TRAILING_NONES
 #endif
+
+#ifndef ARTSEY_BIG_LAYER_TOG_LEFT
+#ifdef ARTSEY_TWO_THUMB
+#define ARTSEY_BIG_LAYER_TOG_LEFT_THUMBS KC_NO, KC_NO
+#endif
+#ifndef ARTSEY_TWO_THUMB
+#define ARTSEY_BIG_LAYER_TOG_LEFT_THUMBS KC_NO, KC_NO, KC_NO
+#endif
+
+#define ARTSEY_BIG_LAYER_TOG_LEFT \
+BIG_LEADING_NONES \
+ARTSEY_TOG_USR_2,           ARTSEY_TOG_USR_1,          LCK_ALT,          LCK_CTRL,          KC_NO,            \
+BIG_BETWEEN_ROW_ONE_TWO_NONES \
+ARTSEY_TOG_USR_4,           ARTSEY_TOG_USR_3,          LCK_GUI,          LCK_SHIFT,          KC_NO,            \
+BIG_BETWEEN_ROW_TWO_THREE_NONES \
+KC_NO,            KC_NO,            KC_NO,            KC_NO,            KC_NO,            \
+BIG_BETWEEN_ROW_THREE_THUMBS_NONES \
+ARTSEY_BIG_LAYER_MSE_LEFT_THUMBS \
+BIG_TRAILING_NONES
+#endif
+
 
 #ifndef ARTSEY_BIG_LAYER_BIG_SYM_LEFT
 #ifdef ARTSEY_TWO_THUMB
@@ -419,6 +452,26 @@ BIG_LEADING_NONES \
 KC_BTN1,          KC_MS_U,          KC_BTN2,          KC_WH_U,          KC_NO,            \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
 KC_MS_L,          KC_MS_D,          KC_MS_R,          KC_WH_D,          KC_NO,            \
+BIG_BETWEEN_ROW_TWO_THREE_NONES \
+KC_NO,            KC_NO,            KC_NO,            KC_NO,            KC_NO,            \
+BIG_BETWEEN_ROW_THREE_THUMBS_NONES \
+ARTSEY_BIG_LAYER_MSE_RIGHT_THUMBS  \
+BIG_TRAILING_NONES
+#endif
+
+#ifndef ARTSEY_BIG_LAYER_TOG_RIGHT
+#ifdef ARTSEY_TWO_THUMB
+#define ARTSEY_BIG_LAYER_TOG_RIGHT_THUMBS KC_NO, KC_NO
+#endif
+#ifndef ARTSEY_TWO_THUMB
+#define ARTSEY_BIG_LAYER_TOG_RIGHT_THUMBS KC_NO, KC_NO, KC_NO
+#endif
+
+#define ARTSEY_BIG_LAYER_TOG_RIGHT \
+BIG_LEADING_NONES \
+ARTSEY_TOG_USR_2,          ARTSEY_TOG_USR_1,          LCK_ALT,          LCK_CTRL,          KC_NO,            \
+BIG_BETWEEN_ROW_ONE_TWO_NONES \
+ARTSEY_TOG_USR_4,          ARTSEY_TOG_USR_3,          LCK_GUI,          LCK_SHIFT,          KC_NO,            \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
 KC_NO,            KC_NO,            KC_NO,            KC_NO,            KC_NO,            \
 BIG_BETWEEN_ROW_THREE_THUMBS_NONES \

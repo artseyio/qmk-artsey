@@ -7,6 +7,7 @@ COMB(combo_backspace_num,                 KC_BSPC,                       KC_4, K
 COMB(combo_delete_num,                    KC_DEL,                        KC_6, KC_2)
 COMB(combo_tab_base,                      KC_TAB,                        LT(LAYER_ID_PARENTHETICALS,KC_A), KC_R, KC_T, LT(LAYER_ID_CUSTOM, KC_O))
 COMB(combo_space_base,                    KC_SPACE,                      LT(LAYER_ID_SYMBOLS, KC_E), KC_Y, KC_I, LT(LAYER_ID_CUSTOM, KC_O))
+COMB(combo_tab_tog,                       KC_TAB,                        LCK_CTRL, LCK_ALT, ARTSEY_TOG_USR_1, ARTSEY_TOG_USR_4)
 
 COMB(combo_space_nav,                     KC_SPACE,                      KC_PGDN, KC_LEFT, KC_DOWN, KC_RIGHT)
 COMB(combo_tab_nav,                       KC_TAB,                        KC_PGDN, KC_HOME, KC_UP, KC_END)

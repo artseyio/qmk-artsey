@@ -77,10 +77,6 @@ OPT_DEFS += -DTAPPING_TERM=$(TAPPING_TERM) -DCOMBO_TERM=$(COMBO_TERM)
 
 ##########
 # Set remix for all build steps
-ifeq ($(strip $(ARTSEY_REMIX)), yes)
-	ARTSEY_REMIX = yes
-	OPT_DEFS += -DARTSEY_REMIX
-endif
 ifeq ($(strip $(ARTSEY_40P_ANSI_BACKSPACE)), yes)
 	ARTSEY_40P_ANSI_BACKSPACE = yes
 	OPT_DEFS += -DARTSEY_40P_ANSI_BACKSPACE

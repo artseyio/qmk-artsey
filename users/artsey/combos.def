@@ -7,6 +7,6 @@
 #include "layout/combos/mods.def"
 #include "layout/combos/layers.def"
 
-#ifdef ARTSEY_REMIX
+#if __has_include("layout/remixes/remix_combos.def")
 #include "layout/remixes/remix_combos.def"
 #endif

@@ -4,7 +4,7 @@
 
 // /////////
 // User remixes / tweaks -- these take precidence above all else
-#ifdef ARTSEY_REMIX
+#if __has_include("remixes/remix_globals.h")
 #include "remixes/remix_globals.h"
 #endif
 

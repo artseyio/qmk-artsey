@@ -9,6 +9,7 @@
         [ "ARTSEY_STD_LAYER_PAR" ],
         [ "ARTSEY_STD_LAYER_NAV" ],
         [ "ARTSEY_STD_LAYER_CUS" ],
-        [ "ARTSEY_STD_LAYER_MSE" ]
+        [ "ARTSEY_STD_LAYER_MSE" ],
+        [ "ARTSEY_STD_LAYER_TOG" ]
     ]
 }

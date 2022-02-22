@@ -16,6 +16,7 @@
 #define LAYER_ID_MOUSE 9
 #define LAYER_ID_BIG_SYM 10
 #define LAYER_ID_BIG_FUN 11
+#define LAYER_ID_TOGGLE 12
 #else
 // Standard and Big ARTSEY layer IDs
 #define LAYER_ID_BASE 0
@@ -27,4 +28,5 @@
 #define LAYER_ID_MOUSE 6
 #define LAYER_ID_BIG_SYM 7
 #define LAYER_ID_BIG_FUN 8
+#define LAYER_ID_TOGGLE 9
 #endif

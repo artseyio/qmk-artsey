@@ -27,6 +27,36 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
             }
             break;
+        case LCK_ALT:
+            if (record->event.pressed) {
+                if (get_mods() & MOD_BIT(KC_LALT)) {
+                    unregister_mods(MOD_BIT(KC_LALT));
+                }
+                else {
+                    register_mods(MOD_BIT(KC_LALT));
+                }
+            }
+            break;
+        case LCK_GUI:
+            if (record->event.pressed) {
+                if (get_mods() & MOD_BIT(KC_LGUI)) {
+                    unregister_mods(MOD_BIT(KC_LGUI));
+                }
+                else {
+                    register_mods(MOD_BIT(KC_LGUI));
+                }
+            }
+            break;
+        case LCK_CTRL:
+            if (record->event.pressed) {
+                if (get_mods() & MOD_BIT(KC_LCTL)) {
+                    unregister_mods(MOD_BIT(KC_LCTL));
+                }
+                else {
+                    register_mods(MOD_BIT(KC_LCTL));
+                }
+            }
+            break;
         case OSM_CTRL:
             if (record->event.pressed) {
                 add_oneshot_mods(MOD_BIT(KC_LCTL));

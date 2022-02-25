@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -141,6 +143,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Create Release
     needs: build
+    if: ${{ !github.event.pull_request.head.repo.fork }}
     steps:
       - name: Get current date/time
         id: date

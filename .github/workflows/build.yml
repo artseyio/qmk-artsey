@@ -4,10 +4,14 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   build:
+    on:
+      pull_request:
+        branches:    
+          - main
+      workflow_dispatch:
     runs-on: ubuntu-latest
     container:
       image: qmkfm/qmk_cli

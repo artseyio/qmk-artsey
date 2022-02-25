@@ -9,11 +9,7 @@ on:
 
 jobs:
   build:
-    on:
-      pull_request:
-        branches:    
-          - main
-      workflow_dispatch:
+    name: ARTSEY Board Builds - QMK
     runs-on: ubuntu-latest
     container:
       image: qmkfm/qmk_cli

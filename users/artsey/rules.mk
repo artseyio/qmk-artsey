@@ -68,7 +68,7 @@ endif
 # User tunable timings
 ifneq ($(KEYBOARD), $(filter $(KEYBOARD), gergo))
 ifndef TAPPING_TERM
-	TAPPING_TERM = 150
+	TAPPING_TERM = 175
 endif
 ifndef COMBO_TERM
 	COMBO_TERM = 250

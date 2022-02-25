@@ -8,6 +8,8 @@ The below is a work in progress. Don't be surprised if there are quirks in the i
 
 ### You must run `qmk setup` for any builds to work!!!!
 
+If these commands don't work, please ensure you've completed all steps per the QMK docs.
+
 ``` sh
 cd /qmk_firmware/users/artsey
 # ARTSEY_SIZE is a required argument

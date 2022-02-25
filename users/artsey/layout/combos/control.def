@@ -1,5 +1,12 @@
 // Copyright (c) 2021 Mike "KemoNine" Crosson
 // SPDX-License-Identifier: Apache-2.0
+
+// /////////
+// User remixes / tweaks -- these take precidence above all else
+#if __has_include("../remixes/combos/control.def")
+#include "../remixes/combos/control.def"
+#endif
+
 //   NAME                            RESULT                         TRIGGER
 COMB(combo_backspace_base,                KC_BSPC,                       LT(LAYER_ID_SYMBOLS, KC_E), KC_R)
 COMB(combo_delete_base,                   KC_DEL,                        KC_I, KC_R)

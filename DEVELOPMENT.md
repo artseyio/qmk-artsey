@@ -152,22 +152,30 @@ docker run --rm -it \
   -v qmk_firmware:/qmk_firmware \
   qmkfm/qmk_cli /bin/bash
 
-cd /qmk_firmware
-if [ -d .git ]; 
+cd ~/qmk_firmware
+if [ -d ~/qmk_firmware/.git ]; 
 then 
-git pull; 
+    cd ~/qmk_firmware;
+    git pull; 
 else 
-git clone https://github.com/qmk/qmk_firmware.git .; 
+    git clone https://github.com/qmk/qmk_firmware.git ~/qmk_firmware/; 
 fi
-mkdir /qmk_firmware/keyboards/artsey
-cd /qmk_firmware/keyboards/artsey
-if [ -d thepaintbrush ];
+if [ ! -d ~/qmk_firmware/keyboards/artsey ];
 then
-cd thepaintbrush;
-git pull;
-else
-git clone https://github.com/artseyio/thepaintbrush.git
+    ln -s "~/qmk-artsey/keyboards/artsey" ~/qmk_firmware/keyboards/artsey;
+    echo "Created keyboards/artsey symlink";
 fi
+if [ ! -d ~/qmk_firmware/keyboards/faunchpad ];
+then
+    ln -s "~/qmk_gboards/keyboards/faunchpad" ~/qmk_firmware/keyboards/faunchpad;
+    echo "Created keyboards/faunchpad symlink";
+fi
+if [ ! -d ~/qmk_firmware/users/artsey ];
+then
+    ln -s "~/qmk-artsey/users/artsey" ~/qmk_firmware/users/artsey;
+    echo "Created users/artsey symlink";
+fi
+qmk setup -y;
 ```
 
 ### Volumes

@@ -21,6 +21,7 @@ cd /qmk_firmware/users/artsey
 # PIMORONI_BRIGHTNESS the brightness of the pimoroni trackball at startup if no user values set. default: 127 (50% brightness)
 # PIMORONI_RGBW the rgb code for the pimoroni trackball at startup if no user values set. default: 255,255,255 (white)
 # TAPPING_TERM the timeout for tap dances (40% artsey only). in miliseconds ; default: 150
+#     this is DISABLED for the gergo due to the gergo forcing a 200ms duration per the main keyboard/config.h file
 # COMBO_TERM the timeout for combos (all artsey variations). in miliseconds ; default 250
 # ONESHOT_TAP_TOGGLE the number of times to tap to toggle a one shot key ; default 5
 # ONESHOT_TIMEOUT the length of time a one shot key is active for. in miliseconds ; default 1500

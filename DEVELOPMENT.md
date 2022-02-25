@@ -6,6 +6,8 @@ The below is a work in progress. Don't be surprised if there are quirks in the i
 
 ## Compiling
 
+### You must run `qmk setup` for any builds to work!!!!
+
 ``` sh
 cd /qmk_firmware/users/artsey
 # ARTSEY_SIZE is a required argument

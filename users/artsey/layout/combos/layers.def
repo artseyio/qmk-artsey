@@ -13,7 +13,7 @@ COMB(combo_layer_funbase,            TG(LAYER_ID_BIG_FUN),          FUN_1, FUN_2
 
 COMB(combo_layer_tog_base,           TG(LAYER_ID_TOGGLE),           KC_R, KC_Y)
 COMB(combo_layer_tog_nav,            TG(LAYER_ID_TOGGLE),           KC_UP, KC_DOWN)
-COMB(combo_layer_basetog             TG(LAYER_ID_BASE),             LCK_ALT, LCK_GUI)
+COMB(combo_layer_basetog,            TG(LAYER_ID_BASE),             LCK_ALT, LCK_GUI)
 #ifdef ARTSEY_SIZE_40P
 #ifdef ARTSEY_HAND_LEFT
 COMB(combo_layer_tog_base_40p,       TG(LAYER_ID_TOGGLE),           KC_E, KC_D)

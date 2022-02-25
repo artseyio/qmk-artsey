@@ -67,10 +67,10 @@ endif
 ##########
 # User tunable timings
 ifndef TAPPING_TERM
-	TAPPING_TERM = 200
+	TAPPING_TERM = 150
 endif
 ifndef COMBO_TERM
-	COMBO_TERM = 300
+	COMBO_TERM = 250
 endif
 OPT_DEFS += -DTAPPING_TERM=$(TAPPING_TERM) -DCOMBO_TERM=$(COMBO_TERM)
 

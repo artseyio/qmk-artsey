@@ -24,7 +24,11 @@ static void render_logo(void) {
 #endif
 
 static void render_status(void) {
+#ifdef ARTSEY_OLED_ICON
     oled_set_cursor(0, 5);
+#else
+    oled_set_cursor(0, 1);
+#endif
     switch (get_highest_layer(layer_state)) {
         case LAYER_ID_BASE:
 #ifdef ARTSEY_SIZE_STD

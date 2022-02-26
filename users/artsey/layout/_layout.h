@@ -61,6 +61,9 @@
 #ifdef KEYBOARD_artsey_thepaintbrush
 #include "boards/artsey_thepaintbrush.h"
 #endif
+#ifdef KEYBOARD_faunchpad
+#include "boards/faunchpad.h"
+#endif
 
 // //////////
 // Include layers last so all overrides and ids are set prior to processing

@@ -84,6 +84,9 @@
 #ifdef KEYBOARD_gergo
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_gergo(__VA_ARGS__)
 #else
+#ifdef KEYBOARD_gboards_gergo
+#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_gergo(__VA_ARGS__)
+#else
 #ifdef KEYBOARD_faunchpad
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_faunch(__VA_ARGS__)
 #else
@@ -97,12 +100,13 @@
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_ortho_5x4(__VA_ARGS__)
 #else
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT(__VA_ARGS__)
-#endif
-#endif
-#endif
-#endif
-#endif
-#endif
+#endif // KEYBOARD_ai03_soyuz
+#endif // KEYBOARD_boardsource_microdox
+#endif // KEYBOARD_minidox_rev1
+#endif // KEYBOARD_faunchpad
+#endif // KEYBOARD_gboards_gergo
+#endif // KEYBOARD_gergo
+#endif // KEYBOARD_crkbd_rev1
 
 // Allow proper auto selection of std size via keymaps
 #ifdef ARTSEY_SIZE_STD

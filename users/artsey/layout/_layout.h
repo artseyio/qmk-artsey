@@ -37,12 +37,8 @@
 #ifdef KEYBOARD_crkbd_rev1
 #include "boards/crkbd_rev1.h"
 #endif
-#ifdef KEYBOARD_gergo
-#include "boards/gergo.h"
-#endif
-// For whatever reason this is needed for GH action builds
 #ifdef KEYBOARD_gboards_gergo
-#include "boards/gergo.h"
+#include "boards/gboards_gergo.h"
 #endif
 #ifdef KEYBOARD_ristretto
 #include "boards/ristretto.h"
@@ -81,9 +77,6 @@
 #ifdef KEYBOARD_crkbd_rev1
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_split_3x6_3(__VA_ARGS__)
 #else
-#ifdef KEYBOARD_gergo
-#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_gergo(__VA_ARGS__)
-#else
 #ifdef KEYBOARD_gboards_gergo
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_gergo(__VA_ARGS__)
 #else
@@ -105,7 +98,6 @@
 #endif // KEYBOARD_minidox_rev1
 #endif // KEYBOARD_faunchpad
 #endif // KEYBOARD_gboards_gergo
-#endif // KEYBOARD_gergo
 #endif // KEYBOARD_crkbd_rev1
 
 // Allow proper auto selection of std size via keymaps

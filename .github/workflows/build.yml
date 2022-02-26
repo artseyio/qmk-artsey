@@ -40,10 +40,10 @@ jobs:
           - layout: crkbd_rev1
             hand: right
             size: big
-          - layout: gergo
+          - layout: gboards_gergo
             hand: left
             size: big
-          - layout: gergo
+          - layout: gboards_gergo
             hand: right
             size: big
           - layout: ferris_sweep

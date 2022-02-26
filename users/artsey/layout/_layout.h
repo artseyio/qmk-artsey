@@ -55,6 +55,12 @@
 #ifdef KEYBOARD_boardsource_microdox
 #include "boards/boardsource_microdox.h"
 #endif
+#ifdef KEYBOARD_ai03_soyuz
+#include "boards/ai03_soyuz.h"
+#endif
+#ifdef KEYBOARD_artsey_thepaintbrush
+#include "boards/artsey_thepaintbrush.h"
+#endif
 
 // //////////
 // Include layers last so all overrides and ids are set prior to processing
@@ -80,7 +86,11 @@
 #ifdef KEYBOARD_boardsource_microdox
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_split_3x5_3(__VA_ARGS__)
 #else
+#ifdef KEYBOARD_ai03_soyuz
+#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_ortho_5x4(__VA_ARGS__)
+#else
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT(__VA_ARGS__)
+#endif
 #endif
 #endif
 #endif

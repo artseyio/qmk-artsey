@@ -40,6 +40,10 @@
 #ifdef KEYBOARD_gergo
 #include "boards/gergo.h"
 #endif
+// For whatever reason this is needed for GH action builds
+#ifdef KEYBOARD_gboards_gergo
+#include "boards/gergo.h"
+#endif
 #ifdef KEYBOARD_ristretto
 #include "boards/ristretto.h"
 #endif

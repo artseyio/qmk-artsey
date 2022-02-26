@@ -80,7 +80,11 @@
 #ifdef KEYBOARD_boardsource_microdox
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_split_3x5_3(__VA_ARGS__)
 #else
+#ifdef KEYBOARD_geekboards_macropad_v2
+#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_ortho_2x4(__VA_ARGS__)
+#else
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT(__VA_ARGS__)
+#endif
 #endif
 #endif
 #endif

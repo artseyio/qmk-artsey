@@ -37,8 +37,8 @@
 #ifdef KEYBOARD_crkbd_rev1
 #include "boards/crkbd_rev1.h"
 #endif
-#ifdef KEYBOARD_gergo
-#include "boards/gergo.h"
+#ifdef KEYBOARD_gboards_gergo
+#include "boards/gboards_gergo.h"
 #endif
 #ifdef KEYBOARD_ristretto
 #include "boards/ristretto.h"
@@ -55,6 +55,18 @@
 #ifdef KEYBOARD_boardsource_microdox
 #include "boards/boardsource_microdox.h"
 #endif
+#ifdef KEYBOARD_ai03_soyuz
+#include "boards/ai03_soyuz.h"
+#endif
+#ifdef KEYBOARD_artsey_thepaintbrush
+#include "boards/artsey_thepaintbrush.h"
+#endif
+#ifdef KEYBOARD_faunchpad
+#include "boards/faunchpad.h"
+#endif
+#ifdef KEYBOARD_geekboards_macropad_v2
+#include "boards/geekboards_macropad_v2.h"
+#endif
 
 // //////////
 // Include layers last so all overrides and ids are set prior to processing
@@ -68,7 +80,7 @@
 #ifdef KEYBOARD_crkbd_rev1
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_split_3x6_3(__VA_ARGS__)
 #else
-#ifdef KEYBOARD_gergo
+#ifdef KEYBOARD_gboards_gergo
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_gergo(__VA_ARGS__)
 #else
 #ifdef KEYBOARD_faunchpad
@@ -80,16 +92,20 @@
 #ifdef KEYBOARD_boardsource_microdox
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_split_3x5_3(__VA_ARGS__)
 #else
+#ifdef KEYBOARD_ai03_soyuz
+#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_ortho_5x4(__VA_ARGS__)
+#else
 #ifdef KEYBOARD_geekboards_macropad_v2
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_ortho_2x4(__VA_ARGS__)
 #else
 #define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT(__VA_ARGS__)
-#endif
-#endif
-#endif
-#endif
-#endif
-#endif
+#endif // KEYBOARD_geekboards_macropad_v2
+#endif // KEYBOARD_ai03_soyuz
+#endif // KEYBOARD_boardsource_microdox
+#endif // KEYBOARD_minidox_rev1
+#endif // KEYBOARD_faunchpad
+#endif // KEYBOARD_gboards_gergo
+#endif // KEYBOARD_crkbd_rev1
 
 // Allow proper auto selection of std size via keymaps
 #ifdef ARTSEY_SIZE_STD

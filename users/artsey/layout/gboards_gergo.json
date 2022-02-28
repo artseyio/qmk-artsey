@@ -1,5 +1,5 @@
 {
-    "keyboard": "gergo",
+    "keyboard": "gboards/gergo",
     "keymap": "artsey",
     "layout": "ARTSEY_LAYOUT_WRAPPER",
     "layers": [

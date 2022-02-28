@@ -108,6 +108,16 @@ rm -rf ../../.build/* && qmk -v compile \
     layout/boardsource_microdox.json
 ```
 
+## Soyuz
+
+```
+# Standard
+rm -rf ../../.build/* && qmk -v compile \
+    -e ARTSEY_SIZE=std \
+    -e ARTSEY_HAND=left \
+    layout/ai03_soyuz.json
+```
+
 ## Remixing
 
 Start with `layouts/_layout.h` and follow the code from there.

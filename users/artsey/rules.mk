@@ -66,7 +66,8 @@ endif
 
 ##########
 # User tunable timings
-ifneq ($(KEYBOARD), $(filter $(KEYBOARD), gergo))
+# gergo (local /and/ remote build filters)
+ifneq ($(KEYBOARD), $(filter $(KEYBOARD), gboards/gergo gergo))
 ifndef TAPPING_TERM
 	TAPPING_TERM = 175
 endif

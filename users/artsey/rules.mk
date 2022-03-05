@@ -77,7 +77,6 @@ endif
 OPT_DEFS += -DTAPPING_TERM=$(TAPPING_TERM) -DCOMBO_TERM=$(COMBO_TERM)
 endif
 
-
 ##########
 # Set remix for all build steps
 ifeq ($(strip $(ARTSEY_40P_ANSI_BACKSPACE)), yes)

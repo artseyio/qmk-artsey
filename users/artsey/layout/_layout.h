@@ -75,24 +75,24 @@
 
 // Artsey layout wrapper
 #ifdef KEYBOARD_crkbd_rev1
-#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_split_3x6_3(__VA_ARGS__)
+#define LAYOUT_artsey_wrapper(...) LAYOUT_split_3x6_3(__VA_ARGS__)
 #else
 #ifdef KEYBOARD_gboards_gergo
-#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_gergo(__VA_ARGS__)
+#define LAYOUT_artsey_wrapper(...) LAYOUT_gergo(__VA_ARGS__)
 #else
 #ifdef KEYBOARD_faunchpad
-#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_faunch(__VA_ARGS__)
+#define LAYOUT_artsey_wrapper(...) LAYOUT_faunch(__VA_ARGS__)
 #else
 #ifdef KEYBOARD_minidox_rev1
-#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_split_3x5_3(__VA_ARGS__)
+#define LAYOUT_artsey_wrapper(...) LAYOUT_split_3x5_3(__VA_ARGS__)
 #else
 #ifdef KEYBOARD_boardsource_microdox
-#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_split_3x5_3(__VA_ARGS__)
+#define LAYOUT_artsey_wrapper(...) LAYOUT_split_3x5_3(__VA_ARGS__)
 #else
 #ifdef KEYBOARD_ai03_soyuz
-#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_ortho_5x4(__VA_ARGS__)
+#define LAYOUT_artsey_wrapper(...) LAYOUT_ortho_5x4(__VA_ARGS__)
 #else
-#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT(__VA_ARGS__)
+#define LAYOUT_artsey_wrapper(...) LAYOUT(__VA_ARGS__)
 #endif // KEYBOARD_ai03_soyuz
 #endif // KEYBOARD_boardsource_microdox
 #endif // KEYBOARD_minidox_rev1

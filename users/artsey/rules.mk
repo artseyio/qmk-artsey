@@ -25,6 +25,13 @@ ifneq ($(PLATFORM),CHIBIOS)
 endif
 
 ##########
+# Fix for melmicro/older elite-c models
+ifeq ($(strip $(SPLIT_USB_DETECT)), yes)
+	SPLIT_USB_DETECT = yes
+	OPT_DEFS += -DSPLIT_USB_DETECT
+endif
+
+##########
 # Ristretto build fails w/o encdoder being enabld
 ifeq ($(KEYBOARD), $(filter $(KEYBOARD), ristretto))
     ENCODER_ENABLE = yes

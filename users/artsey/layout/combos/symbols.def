@@ -11,11 +11,11 @@ COMB(combo_single_quote,             KC_QUOT,                       LT(LAYER_ID_
 
 #ifdef ARTSEY_SIZE_40P
 #ifdef ARTSEY_HAND_LEFT
-COMB(combo_exclamation_40p,          KC_EXLM,                       KC_W, KC_S)
+COMB(combo_exclamation_40p,          ARTSEY_EXCLAMATION,            KC_W, KC_S)
 COMB(combo_single_quote_40p,         KC_QUOT,                       LEFT_PARENTHETICALS, KC_D, KC_S)
 #endif
 #ifdef ARTSEY_HAND_RIGHT
-COMB(combo_exclamation_40p,          KC_EXLM,                       KC_I, KC_K)
+COMB(combo_exclamation_40p,          ARTSEY_EXCLAMATION,            KC_I, KC_K)
 COMB(combo_single_quote_40p,         KC_QUOT,                       RIGHT_PARENTHETICALS, KC_K, KC_L)
 #endif
 #endif

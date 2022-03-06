@@ -156,7 +156,6 @@ rm -rf ../../.build/* && qmk -v compile \
     -e ARTSEY_SIZE=big \
     -e ARTSEY_HAND=left \
     layout/splitkb_kyria_rev2.json
-## Geekboards Macropad v2
 
 ```
 

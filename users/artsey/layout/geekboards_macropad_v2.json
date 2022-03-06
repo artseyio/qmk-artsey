@@ -1,7 +1,7 @@
 {
     "keyboard": "geekboards/macropad_v2",
     "keymap": "artsey",
-    "layout": "ARTSEY_LAYOUT_WRAPPER",
+    "layout": "LAYOUT_artsey_wrapper",
     "layers": [
         [ "ARTSEY_STD_LAYER_BASE" ],
         [ "ARTSEY_STD_LAYER_NUM" ],

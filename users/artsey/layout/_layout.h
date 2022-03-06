@@ -64,6 +64,9 @@
 #ifdef KEYBOARD_faunchpad
 #include "boards/faunchpad.h"
 #endif
+#ifdef KEYBOARD_splitkb_kyria_rev2
+#include "boards/splitkb_kyria_rev2.h"
+#endif
 
 // //////////
 // Include layers last so all overrides and ids are set prior to processing

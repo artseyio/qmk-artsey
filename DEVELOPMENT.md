@@ -126,6 +126,22 @@ rm -rf ../../.build/* && qmk -v compile \
     layout/ai03_soyuz.json
 ```
 
+## Kyria rev2
+
+```
+# 40%
+rm -rf ../../.build/* && qmk -v compile \
+    -e ARTSEY_SIZE=40p \
+    -e ARTSEY_HAND=left \
+    layout/splitkb_kyria_rev2_40p.json
+    
+# Big
+rm -rf ../../.build/* && qmk -v compile \
+    -e ARTSEY_SIZE=big \
+    -e ARTSEY_HAND=left \
+    layout/splitkb_kyria_rev2.json
+```
+
 ## Remixing
 
 Start with `layouts/_layout.h` and follow the code from there.

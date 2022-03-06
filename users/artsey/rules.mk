@@ -149,7 +149,7 @@ endif
 ##########
 # OLED enable based on board support
 ifndef OLED_ENABLE
-ifeq ($(KEYBOARD), $(filter $(KEYBOARD), artsey/thepaintbrush crkbd/rev1 ristretto))
+ifeq ($(KEYBOARD), $(filter $(KEYBOARD), artsey/thepaintbrush crkbd/rev1 ristretto splitkb/kyria/rev2))
     OLED_ENABLE = yes
 else
 	OLED_ENABLE = no

@@ -49,7 +49,7 @@
 #ifdef KEYBOARD_ferris_sweep
 #include "boards/ferris_sweep.h"
 #endif
-#ifdef KEYBOARD_minidox_rev1
+#ifdef KEYBOARD_maple_computing_minidox_rev1
 #include "boards/minidox_rev1.h"
 #endif
 #ifdef KEYBOARD_boardsource_microdox
@@ -83,7 +83,7 @@
 #ifdef KEYBOARD_faunchpad
 #define LAYOUT_artsey_wrapper(...) LAYOUT_faunch(__VA_ARGS__)
 #else
-#ifdef KEYBOARD_minidox_rev1
+#ifdef KEYBOARD_maple_computing_minidox_rev1
 #define LAYOUT_artsey_wrapper(...) LAYOUT_split_3x5_3(__VA_ARGS__)
 #else
 #ifdef KEYBOARD_boardsource_microdox

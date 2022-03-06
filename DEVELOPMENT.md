@@ -37,6 +37,7 @@ cd /qmk_firmware/users/artsey
 # ONESHOT_TIMEOUT the length of time a one shot key is active for. in miliseconds ; default 1500
 # ENCODER_ENABLE whether or not to include encoder support. default: no ; uses just over 1k of rom space which is quite large
 # RGBLIGHT_ENABLE whether or not to turn on some underglow features. default: no ; uses a TON of rom space and we need a lot for 40% artsey to work
+# SPLIT_USB_DETECT use this option (see kemo builds) when using an unmodified miranda or old elite-c
 qmk -v compile -e ARTSEY_SIZE=[std|big|40p] \
                -e ARTSEY_HAND=[left|right] \
                -e ARTSEY_OLED_BOOT_LOGO=[yes|no] \
@@ -58,12 +59,17 @@ qmk -v compile -e ARTSEY_SIZE=[std|big|40p] \
        layout/[board.json]
 ```
 
+#### MelMicro
+
+An unmodified MelMicro and some knock off ProMicro boards require `-e SPLIT_USB_DETECT=yes` in order to function properly with 40% ARTSEY and QMK.
+
 ### KemoNine Builds
 
 ```
 root@d8949d0fe972:/qmk_firmware/users/artsey# 
 # Corne (6 column) 40%
 rm -rf ../../.build/* && qmk -v compile \
+    -e SPLIT_USB_DETECT=yes \
     -e OLED_BRIGHTNESS=64 \
     -e PIMORONI_BRIGHTNESS=7 \
     -e PIMORONI_RGB="255,165,0" \
@@ -71,6 +77,7 @@ rm -rf ../../.build/* && qmk -v compile \
     -e ARTSEY_EXCLAMATION=KC_SCLN \
     -e ARTSEY_SIZE=40p \
     -e ARTSEY_HAND=left \
+    -e TAPPING_TERM=200 \
     layout/crkbd_rev1_40p.json
 
 # The Paintbrush
@@ -79,6 +86,7 @@ rm -rf ../../.build/* && qmk -v compile \
     -e ARTSEY_EXCLAMATION=KC_SCLN \
     -e ARTSEY_SIZE=std \
     -e ARTSEY_HAND=left \
+    -e TAPPING_TERM=200 \
     layout/artsey_thepaintbrush.json
 ```
 
@@ -132,6 +140,24 @@ rm -rf ../../.build/* && qmk -v compile \
     -e ARTSEY_SIZE=std \
     -e ARTSEY_HAND=left \
     layout/geekboards_macropad_v2.json
+```
+
+## Kyria rev2
+
+```
+# 40%
+rm -rf ../../.build/* && qmk -v compile \
+    -e ARTSEY_SIZE=40p \
+    -e ARTSEY_HAND=left \
+    layout/splitkb_kyria_rev2_40p.json
+    
+# Big
+rm -rf ../../.build/* && qmk -v compile \
+    -e ARTSEY_SIZE=big \
+    -e ARTSEY_HAND=left \
+    layout/splitkb_kyria_rev2.json
+## Geekboards Macropad v2
+
 ```
 
 ## Remixing

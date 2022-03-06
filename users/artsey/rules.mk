@@ -25,6 +25,13 @@ ifneq ($(PLATFORM),CHIBIOS)
 endif
 
 ##########
+# Fix for melmicro/older elite-c models
+ifeq ($(strip $(SPLIT_USB_DETECT)), yes)
+	SPLIT_USB_DETECT = yes
+	OPT_DEFS += -DSPLIT_USB_DETECT
+endif
+
+##########
 # Ristretto build fails w/o encdoder being enabld
 ifeq ($(KEYBOARD), $(filter $(KEYBOARD), ristretto))
     ENCODER_ENABLE = yes
@@ -77,7 +84,6 @@ endif
 OPT_DEFS += -DTAPPING_TERM=$(TAPPING_TERM) -DCOMBO_TERM=$(COMBO_TERM)
 endif
 
-
 ##########
 # Set remix for all build steps
 ifeq ($(strip $(ARTSEY_40P_ANSI_BACKSPACE)), yes)
@@ -113,7 +119,7 @@ endif
 
 ##########
 # 5 column flag for 40% ARTSEY
-ifeq ($(KEYBOARD), $(filter $(KEYBOARD), draculad ferris/sweep minidox/rev1 boardsource/microdox))
+ifeq ($(KEYBOARD), $(filter $(KEYBOARD), draculad ferris/sweep maple_computing/minidox/rev1 boardsource/microdox))
 	ARTSEY_FIVE_COLUMN = yes
 	OPT_DEFS += -DARTSEY_FIVE_COLUMN
 endif
@@ -143,7 +149,7 @@ endif
 ##########
 # OLED enable based on board support
 ifndef OLED_ENABLE
-ifeq ($(KEYBOARD), $(filter $(KEYBOARD), artsey/thepaintbrush crkbd/rev1 ristretto))
+ifeq ($(KEYBOARD), $(filter $(KEYBOARD), artsey/thepaintbrush crkbd/rev1 ristretto splitkb/kyria/rev2))
     OLED_ENABLE = yes
 else
 	OLED_ENABLE = no

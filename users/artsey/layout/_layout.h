@@ -95,7 +95,11 @@
 #ifdef KEYBOARD_ai03_soyuz
 #define LAYOUT_artsey_wrapper(...) LAYOUT_ortho_5x4(__VA_ARGS__)
 #else
+#ifdef KEYBOARD_geekboards_macropad_v2
+#define ARTSEY_LAYOUT_WRAPPER(...) LAYOUT_ortho_2x4(__VA_ARGS__)
+#else
 #define LAYOUT_artsey_wrapper(...) LAYOUT(__VA_ARGS__)
+#endif // KEYBOARD_geekboards_macropad_v2
 #endif // KEYBOARD_ai03_soyuz
 #endif // KEYBOARD_boardsource_microdox
 #endif // KEYBOARD_minidox_rev1

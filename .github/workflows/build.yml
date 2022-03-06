@@ -64,6 +64,12 @@ jobs:
           - layout: boardsource_microdox
             hand: right
             size: big
+          - layout: splitkb_kyria_rev2
+            hand: right
+            size: big
+          - layout: splitkb_kyria_rev2
+            hand: left
+            size: big
           - layout: crkbd_rev1
             hand: left
             size: 40p
@@ -87,6 +93,12 @@ jobs:
             size: 40p
           - layout: boardsource_microdox
             hand: right
+            size: 40p
+          - layout: splitkb_kyria_rev2
+            hand: right
+            size: 40p
+          - layout: splitkb_kyria_rev2
+            hand: left
             size: 40p
     steps:
       - name: Checkout

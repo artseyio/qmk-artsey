@@ -34,6 +34,12 @@ jobs:
           - layout: ai03_soyuz
             hand: right
             size: std
+          - layout: geekboards_macropad_v2
+            hand: left
+            size: std
+          - layout: geekboards_macropad_v2
+            hand: right
+            size: std
           - layout: crkbd_rev1
             hand: left
             size: big

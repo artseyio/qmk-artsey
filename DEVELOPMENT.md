@@ -8,6 +8,12 @@ The below is a work in progress. Don't be surprised if there are quirks in the i
 
 ### You must run `qmk setup` for any builds to work!!!!
 
+If your qmk_firmware repository is NOT located under ~/qmk_firmware, you may encounter qmk build issue.  In such case, try moving the repository or adding a symlink, then retry compiling.
+
+``` sh
+ln -s your_path_to_repos/qmk_firmware ~/qmk_firmware
+```
+
 If these commands don't work, please ensure you've completed all steps per the QMK docs.
 
 ``` sh
@@ -126,6 +132,16 @@ rm -rf ../../.build/* && qmk -v compile \
     layout/ai03_soyuz.json
 ```
 
+## Geekboards Macropad v2
+
+```
+# Standard
+rm -rf ../../.build/* && qmk -v compile \
+    -e ARTSEY_SIZE=std \
+    -e ARTSEY_HAND=left \
+    layout/geekboards_macropad_v2.json
+```
+
 ## Kyria rev2
 
 ```
@@ -140,6 +156,7 @@ rm -rf ../../.build/* && qmk -v compile \
     -e ARTSEY_SIZE=big \
     -e ARTSEY_HAND=left \
     layout/splitkb_kyria_rev2.json
+
 ```
 
 ## Remixing

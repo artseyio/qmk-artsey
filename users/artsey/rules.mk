@@ -25,6 +25,13 @@ ifneq ($(PLATFORM),CHIBIOS)
 endif
 
 ##########
+# Fix for melmicro/older elite-c models
+ifeq ($(strip $(SPLIT_USB_DETECT)), yes)
+	SPLIT_USB_DETECT = yes
+	OPT_DEFS += -DSPLIT_USB_DETECT
+endif
+
+##########
 # Ristretto build fails w/o encdoder being enabld
 ifeq ($(KEYBOARD), $(filter $(KEYBOARD), ristretto))
     ENCODER_ENABLE = yes
@@ -66,14 +73,16 @@ endif
 
 ##########
 # User tunable timings
+# gergo (local /and/ remote build filters)
+ifneq ($(KEYBOARD), $(filter $(KEYBOARD), gboards/gergo gergo))
 ifndef TAPPING_TERM
-	TAPPING_TERM = 200
+	TAPPING_TERM = 175
 endif
 ifndef COMBO_TERM
-	COMBO_TERM = 300
+	COMBO_TERM = 250
 endif
 OPT_DEFS += -DTAPPING_TERM=$(TAPPING_TERM) -DCOMBO_TERM=$(COMBO_TERM)
-
+endif
 
 ##########
 # Set remix for all build steps
@@ -84,6 +93,16 @@ endif
 ifeq ($(strip $(ARTSEY_40P_ANSI_DELETE)), yes)
 	ARTSEY_40P_ANSI_DELETE = yes
 	OPT_DEFS += -DARTSEY_40P_ANSI_DELETE
+endif
+ifdef ONESHOT_TAP_TOGGLE
+	OPT_DEFS += -DONESHOT_TAP_TOGGLE=$(ONESHOT_TAP_TOGGLE)
+else
+	OPT_DEFS += -DONESHOT_TAP_TOGGLE=5
+endif
+ifdef ONESHOT_TIMEOUT
+	OPT_DEFS += -DONESHOT_TIMEOUT=$(ONESHOT_TIMEOUT)
+else
+	OPT_DEFS += -DONESHOT_TIMEOUT=1500
 endif
 ifdef ARTSEY_EXCLAMATION
 	OPT_DEFS += -DARTSEY_EXCLAMATION=$(ARTSEY_EXCLAMATION)
@@ -120,7 +139,7 @@ endif
 
 ##########
 # 5 column flag for 40% ARTSEY
-ifeq ($(KEYBOARD), $(filter $(KEYBOARD), draculad ferris/sweep minidox/rev1 boardsource/microdox))
+ifeq ($(KEYBOARD), $(filter $(KEYBOARD), draculad ferris/sweep maple_computing/minidox/rev1 boardsource/microdox))
 	ARTSEY_FIVE_COLUMN = yes
 	OPT_DEFS += -DARTSEY_FIVE_COLUMN
 endif
@@ -150,7 +169,7 @@ endif
 ##########
 # OLED enable based on board support
 ifndef OLED_ENABLE
-ifeq ($(KEYBOARD), $(filter $(KEYBOARD), artsey/thepaintbrush crkbd/rev1 ristretto))
+ifeq ($(KEYBOARD), $(filter $(KEYBOARD), artsey/thepaintbrush crkbd/rev1 ristretto splitkb/kyria/rev2))
     OLED_ENABLE = yes
 else
 	OLED_ENABLE = no

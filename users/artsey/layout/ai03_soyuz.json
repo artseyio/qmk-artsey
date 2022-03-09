@@ -1,5 +1,5 @@
 {
-    "keyboard": "faunchpad",
+    "keyboard": "ai03/soyuz",
     "keymap": "artsey",
     "layout": "LAYOUT_artsey_wrapper",
     "layers": [
@@ -9,7 +9,6 @@
         [ "ARTSEY_STD_LAYER_PAR" ],
         [ "ARTSEY_STD_LAYER_NAV" ],
         [ "ARTSEY_STD_LAYER_CUS" ],
-        [ "ARTSEY_STD_LAYER_MSE" ],
-        [ "ARTSEY_STD_LAYER_TOG" ]
+        [ "ARTSEY_STD_LAYER_MSE" ]
     ]
 }

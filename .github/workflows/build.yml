@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-    name: ARTSEY Board Builds - QMK
     runs-on: ubuntu-latest
     container:
       image: qmkfm/qmk_cli
@@ -27,16 +26,28 @@ jobs:
           - layout: faunchpad
             hand: right
             size: std
+          - layout: ai03_soyuz
+            hand: left
+            size: std
+          - layout: ai03_soyuz
+            hand: right
+            size: std
+          - layout: geekboards_macropad_v2
+            hand: left
+            size: std
+          - layout: geekboards_macropad_v2
+            hand: right
+            size: std
           - layout: crkbd_rev1
             hand: left
             size: big
           - layout: crkbd_rev1
             hand: right
             size: big
-          - layout: gergo
+          - layout: gboards_gergo
             hand: left
             size: big
-          - layout: gergo
+          - layout: gboards_gergo
             hand: right
             size: big
           - layout: ferris_sweep
@@ -57,6 +68,12 @@ jobs:
           - layout: boardsource_microdox
             hand: right
             size: big
+          - layout: splitkb_kyria_rev2
+            hand: right
+            size: big
+          - layout: splitkb_kyria_rev2
+            hand: left
+            size: big
           - layout: crkbd_rev1
             hand: left
             size: 40p
@@ -80,6 +97,12 @@ jobs:
             size: 40p
           - layout: boardsource_microdox
             hand: right
+            size: 40p
+          - layout: splitkb_kyria_rev2
+            hand: right
+            size: 40p
+          - layout: splitkb_kyria_rev2
+            hand: left
             size: 40p
     steps:
       - name: Checkout

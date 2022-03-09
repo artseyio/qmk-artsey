@@ -14,44 +14,65 @@
 
 #ifndef ARTSEY_STD_LAYER_BASE_LEFT
 #define ARTSEY_STD_LAYER_BASE_LEFT \
+STD_LEADING_NONES \
 LT(LAYER_ID_NUMBERS, KC_S),    KC_T,             KC_R,             LT(LAYER_ID_PARENTHETICALS, KC_A),    \
-LT(LAYER_ID_CUSTOM, KC_O),     KC_I,             KC_Y,             LT(LAYER_ID_SYMBOLS, KC_E)
+STD_BETWEEN_ROW_ONE_TWO_NONES \
+LT(LAYER_ID_CUSTOM, KC_O),     KC_I,             KC_Y,             LT(LAYER_ID_SYMBOLS, KC_E) \
+STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_PAR_LEFT
-#define ARTSEY_STD_LAYER_PAR_LEFT                                       \
+#define ARTSEY_STD_LAYER_PAR_LEFT \
+STD_LEADING_NONES \
 KC_RCBR,          KC_LPRN,          KC_RPRN,          KC_TRNS,          \
-KC_LCBR,          KC_LBRC,          KC_RBRC,          KC_NO
+STD_BETWEEN_ROW_ONE_TWO_NONES \
+KC_LCBR,          KC_LBRC,          KC_RBRC,          KC_NO \
+STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_NUM_LEFT
 #define ARTSEY_STD_LAYER_NUM_LEFT \
+STD_LEADING_NONES \
 KC_TRNS,          KC_3,             KC_2,             KC_1,             \
-KC_NO,            KC_6,             KC_5,             KC_4
+STD_BETWEEN_ROW_ONE_TWO_NONES \
+KC_NO,            KC_6,             KC_5,             KC_4 \
+STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_NAV_LEFT
 #define ARTSEY_STD_LAYER_NAV_LEFT \
+STD_LEADING_NONES \
 KC_PGUP,          KC_HOME,          KC_UP,            KC_END,           \
-KC_PGDN,          KC_LEFT,          KC_DOWN,          KC_RIGHT
+STD_BETWEEN_ROW_ONE_TWO_NONES \
+KC_PGDN,          KC_LEFT,          KC_DOWN,          KC_RIGHT \
+STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_SYM_LEFT
 #define ARTSEY_STD_LAYER_SYM_LEFT \
+STD_LEADING_NONES \
 KC_GRV,           KC_SCLN,          KC_BSLS,          KC_EXLM,          \
-KC_EQL,           KC_MINS,          KC_QUES,          KC_TRNS
+STD_BETWEEN_ROW_ONE_TWO_NONES \
+KC_EQL,           KC_MINS,          KC_QUES,          KC_TRNS \
+STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_CUS_LEFT
 #define ARTSEY_STD_LAYER_CUS_LEFT \
+STD_LEADING_NONES \
 KC_NO,            KC_VOLU,          KC_INS,           KC_MUTE,          \
-KC_TRNS,          KC_VOLD,          KC_PSCR,          KC_RSFT
+STD_BETWEEN_ROW_ONE_TWO_NONES \
+KC_TRNS,          KC_VOLD,          KC_PSCR,          KC_RSFT \
+STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_MSE_LEFT
 #define ARTSEY_STD_LAYER_MSE_LEFT \
+STD_LEADING_NONES \
 KC_WH_U,          KC_BTN2,          KC_MS_U,          KC_BTN1,          \
-KC_WH_D,          KC_MS_L,          KC_MS_D,          KC_MS_R
+STD_BETWEEN_ROW_ONE_TWO_NONES \
+KC_WH_D,          KC_MS_L,          KC_MS_D,          KC_MS_R \
+STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_TOG_LEFT
@@ -62,44 +83,65 @@ ARTSEY_TOG_USR_4,          ARTSEY_TOG_USR_3,          LCK_GUI,          LCK_SHIF
 
 #ifndef ARTSEY_STD_LAYER_BASE_RIGHT
 #define ARTSEY_STD_LAYER_BASE_RIGHT \
+STD_LEADING_NONES \
 LT(LAYER_ID_PARENTHETICALS, KC_A),    KC_R,             KC_T,             LT(LAYER_ID_NUMBERS, KC_S),    \
-LT(LAYER_ID_SYMBOLS, KC_E),           KC_Y,             KC_I,             LT(LAYER_ID_CUSTOM, KC_O)
+STD_BETWEEN_ROW_ONE_TWO_NONES \
+LT(LAYER_ID_SYMBOLS, KC_E),           KC_Y,             KC_I,             LT(LAYER_ID_CUSTOM, KC_O) \
+STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_PAR_RIGHT
 #define ARTSEY_STD_LAYER_PAR_RIGHT \
+STD_LEADING_NONES \
 KC_TRNS,          KC_LPRN,          KC_RPRN,          KC_LCBR,          \
-KC_NO,            KC_LBRC,          KC_RBRC,          KC_RCBR
+STD_BETWEEN_ROW_ONE_TWO_NONES \
+KC_NO,            KC_LBRC,          KC_RBRC,          KC_RCBR \
+STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_NUM_RIGHT
 #define ARTSEY_STD_LAYER_NUM_RIGHT \
+STD_LEADING_NONES \
 KC_1,             KC_2,             KC_3,             KC_TRNS,          \
-KC_4,             KC_5,             KC_6,             KC_NO
+STD_BETWEEN_ROW_ONE_TWO_NONES \
+KC_4,             KC_5,             KC_6,             KC_NO \
+STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_NAV_RIGHT
 #define ARTSEY_STD_LAYER_NAV_RIGHT \
+STD_LEADING_NONES \
 KC_HOME,          KC_UP,            KC_END,           KC_PGUP,          \
-KC_LEFT,          KC_DOWN,          KC_RIGHT,         KC_PGDN
+STD_BETWEEN_ROW_ONE_TWO_NONES \
+KC_LEFT,          KC_DOWN,          KC_RIGHT,         KC_PGDN \
+STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_SYM_RIGHT
 #define ARTSEY_STD_LAYER_SYM_RIGHT \
+STD_LEADING_NONES \
 KC_EXLM,          KC_BSLS,          KC_SCLN,          KC_GRV,           \
-KC_TRNS,          KC_QUES,          KC_MINS,          KC_EQL
+STD_BETWEEN_ROW_ONE_TWO_NONES \
+KC_TRNS,          KC_QUES,          KC_MINS,          KC_EQL \
+STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_CUS_RIGHT
 #define ARTSEY_STD_LAYER_CUS_RIGHT \
+STD_LEADING_NONES \
 KC_MUTE,          KC_INS,           KC_VOLU,          KC_NO,            \
-KC_RSFT,          KC_PSCR,          KC_VOLD,          KC_TRNS
+STD_BETWEEN_ROW_ONE_TWO_NONES \
+KC_RSFT,          KC_PSCR,          KC_VOLD,          KC_TRNS \
+STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_MSE_RIGHT
 #define ARTSEY_STD_LAYER_MSE_RIGHT \
+STD_LEADING_NONES \
 KC_BTN1,          KC_MS_U,          KC_BTN2,          KC_WH_U,          \
-KC_MS_L,          KC_MS_D,          KC_MS_R,          KC_WH_D
+STD_BETWEEN_ROW_ONE_TWO_NONES \
+KC_MS_L,          KC_MS_D,          KC_MS_R,          KC_WH_D \
+STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_TOG_RIGHT

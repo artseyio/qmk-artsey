@@ -1,7 +1,7 @@
 {
     "keyboard": "crkbd/rev1",
     "keymap": "artsey",
-    "layout": "ARTSEY_LAYOUT_WRAPPER",
+    "layout": "LAYOUT_artsey_wrapper",
     "layers": [
         [ "ARTSEY_BIG_LAYER_BASE" ],
         [ "ARTSEY_BIG_LAYER_NUM" ],

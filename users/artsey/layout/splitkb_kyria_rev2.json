@@ -1,5 +1,5 @@
 {
-    "keyboard": "draculad",
+    "keyboard": "splitkb/kyria/rev2",
     "keymap": "artsey",
     "layout": "LAYOUT_artsey_wrapper",
     "layers": [
@@ -11,7 +11,6 @@
         [ "ARTSEY_BIG_LAYER_CUS" ],
         [ "ARTSEY_BIG_LAYER_MSE" ],
         [ "ARTSEY_BIG_LAYER_BIG_SYM" ],
-        [ "ARTSEY_BIG_LAYER_BIG_FUN" ],
-        [ "ARTSEY_BIG_LAYER_TOG" ]
+        [ "ARTSEY_BIG_LAYER_BIG_FUN" ]
     ]
 }

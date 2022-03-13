@@ -2,6 +2,8 @@
 // SPDX-License-Identifier: Apache-2.0
 #include "../shared_defines.h"
 
+#ifndef DISABLE_DEFAULT_SYMBOL_COMBOS
+
 //   NAME                            RESULT                         TRIGGER
 COMB(combo_period,                   KC_DOT,                        LT(LAYER_ID_PARENTHETICALS,KC_A), KC_Y)
 COMB(combo_comma,                    KC_COMM,                       LT(LAYER_ID_PARENTHETICALS,KC_A), KC_I)
@@ -18,4 +20,6 @@ COMB(combo_single_quote_40p,         KC_QUOT,                       LEFT_PARENTH
 COMB(combo_exclamation_40p,          ARTSEY_EXCLAMATION,            KC_I, KC_K)
 COMB(combo_single_quote_40p,         KC_QUOT,                       RIGHT_PARENTHETICALS, KC_K, KC_L)
 #endif
-#endif
+#endif // ARTSEY_SIZE_40P
+
+#endif // DISABLE_DEFAULT_SYMBOL_COMBOS

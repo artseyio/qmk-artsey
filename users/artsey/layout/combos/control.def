@@ -7,6 +7,8 @@
 #include "../remixes/combos/control.def"
 #endif
 
+#ifndef DISABLE_DEFAULT_CONTROL_COMBOS
+
 //   NAME                            RESULT                         TRIGGER
 COMB(combo_backspace_base,                KC_BSPC,                       LT(LAYER_ID_SYMBOLS, KC_E), KC_R)
 COMB(combo_delete_base,                   KC_DEL,                        KC_I, KC_R)
@@ -47,4 +49,6 @@ COMB(combo_delete_base_40p,               KC_DEL,                        KC_I, K
 COMB(combo_tab_base_40p,                  KC_TAB,                        RIGHT_PARENTHETICALS, KC_I, KC_O, RIGHT_CUSTOM)
 COMB(combo_space_base_40p,                KC_SPACE,                      RIGHT_SYMBOLS,        KC_K, KC_L, RIGHT_CUSTOM)
 #endif
-#endif
+#endif // ARTSEY_SIZE_40P
+
+#endif // DISABLE_DEFAULT_CONTROL_COMBOS

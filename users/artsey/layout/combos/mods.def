@@ -1,5 +1,8 @@
 // Copyright (c) 2021 Mike "KemoNine" Crosson
 // SPDX-License-Identifier: Apache-2.0
+
+#ifndef DISABLE_DEFAULT_MOD_COMBOS
+
 //   NAME                            RESULT                         TRIGGER
 COMB(combo_enter_base,                    KC_ENT,                        LT(LAYER_ID_PARENTHETICALS,KC_A), LT(LAYER_ID_SYMBOLS, KC_E))
 COMB(combo_control_base,                  OSM_CTRL,                      LT(LAYER_ID_SYMBOLS, KC_E), LT(LAYER_ID_NUMBERS, KC_S))
@@ -49,4 +52,6 @@ COMB(combo_shift_lock_base_40p,           LCK_SHIFT,                     KC_E, K
 COMB(combo_shift_base_40p,                OSM_SHIFT,                     RIGHT_NUMBERS, KC_O, KC_I, RIGHT_SYMBOLS)
 COMB(combo_caps_lock_base_40p,            KC_CAPS,                       RIGHT_CUSTOM, KC_L, KC_K, RIGHT_PARENTHETICALS)
 #endif
-#endif
+#endif // ARTSEY_SIZE_40P
+
+#endif // DISABLE_DEFAULT_MOD_COMBOS

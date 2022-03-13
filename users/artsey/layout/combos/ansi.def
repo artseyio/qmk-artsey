@@ -9,6 +9,7 @@
 
 #ifndef DISABLE_DEFAULT_ANSI_COMBOS
 
+#ifndef DISABLE_DEFAULT_ALPHA_COMBOS
 //   NAME                            RESULT                         TRIGGER
 COMB(combo_b,                        KC_B,                          KEY_L1,                    KEY_L4)
 COMB(combo_c,                        KC_C,                          KEY_L1,  KEY_L2)
@@ -28,10 +29,13 @@ COMB(combo_q,                        KC_Q,                          KEY_U1,     
 COMB(combo_x,                        KC_X,                                   KEY_U2,  KEY_U3,  KEY_U4)
 COMB(combo_l,                        KC_L,                          KEY_L1,  KEY_L2,  KEY_L3)
 COMB(combo_z,                        KC_Z,                          KEY_U1,  KEY_U2,  KEY_U3,  KEY_U4)
+#endif // DISABLE_DEFAULT_ALPHA_COMBOS
 
+#ifndef DISABLE_DEFAULT_NUMBER_COMBOS
 COMB(combo_seven,                    KC_7,                          KNUM_U1, KNUM_U2)
 COMB(combo_eight,                    KC_8,                                   KNUM_U2, KNUM_U3)
 COMB(combo_nine,                     KC_9,                          KNUM_L1, KNUM_L2)
 COMB(combo_zero,                     KC_0,                                   KNUM_L2, KNUM_L3)
+#endif // DISABLE_DEFAULT_NUMBER_COMBOS
 
 #endif // DISABLE_DEFAULT_ANSI_COMBOS

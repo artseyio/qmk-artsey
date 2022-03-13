@@ -2,14 +2,12 @@
 // SPDX-License-Identifier: Apache-2.0
 #pragma once
 
-// //////////
-// Standard Artsey keys
-#include "keys.h"
+#include "shared_defines.h"
 
 // /////////
 // User remixes / tweaks -- these take precidence above all else
-#if __has_include("remixes/remix_keys.h")
-#include "remixes/remix_keys.h"
+#if __has_include("remixes/remix_shared_defines.h")
+#include "remixes/remix_shared_defines.h"
 #endif
 #if __has_include("remixes/remix_layers.h")
 #include "remixes/remix_layers.h"

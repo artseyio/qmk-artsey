@@ -1,12 +1,10 @@
 // Copyright (c) 2021 Mike "KemoNine" Crosson
 // SPDX-License-Identifier: Apache-2.0
 
-#include "layout/keys.h"
-#if __has_include("layout/remixes/remix_keys.h")
-#include "layout/remixes/remix_keys.h"
-#endif
-
 #include "layout/shared_defines.h"
+#if __has_include("layout/remixes/remix_shared_defines.h")
+#include "layout/remixes/remix_shared_defines.h"
+#endif
 
 #ifndef DISABLE_ALL_DEFAULT_COMBOS
 #include "layout/combos/ansi.def"

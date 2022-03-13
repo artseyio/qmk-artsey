@@ -10,44 +10,39 @@
 #ifndef DISABLE_DEFAULT_CONTROL_COMBOS
 
 //   NAME                            RESULT                         TRIGGER
-COMB(combo_backspace_base,                KC_BSPC,                       LT(LAYER_ID_SYMBOLS, KC_E), KC_R)
-COMB(combo_delete_base,                   KC_DEL,                        KC_I, KC_R)
-COMB(combo_backspace_num,                 KC_BSPC,                       KC_4, KC_2)
-COMB(combo_delete_num,                    KC_DEL,                        KC_6, KC_2)
-COMB(combo_tab_base,                      KC_TAB,                        LT(LAYER_ID_PARENTHETICALS,KC_A), KC_R, KC_T, LT(LAYER_ID_CUSTOM, KC_O))
-COMB(combo_space_base,                    KC_SPACE,                      LT(LAYER_ID_SYMBOLS, KC_E), KC_Y, KC_I, LT(LAYER_ID_CUSTOM, KC_O))
+COMB(combo_backspace_base,           KC_BSPC,                       KEY_L1,  KEY_U2)
+COMB(combo_delete_base,              KC_DEL,                                 KEY_L2,  KEY_U3)
+COMB(combo_tab_base,                 KC_TAB,                        KEY_U1,  KEY_U2,  KEY_U3,  KEY_L4)
+COMB(combo_space_base,               KC_SPACE,                      KEY_L1,  KEY_L2,  KEY_L3,  KEY_L4)
 
-COMB(combo_space_nav,                     KC_SPACE,                      KC_PGDN, KC_LEFT, KC_DOWN, KC_RIGHT)
-COMB(combo_tab_nav,                       KC_TAB,                        KC_PGDN, KC_HOME, KC_UP, KC_END)
-#ifdef ARTSEY_HAND_LEFT
-COMB(combo_backspace_nav,                 KC_BSPC,                       KC_UP, KC_RIGHT)
-COMB(combo_delete_nav,                    KC_DEL,                        KC_UP, KC_LEFT)
-#endif
-#ifdef ARTSEY_HAND_RIGHT
-COMB(combo_backspace_nav,                 KC_BSPC,                       KC_UP, KC_LEFT)
-COMB(combo_delete_nav,                    KC_DEL,                        KC_UP, KC_RIGHT)
-#endif
+COMB(combo_backspace_nav,            KC_BSPC,                       KNAV_L1, KNAV_U2)
+COMB(combo_delete_nav,               KC_DEL,                                 KNAV_U2, KNAV_L3)
+COMB(combo_tab_nav,                  KC_TAB,                        KNAV_U1, KNAV_U2, KNAV_U3, KNAV_L4)
+COMB(combo_space_nav,                KC_SPACE,                      KNAV_L1, KNAV_L2, KNAV_L3, KNAV_L4)
+
+COMB(combo_backspace_num,            KC_BSPC,                       KNUM_L1, KNUM_U2)
+COMB(combo_delete_num,               KC_DEL,                                 KNUM_U2, KNUM_L3)
 
 #ifdef ARTSEY_SIZE_40P
 #ifdef ARTSEY_HAND_LEFT
 #ifdef ARTSEY_40P_ANSI_BACKSPACE
-COMB(combo_backspace_base_40p,            KC_BSPC,                       LEFT_SYMBOLS, KC_E)
+COMB(combo_backspace_base_40p,       KC_BSPC,                       LEFT_SYMBOLS, KC_E)
 #endif
 #ifdef ARTSEY_40P_ANSI_DELETE
-COMB(combo_delete_base_40p,               KC_DEL,                        KC_S, KC_E)
+COMB(combo_delete_base_40p,          KC_DEL,                        KC_S, KC_E)
 #endif
-COMB(combo_tab_base_40p,                  KC_TAB,                        LEFT_CUSTOM, KC_W, KC_E, LEFT_PARENTHETICALS)
-COMB(combo_space_base_40p,                KC_SPACE,                      LEFT_CUSTOM,  KC_S, KC_D, LEFT_SYMBOLS)
+COMB(combo_tab_base_40p,             KC_TAB,                        LEFT_CUSTOM, KC_W, KC_E, LEFT_PARENTHETICALS)
+COMB(combo_space_base_40p,           KC_SPACE,                      LEFT_CUSTOM,  KC_S, KC_D, LEFT_SYMBOLS)
 #endif
 #ifdef ARTSEY_HAND_RIGHT
 #ifdef ARTSEY_40P_ANSI_BACKSPACE
-COMB(combo_backspace_base_40p,            KC_BSPC,                       RIGHT_SYMBOLS, KC_I)
+COMB(combo_backspace_base_40p,       KC_BSPC,                       RIGHT_SYMBOLS, KC_I)
 #endif
 #ifdef ARTSEY_40P_ANSI_DELETE
-COMB(combo_delete_base_40p,               KC_DEL,                        KC_I, KC_L)
+COMB(combo_delete_base_40p,          KC_DEL,                        KC_I, KC_L)
 #endif
-COMB(combo_tab_base_40p,                  KC_TAB,                        RIGHT_PARENTHETICALS, KC_I, KC_O, RIGHT_CUSTOM)
-COMB(combo_space_base_40p,                KC_SPACE,                      RIGHT_SYMBOLS,        KC_K, KC_L, RIGHT_CUSTOM)
+COMB(combo_tab_base_40p,             KC_TAB,                        RIGHT_PARENTHETICALS, KC_I, KC_O, RIGHT_CUSTOM)
+COMB(combo_space_base_40p,           KC_SPACE,                      RIGHT_SYMBOLS,        KC_K, KC_L, RIGHT_CUSTOM)
 #endif
 #endif // ARTSEY_SIZE_40P
 

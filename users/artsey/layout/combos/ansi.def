@@ -1,7 +1,12 @@
 // Copyright (c) 2021 Mike "KemoNine" Crosson
 // SPDX-License-Identifier: Apache-2.0
 
-#include "layout/keys.h"
+// /////////
+// User remixes / tweaks -- these take precidence above all else
+#if __has_include("../remixes/combos/ansi.def")
+#include "../remixes/combos/ansi.def"
+#endif
+
 #ifndef DISABLE_DEFAULT_ANSI_COMBOS
 
 //   NAME                            RESULT                         TRIGGER
@@ -24,9 +29,9 @@ COMB(combo_x,                        KC_X,                                   KEY
 COMB(combo_l,                        KC_L,                          KEY_L1,  KEY_L2,  KEY_L3)
 COMB(combo_z,                        KC_Z,                          KEY_U1,  KEY_U2,  KEY_U3,  KEY_U4)
 
-COMB(combo_seven,                    KC_7,                          KC_1, KC_2)
-COMB(combo_eight,                    KC_8,                                KC_2, KC_3)
-COMB(combo_nine,                     KC_9,                          KC_4, KC_5)
-COMB(combo_zero,                     KC_0,                                KC_5, KC_6)
+COMB(combo_seven,                    KC_7,                          KNUM_U1, KNUM_U2)
+COMB(combo_eight,                    KC_8,                                   KNUM_U2, KNUM_U3)
+COMB(combo_nine,                     KC_9,                          KNUM_L1, KNUM_L2)
+COMB(combo_zero,                     KC_0,                                   KNUM_L2, KNUM_L3)
 
 #endif // DISABLE_DEFAULT_ANSI_COMBOS

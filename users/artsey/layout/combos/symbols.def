@@ -2,14 +2,20 @@
 // SPDX-License-Identifier: Apache-2.0
 #include "../shared_defines.h"
 
+// /////////
+// User remixes / tweaks -- these take precidence above all else
+#if __has_include("../remixes/combos/symbols.def")
+#include "../remixes/combos/symbols.def"
+#endif
+
 #ifndef DISABLE_DEFAULT_SYMBOL_COMBOS
 
 //   NAME                            RESULT                         TRIGGER
-COMB(combo_period,                   KC_DOT,                        LT(LAYER_ID_PARENTHETICALS,KC_A), KC_Y)
-COMB(combo_comma,                    KC_COMM,                       LT(LAYER_ID_PARENTHETICALS,KC_A), KC_I)
-COMB(combo_slash,                    KC_SLSH,                       LT(LAYER_ID_PARENTHETICALS,KC_A), LT(LAYER_ID_CUSTOM, KC_O))
-COMB(combo_exclamation,              ARTSEY_EXCLAMATION,            KC_T, KC_I)
-COMB(combo_single_quote,             KC_QUOT,                       LT(LAYER_ID_PARENTHETICALS,KC_A), KC_Y, KC_I)
+COMB(combo_period,                   KC_DOT,                        KEY_U1, KEY_L2)
+COMB(combo_comma,                    KC_COMM,                       KEY_U1,         KEY_L3)
+COMB(combo_slash,                    KC_SLSH,                       KEY_U1,                 KEY_L4)
+COMB(combo_exclamation,              ARTSEY_EXCLAMATION,                            KEY_U3, KEY_L3)
+COMB(combo_single_quote,             KC_QUOT,                       KEY_U1, KEY_L2, KEY_L3)
 
 #ifdef ARTSEY_SIZE_40P
 #ifdef ARTSEY_HAND_LEFT

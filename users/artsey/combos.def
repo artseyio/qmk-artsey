@@ -6,6 +6,8 @@
 #include "layout/remixes/remix_keys.h"
 #endif
 
+#include "layout/shared_defines.h"
+
 #ifndef DISABLE_ALL_DEFAULT_COMBOS
 #include "layout/combos/ansi.def"
 #include "layout/combos/symbols.def"

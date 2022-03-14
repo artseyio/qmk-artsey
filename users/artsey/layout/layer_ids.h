@@ -28,3 +28,9 @@
 #define LAYER_ID_BIG_SYM 7
 #define LAYER_ID_BIG_FUN 8
 #endif
+
+// /////////
+// User remixes / tweaks
+#if __has_include("remixes/remix_layer_ids.h")
+#include "remixes/remix_layer_ids.h"
+#endif

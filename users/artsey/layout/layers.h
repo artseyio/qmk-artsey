@@ -2,20 +2,18 @@
 // SPDX-License-Identifier: Apache-2.0
 #pragma once
 
+// /////////
+// Shared defines (combo definitions need these too)
 #include "shared_defines.h"
 
 // /////////
-// User remixes / tweaks -- these take precidence above all else
+// User remixes / tweaks -- these take precidence above all standard definitions
 #if __has_include("remixes/remix_shared_defines.h")
 #include "remixes/remix_shared_defines.h"
 #endif
 #if __has_include("remixes/remix_layers.h")
 #include "remixes/remix_layers.h"
 #endif
-
-// //////////
-// Shared custom defines (combo definitions need these too)
-#include "shared_defines.h"
 
 #ifndef ARTSEY_STD_LAYER_BASE_LEFT
 #define ARTSEY_STD_LAYER_BASE_LEFT \

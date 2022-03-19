@@ -11,7 +11,7 @@
 
 //   NAME                            RESULT                         TRIGGER
 COMB(combo_backspace_base,           KC_BSPC,                       KEY_L1,  KEY_U2)
-COMB(combo_delete_base,              KC_DEL,                                 KEY_L2,  KEY_U3)
+COMB(combo_delete_base,              KC_DEL,                                 KEY_U2,  KEY_L3)
 COMB(combo_tab_base,                 KC_TAB,                        KEY_U1,  KEY_U2,  KEY_U3,  KEY_L4)
 COMB(combo_space_base,               KC_SPACE,                      KEY_L1,  KEY_L2,  KEY_L3,  KEY_L4)
 

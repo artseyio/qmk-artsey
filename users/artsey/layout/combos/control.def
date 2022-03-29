@@ -10,18 +10,18 @@
 #ifndef DISABLE_DEFAULT_CONTROL_COMBOS
 
 //   NAME                            RESULT                         TRIGGER
-COMB(combo_backspace_base,           KC_BSPC,                       KEY_L1,  KEY_U2)
-COMB(combo_delete_base,              KC_DEL,                                 KEY_U2,  KEY_L3)
-COMB(combo_tab_base,                 KC_TAB,                        KEY_U1,  KEY_U2,  KEY_U3,  KEY_L4)
-COMB(combo_space_base,               KC_SPACE,                      KEY_L1,  KEY_L2,  KEY_L3,  KEY_L4)
+COMB(combo_backspace_base,           KC_BSPC,                       KEY_B1,  KEY_T2)
+COMB(combo_delete_base,              KC_DEL,                                 KEY_T2,  KEY_B3)
+COMB(combo_tab_base,                 KC_TAB,                        KEY_T1,  KEY_T2,  KEY_T3,  KEY_B4)
+COMB(combo_space_base,               KC_SPACE,                      KEY_B1,  KEY_B2,  KEY_B3,  KEY_B4)
 
-COMB(combo_backspace_nav,            KC_BSPC,                       KNAV_L1, KNAV_U2)
-COMB(combo_delete_nav,               KC_DEL,                                 KNAV_U2, KNAV_L3)
-COMB(combo_tab_nav,                  KC_TAB,                        KNAV_U1, KNAV_U2, KNAV_U3, KNAV_L4)
-COMB(combo_space_nav,                KC_SPACE,                      KNAV_L1, KNAV_L2, KNAV_L3, KNAV_L4)
+COMB(combo_backspace_nav,            KC_BSPC,                       KNAV_B1, KNAV_T2)
+COMB(combo_delete_nav,               KC_DEL,                                 KNAV_T2, KNAV_B3)
+COMB(combo_tab_nav,                  KC_TAB,                        KNAV_T1, KNAV_T2, KNAV_T3, KNAV_B4)
+COMB(combo_space_nav,                KC_SPACE,                      KNAV_B1, KNAV_B2, KNAV_B3, KNAV_B4)
 
-COMB(combo_backspace_num,            KC_BSPC,                       KNUM_L1, KNUM_U2)
-COMB(combo_delete_num,               KC_DEL,                                 KNUM_U2, KNUM_L3)
+COMB(combo_backspace_num,            KC_BSPC,                       KNUM_B1, KNUM_T2)
+COMB(combo_delete_num,               KC_DEL,                                 KNUM_T2, KNUM_B3)
 
 #ifdef ARTSEY_SIZE_40P
 #ifdef ARTSEY_HAND_LEFT

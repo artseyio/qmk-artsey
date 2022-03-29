@@ -10,22 +10,22 @@
 #ifndef DISABLE_DEFAULT_MOD_COMBOS
 
 //   NAME                            RESULT                         TRIGGER
-COMB(combo_enter_base,               KC_ENT,                        KEY_U1,  KEY_L1)
-COMB(combo_control_base,             OSM_CTRL,                      KEY_L1,                    KEY_U4)
-COMB(combo_gui_base,                 OSM_GUI,                                KEY_L2,           KEY_U4)
-COMB(combo_alt_base,                 OSM_ALT,                                         KEY_L3,  KEY_U4)
-COMB(combo_esc_base,                 KC_ESC,                        KEY_U1,  KEY_U2,           KEY_L4)
-COMB(combo_shift_lock_base,          LCK_SHIFT,                              KEY_U2,  KEY_L2)
-COMB(combo_shift_base,               OSM_SHIFT,                     KEY_L1,  KEY_U2,  KEY_U3,  KEY_U4)
-COMB(combo_caps_lock_base,           KC_CAPS,                       KEY_U1,  KEY_L2,  KEY_L3,  KEY_L4)
+COMB(combo_enter_base,               KC_ENT,                        KEY_T1,  KEY_B1)
+COMB(combo_control_base,             OSM_CTRL,                      KEY_B1,                    KEY_T4)
+COMB(combo_gui_base,                 OSM_GUI,                                KEY_B2,           KEY_T4)
+COMB(combo_alt_base,                 OSM_ALT,                                         KEY_B3,  KEY_T4)
+COMB(combo_esc_base,                 KC_ESC,                        KEY_T1,  KEY_T2,           KEY_B4)
+COMB(combo_shift_lock_base,          LCK_SHIFT,                              KEY_T2,  KEY_B2)
+COMB(combo_shift_base,               OSM_SHIFT,                     KEY_B1,  KEY_T2,  KEY_T3,  KEY_T4)
+COMB(combo_caps_lock_base,           KC_CAPS,                       KEY_T1,  KEY_B2,  KEY_B3,  KEY_B4)
 
-COMB(combo_enter_nav,                KC_ENT,                        KNAV_U1, KNAV_L1)
-COMB(combo_control_nav,              OSM_CTRL,                      KNAV_L1,                   KNAV_U4)
-COMB(combo_gui_nav,                  OSM_GUI,                                KNAV_L2,          KNAV_U4)
-COMB(combo_alt_nav,                  OSM_ALT,                                         KNAV_L3, KNAV_U4)
-COMB(combo_esc_nav,                  KC_ESC,                        KNAV_U1, KNAV_U2,          KNAV_L4)
-COMB(combo_shift_lock_nav,           LCK_SHIFT,                              KNAV_U2, KNAV_L2)
-COMB(combo_shift_nav,                OSM_SHIFT,                     KNAV_L1, KNAV_U2, KNAV_U3, KNAV_U4)
+COMB(combo_enter_nav,                KC_ENT,                        KNAV_T1, KNAV_B1)
+COMB(combo_control_nav,              OSM_CTRL,                      KNAV_B1,                   KNAV_T4)
+COMB(combo_gui_nav,                  OSM_GUI,                                KNAV_B2,          KNAV_T4)
+COMB(combo_alt_nav,                  OSM_ALT,                                         KNAV_B3, KNAV_T4)
+COMB(combo_esc_nav,                  KC_ESC,                        KNAV_T1, KNAV_T2,          KNAV_B4)
+COMB(combo_shift_lock_nav,           LCK_SHIFT,                              KNAV_T2, KNAV_B2)
+COMB(combo_shift_nav,                OSM_SHIFT,                     KNAV_B1, KNAV_T2, KNAV_T3, KNAV_T4)
 
 #ifdef ARTSEY_SIZE_40P
 #ifdef ARTSEY_HAND_LEFT

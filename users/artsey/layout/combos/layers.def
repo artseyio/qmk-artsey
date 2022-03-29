@@ -10,10 +10,10 @@
 #ifndef DISABLE_DEFAULT_LAYER_COMBOS
 
 //   NAME                            RESULT                         TRIGGER
-COMB(combo_layer_basenav,            TG(LAYER_ID_NAVIGATION),       KEY_L1,  KEY_U2,  KEY_L3)
-COMB(combo_layer_navbase,            TG(LAYER_ID_NAVIGATION),       KNAV_L1, KNAV_U2, KNAV_L3)
-COMB(combo_layer_basemse,            TG(LAYER_ID_MOUSE),            KEY_U1,  KEY_L2,  KEY_U3)
-COMB(combo_layer_msebase,            TG(LAYER_ID_MOUSE),            KMSE_U1, KMSE_L2, KMSE_U3)
+COMB(combo_layer_basenav,            TG(LAYER_ID_NAVIGATION),       KEY_B1,  KEY_T2,  KEY_B3)
+COMB(combo_layer_navbase,            TG(LAYER_ID_NAVIGATION),       KNAV_B1, KNAV_T2, KNAV_B3)
+COMB(combo_layer_basemse,            TG(LAYER_ID_MOUSE),            KEY_T1,  KEY_B2,  KEY_T3)
+COMB(combo_layer_msebase,            TG(LAYER_ID_MOUSE),            KMSE_T1, KMSE_B2, KMSE_T3)
 
 #ifndef ARTSEY_SIZE_STD
 COMB(combo_layer_basefun,            TG(LAYER_ID_BIG_FUN),          OSM_SHIFT, KC_TAB)

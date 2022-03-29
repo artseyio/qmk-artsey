@@ -10,11 +10,11 @@
 #ifndef DISABLE_DEFAULT_SYMBOL_COMBOS
 
 //   NAME                            RESULT                         TRIGGER
-COMB(combo_period,                   KC_DOT,                        KEY_U1, KEY_L2)
-COMB(combo_comma,                    KC_COMM,                       KEY_U1,         KEY_L3)
-COMB(combo_slash,                    KC_SLSH,                       KEY_U1,                 KEY_L4)
-COMB(combo_exclamation,              ARTSEY_EXCLAMATION,                            KEY_U3, KEY_L3)
-COMB(combo_single_quote,             KC_QUOT,                       KEY_U1, KEY_L2, KEY_L3)
+COMB(combo_period,                   KC_DOT,                        KEY_T1, KEY_B2)
+COMB(combo_comma,                    KC_COMM,                       KEY_T1,         KEY_B3)
+COMB(combo_slash,                    KC_SLSH,                       KEY_T1,                 KEY_B4)
+COMB(combo_exclamation,              ARTSEY_EXCLAMATION,                            KEY_T3, KEY_B3)
+COMB(combo_single_quote,             KC_QUOT,                       KEY_T1, KEY_B2, KEY_B3)
 
 #ifdef ARTSEY_SIZE_40P
 #ifdef ARTSEY_HAND_LEFT

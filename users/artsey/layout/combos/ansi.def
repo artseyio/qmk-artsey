@@ -1,26 +1,41 @@
 // Copyright (c) 2021 Mike "KemoNine" Crosson
 // SPDX-License-Identifier: Apache-2.0
-//   NAME                            RESULT                         TRIGGER
-COMB(combo_b,                        KC_B,                          LT(LAYER_ID_SYMBOLS, KC_E), LT(LAYER_ID_CUSTOM, KC_O))
-COMB(combo_c,                        KC_C,                          LT(LAYER_ID_SYMBOLS, KC_E), KC_Y)
-COMB(combo_n,                        KC_N,                          KC_I, LT(LAYER_ID_CUSTOM, KC_O))
-COMB(combo_f,                        KC_F,                          LT(LAYER_ID_PARENTHETICALS,KC_A), KC_R)
-COMB(combo_g,                        KC_G,                          KC_R, KC_T)
-COMB(combo_u,                        KC_U,                          KC_Y, KC_I)
-COMB(combo_h,                        KC_H,                          LT(LAYER_ID_SYMBOLS, KC_E), KC_I)
-COMB(combo_v,                        KC_V,                          KC_R, LT(LAYER_ID_NUMBERS, KC_S))
-COMB(combo_j,                        KC_J,                          KC_T, LT(LAYER_ID_NUMBERS, KC_S))
-COMB(combo_w,                        KC_W,                          LT(LAYER_ID_PARENTHETICALS,KC_A), LT(LAYER_ID_NUMBERS, KC_S))
-COMB(combo_k,                        KC_K,                          KC_Y, LT(LAYER_ID_CUSTOM, KC_O))
-COMB(combo_m,                        KC_M,                          KC_Y, KC_I, LT(LAYER_ID_CUSTOM, KC_O))
-COMB(combo_d,                        KC_D,                          LT(LAYER_ID_PARENTHETICALS,KC_A), KC_R, KC_T)
-COMB(combo_p,                        KC_P,                          LT(LAYER_ID_SYMBOLS, KC_E), KC_I, LT(LAYER_ID_CUSTOM, KC_O))
-COMB(combo_q,                        KC_Q,                          LT(LAYER_ID_PARENTHETICALS,KC_A), KC_T, LT(LAYER_ID_NUMBERS, KC_S))
-COMB(combo_x,                        KC_X,                          KC_R, KC_T, LT(LAYER_ID_NUMBERS, KC_S))
-COMB(combo_l,                        KC_L,                          LT(LAYER_ID_SYMBOLS, KC_E), KC_Y, KC_I)
-COMB(combo_z,                        KC_Z,                          LT(LAYER_ID_PARENTHETICALS,KC_A), KC_R, KC_T, LT(LAYER_ID_NUMBERS, KC_S))
 
-COMB(combo_seven,                    KC_7,                          KC_2, KC_1)
-COMB(combo_eight,                    KC_8,                          KC_3, KC_2)
-COMB(combo_nine,                     KC_9,                          KC_4, KC_5)
-COMB(combo_zero,                     KC_0,                          KC_5, KC_6)
+// /////////
+// User remixes / tweaks -- these take precidence above all else
+#if __has_include("../remixes/combos/ansi.def")
+#include "../remixes/combos/ansi.def"
+#endif
+
+#ifndef DISABLE_DEFAULT_ANSI_COMBOS
+
+#ifndef DISABLE_DEFAULT_ALPHA_COMBOS
+//   NAME                            RESULT                         TRIGGER
+COMB(combo_b,                        KC_B,                          KEY_B1,                    KEY_B4)
+COMB(combo_c,                        KC_C,                          KEY_B1,  KEY_B2)
+COMB(combo_n,                        KC_N,                                            KEY_B3,  KEY_B4)
+COMB(combo_f,                        KC_F,                          KEY_T1,  KEY_T2)
+COMB(combo_g,                        KC_G,                                   KEY_T2,  KEY_T3)
+COMB(combo_u,                        KC_U,                                   KEY_B2,  KEY_B3)
+COMB(combo_h,                        KC_H,                          KEY_B1,           KEY_B3)
+COMB(combo_v,                        KC_V,                                   KEY_T2,           KEY_T4)
+COMB(combo_j,                        KC_J,                                            KEY_T3,  KEY_T4)
+COMB(combo_w,                        KC_W,                          KEY_T1,                    KEY_T4)
+COMB(combo_k,                        KC_K,                                   KEY_B2,           KEY_B4)
+COMB(combo_m,                        KC_M,                                   KEY_B2,  KEY_B3,  KEY_B4)
+COMB(combo_d,                        KC_D,                          KEY_T1,  KEY_T2,  KEY_T3)
+COMB(combo_p,                        KC_P,                          KEY_B1,           KEY_B3,  KEY_B4)
+COMB(combo_q,                        KC_Q,                          KEY_T1,           KEY_T3,  KEY_T4)
+COMB(combo_x,                        KC_X,                                   KEY_T2,  KEY_T3,  KEY_T4)
+COMB(combo_l,                        KC_L,                          KEY_B1,  KEY_B2,  KEY_B3)
+COMB(combo_z,                        KC_Z,                          KEY_T1,  KEY_T2,  KEY_T3,  KEY_T4)
+#endif // DISABLE_DEFAULT_ALPHA_COMBOS
+
+#ifndef DISABLE_DEFAULT_NUMBER_COMBOS
+COMB(combo_seven,                    KC_7,                          KNUM_T1, KNUM_T2)
+COMB(combo_eight,                    KC_8,                                   KNUM_T2, KNUM_T3)
+COMB(combo_nine,                     KC_9,                          KNUM_B1, KNUM_B2)
+COMB(combo_zero,                     KC_0,                                   KNUM_B2, KNUM_B3)
+#endif // DISABLE_DEFAULT_NUMBER_COMBOS
+
+#endif // DISABLE_DEFAULT_ANSI_COMBOS

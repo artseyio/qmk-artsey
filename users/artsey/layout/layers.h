@@ -3,21 +3,24 @@
 #pragma once
 
 // /////////
-// User remixes / tweaks -- these take precidence above all else
+// Shared defines (combo definitions need these too)
+#include "shared_defines.h"
+
+// /////////
+// User remixes / tweaks -- these take precidence above all standard definitions
+#if __has_include("remixes/remix_shared_defines.h")
+#include "remixes/remix_shared_defines.h"
+#endif
 #if __has_include("remixes/remix_layers.h")
 #include "remixes/remix_layers.h"
 #endif
 
-// //////////
-// Shared custom defines (combo definitions need these too)
-#include "shared_defines.h"
-
 #ifndef ARTSEY_STD_LAYER_BASE_LEFT
 #define ARTSEY_STD_LAYER_BASE_LEFT \
 STD_LEADING_NONES \
-LT(LAYER_ID_NUMBERS, KC_S),    KC_T,             KC_R,             LT(LAYER_ID_PARENTHETICALS, KC_A),    \
+KEY_T4,           KEY_T3,           KEY_T2,           KEY_T1,           \
 STD_BETWEEN_ROW_ONE_TWO_NONES \
-LT(LAYER_ID_CUSTOM, KC_O),     KC_I,             KC_Y,             LT(LAYER_ID_SYMBOLS, KC_E) \
+KEY_B4,           KEY_B3,           KEY_B2,           KEY_B1            \
 STD_TRAILING_NONES
 #endif
 
@@ -26,25 +29,25 @@ STD_TRAILING_NONES
 STD_LEADING_NONES \
 KC_RCBR,          KC_LPRN,          KC_RPRN,          KC_TRNS,          \
 STD_BETWEEN_ROW_ONE_TWO_NONES \
-KC_LCBR,          KC_LBRC,          KC_RBRC,          KC_NO \
+KC_LCBR,          KC_LBRC,          KC_RBRC,          KC_NO             \
 STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_NUM_LEFT
 #define ARTSEY_STD_LAYER_NUM_LEFT \
 STD_LEADING_NONES \
-KC_TRNS,          KC_3,             KC_2,             KC_1,             \
+KNUM_T4,          KNUM_T3,          KNUM_T2,          KNUM_T1,          \
 STD_BETWEEN_ROW_ONE_TWO_NONES \
-KC_NO,            KC_6,             KC_5,             KC_4 \
+KNUM_B4,          KNUM_B3,          KNUM_B2,          KNUM_B1           \
 STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_NAV_LEFT
 #define ARTSEY_STD_LAYER_NAV_LEFT \
 STD_LEADING_NONES \
-KC_PGUP,          KC_HOME,          KC_UP,            KC_END,           \
+KNAV_T4,          KNAV_T3,          KNAV_T2,          KNAV_T1,          \
 STD_BETWEEN_ROW_ONE_TWO_NONES \
-KC_PGDN,          KC_LEFT,          KC_DOWN,          KC_RIGHT \
+KNAV_B4,          KNAV_B3,          KNAV_B2,          KNAV_B1           \
 STD_TRAILING_NONES
 #endif
 
@@ -53,7 +56,7 @@ STD_TRAILING_NONES
 STD_LEADING_NONES \
 KC_GRV,           KC_SCLN,          KC_BSLS,          KC_EXLM,          \
 STD_BETWEEN_ROW_ONE_TWO_NONES \
-KC_EQL,           KC_MINS,          KC_QUES,          KC_TRNS \
+KC_EQL,           KC_MINS,          KC_QUES,          KC_TRNS           \
 STD_TRAILING_NONES
 #endif
 
@@ -62,25 +65,25 @@ STD_TRAILING_NONES
 STD_LEADING_NONES \
 KC_NO,            KC_VOLU,          KC_INS,           KC_MUTE,          \
 STD_BETWEEN_ROW_ONE_TWO_NONES \
-KC_TRNS,          KC_VOLD,          KC_PSCR,          KC_RSFT \
+KC_TRNS,          KC_VOLD,          KC_PSCR,          KC_RSFT           \
 STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_MSE_LEFT
 #define ARTSEY_STD_LAYER_MSE_LEFT \
 STD_LEADING_NONES \
-KC_WH_U,          KC_BTN2,          KC_MS_U,          KC_BTN1,          \
+KMSE_T4,          KMSE_T3,          KMSE_T2,          KMSE_T1,          \
 STD_BETWEEN_ROW_ONE_TWO_NONES \
-KC_WH_D,          KC_MS_L,          KC_MS_D,          KC_MS_R \
+KMSE_B4,          KMSE_B3,          KMSE_B2,          KMSE_B1           \
 STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_BASE_RIGHT
 #define ARTSEY_STD_LAYER_BASE_RIGHT \
 STD_LEADING_NONES \
-LT(LAYER_ID_PARENTHETICALS, KC_A),    KC_R,             KC_T,             LT(LAYER_ID_NUMBERS, KC_S),    \
+KEY_T1,           KEY_T2,           KEY_T3,           KEY_T4,           \
 STD_BETWEEN_ROW_ONE_TWO_NONES \
-LT(LAYER_ID_SYMBOLS, KC_E),           KC_Y,             KC_I,             LT(LAYER_ID_CUSTOM, KC_O) \
+KEY_B1,           KEY_B2,           KEY_B3,           KEY_B4            \
 STD_TRAILING_NONES
 #endif
 
@@ -89,25 +92,25 @@ STD_TRAILING_NONES
 STD_LEADING_NONES \
 KC_TRNS,          KC_LPRN,          KC_RPRN,          KC_LCBR,          \
 STD_BETWEEN_ROW_ONE_TWO_NONES \
-KC_NO,            KC_LBRC,          KC_RBRC,          KC_RCBR \
+KC_NO,            KC_LBRC,          KC_RBRC,          KC_RCBR           \
 STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_NUM_RIGHT
 #define ARTSEY_STD_LAYER_NUM_RIGHT \
 STD_LEADING_NONES \
-KC_1,             KC_2,             KC_3,             KC_TRNS,          \
+KNUM_T1,          KNUM_T2,          KNUM_T3,          KNUM_T4,          \
 STD_BETWEEN_ROW_ONE_TWO_NONES \
-KC_4,             KC_5,             KC_6,             KC_NO \
+KNUM_B1,          KNUM_B2,          KNUM_B3,          KNUM_B4           \
 STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_NAV_RIGHT
 #define ARTSEY_STD_LAYER_NAV_RIGHT \
 STD_LEADING_NONES \
-KC_HOME,          KC_UP,            KC_END,           KC_PGUP,          \
+KNAV_T1,          KNAV_T2,          KNAV_T3,          KNAV_T4,          \
 STD_BETWEEN_ROW_ONE_TWO_NONES \
-KC_LEFT,          KC_DOWN,          KC_RIGHT,         KC_PGDN \
+KNAV_B1,          KNAV_B2,          KNAV_B3,          KNAV_B4           \
 STD_TRAILING_NONES
 #endif
 
@@ -116,7 +119,7 @@ STD_TRAILING_NONES
 STD_LEADING_NONES \
 KC_EXLM,          KC_BSLS,          KC_SCLN,          KC_GRV,           \
 STD_BETWEEN_ROW_ONE_TWO_NONES \
-KC_TRNS,          KC_QUES,          KC_MINS,          KC_EQL \
+KC_TRNS,          KC_QUES,          KC_MINS,          KC_EQL            \
 STD_TRAILING_NONES
 #endif
 
@@ -125,16 +128,16 @@ STD_TRAILING_NONES
 STD_LEADING_NONES \
 KC_MUTE,          KC_INS,           KC_VOLU,          KC_NO,            \
 STD_BETWEEN_ROW_ONE_TWO_NONES \
-KC_RSFT,          KC_PSCR,          KC_VOLD,          KC_TRNS \
+KC_RSFT,          KC_PSCR,          KC_VOLD,          KC_TRNS           \
 STD_TRAILING_NONES
 #endif
 
 #ifndef ARTSEY_STD_LAYER_MSE_RIGHT
 #define ARTSEY_STD_LAYER_MSE_RIGHT \
 STD_LEADING_NONES \
-KC_BTN1,          KC_MS_U,          KC_BTN2,          KC_WH_U,          \
+KMSE_T1,          KMSE_T2,          KMSE_T3,          KMSE_T4,          \
 STD_BETWEEN_ROW_ONE_TWO_NONES \
-KC_MS_L,          KC_MS_D,          KC_MS_R,          KC_WH_D \
+KMSE_B1,          KMSE_B2,          KMSE_B3,          KMSE_B4           \
 STD_TRAILING_NONES
 #endif
 
@@ -153,11 +156,11 @@ STD_TRAILING_NONES
 #endif
 #define ARTSEY_BIG_LAYER_BASE_LEFT \
 BIG_LEADING_NONES \
-LT(LAYER_ID_NUMBERS, KC_S),             KC_T,             KC_R,             LT(LAYER_ID_PARENTHETICALS, KC_A),      ARTSEY_MINUS,          \
+KEY_T4,           KEY_T3,           KEY_T2,           KEY_T1,           ARTSEY_MINUS,     \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-LT(LAYER_ID_CUSTOM, KC_O),              KC_I,             KC_Y,             LT(LAYER_ID_SYMBOLS, KC_E),             OSM_SHIFT,          \
+KEY_B4,           KEY_B3,           KEY_B2,           KEY_B1,           OSM_SHIFT,        \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
-LALT_T(OSM_CTRL),                        KC_AT,            KC_DEL,           KC_EQL,                                 KC_TAB,           \
+LALT_T(OSM_CTRL), KC_AT,            KC_DEL,           KC_EQL,           KC_TAB,           \
 BIG_BETWEEN_ROW_THREE_THUMBS_NONES \
 ARTSEY_BIG_LAYER_BASE_LEFT_THUMBS \
 BIG_TRAILING_NONES
@@ -173,9 +176,9 @@ BIG_TRAILING_NONES
 
 #define ARTSEY_BIG_LAYER_NAV_LEFT \
 BIG_LEADING_NONES \
-KC_PGUP,          KC_HOME,          KC_UP,            KC_END,           KC_NO,            \
+KNAV_T4,          KNAV_T3,          KNAV_T2,          KNAV_T1,          KC_NO,            \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-KC_PGDN,          KC_LEFT,          KC_DOWN,          KC_RIGHT,         KC_NO,            \
+KNAV_B4,          KNAV_B3,          KNAV_B2,          KNAV_B1,          KC_NO,            \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
 KC_NO,            KC_NO,            KC_NO,            KC_NO,            KC_NO,            \
 BIG_BETWEEN_ROW_THREE_THUMBS_NONES \
@@ -193,9 +196,9 @@ BIG_TRAILING_NONES
 
 #define ARTSEY_BIG_LAYER_NUM_LEFT \
 BIG_LEADING_NONES \
-KC_TRNS,          KC_3,             KC_2,             KC_1,             KC_NO,            \
+KNUM_T4,          KNUM_T3,          KNUM_T2,          KNUM_T1,          KC_NO,            \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-KC_NO,            KC_6,             KC_5,             KC_4,             KC_NO,            \
+KNUM_B4,          KNUM_B3,          KNUM_B2,          KNUM_B1,          KC_NO,            \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
 KC_NO,            KC_NO,            KC_NO,            KC_NO,            KC_NO,            \
 BIG_BETWEEN_ROW_THREE_THUMBS_NONES \
@@ -273,9 +276,9 @@ BIG_TRAILING_NONES
 
 #define ARTSEY_BIG_LAYER_MSE_LEFT \
 BIG_LEADING_NONES \
-KC_WH_U,          KC_BTN2,          KC_MS_U,          KC_BTN1,          KC_NO,            \
+KMSE_T4,          KMSE_T3,          KMSE_T2,          KMSE_T1,          KC_NO,            \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-KC_WH_D,          KC_MS_L,          KC_MS_D,          KC_MS_R,          KC_NO,            \
+KMSE_B4,          KMSE_B3,          KMSE_B2,          KMSE_B1,          KC_NO,            \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
 KC_NO,            KC_NO,            KC_NO,            KC_NO,            KC_NO,            \
 BIG_BETWEEN_ROW_THREE_THUMBS_NONES \
@@ -317,7 +320,7 @@ KC_F4,            KC_F3,            KC_F2,            KC_F1,            KC_NO,  
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
 KC_F8,            KC_F7,            KC_F6,            KC_F5,            FUN_1,          \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
-KC_F12,           KC_F11,           KC_F10,           KC_F9,            FUN_2,            \
+KC_F12,           KC_F11,           KC_F10,           KC_F9,            FUN_2,          \
 BIG_BETWEEN_ROW_THREE_THUMBS_NONES \
 ARTSEY_BIG_LAYER_BIG_FUN_LEFT_THUMBS \
 BIG_TRAILING_NONES
@@ -339,11 +342,11 @@ BIG_TRAILING_NONES
 
 #define ARTSEY_BIG_LAYER_BASE_RIGHT \
 BIG_LEADING_NONES \
-ARTSEY_MINUS,     LT(LAYER_ID_PARENTHETICALS, KC_A),             KC_R,             KC_T,             LT(LAYER_ID_NUMBERS, KC_S),             \
+ARTSEY_MINUS,     KEY_T1,           KEY_T2,           KEY_T3,           KEY_T4,           \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-OSM_SHIFT,          LT(LAYER_ID_SYMBOLS, KC_E),                    KC_Y,             KC_I,             LT(LAYER_ID_CUSTOM, KC_O),              \
+OSM_SHIFT,        KEY_B1,           KEY_B2,           KEY_B3,           KEY_B4,           \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
-KC_TAB,           KC_EQL,                    KC_DEL,           KC_AT,            OSM_CTRL,          \
+KC_TAB,           KC_EQL,           KC_DEL,           KC_AT,            OSM_CTRL,         \
 BIG_BETWEEN_ROW_THREE_THUMBS_NONES \
 ARTSEY_BIG_LAYER_BASE_RIGHT_THUMBS \
 BIG_TRAILING_NONES
@@ -359,9 +362,9 @@ BIG_TRAILING_NONES
 
 #define ARTSEY_BIG_LAYER_NAV_RIGHT \
 BIG_LEADING_NONES \
-KC_HOME,          KC_UP,            KC_END,           KC_PGUP,          KC_NO,            \
+KNAV_T1,          KNAV_T2,          KNAV_T3,          KNAV_T4,          KC_NO,            \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-KC_LEFT,          KC_DOWN,          KC_RIGHT,         KC_PGDN,          KC_NO,            \
+KNAV_B1,          KNAV_B2,          KNAV_B3,          KNAV_B4,          KC_NO,            \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
 KC_NO,            KC_NO,            KC_NO,            KC_NO,            KC_NO,            \
 BIG_BETWEEN_ROW_THREE_THUMBS_NONES \
@@ -378,9 +381,9 @@ BIG_TRAILING_NONES
 #endif
 #define ARTSEY_BIG_LAYER_NUM_RIGHT \
 BIG_LEADING_NONES \
-KC_1,             KC_2,             KC_3,             KC_TRNS,          KC_NO,            \
+KNUM_T1,          KNUM_T2,          KNUM_T3,          KNUM_T4,          KC_NO,            \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-KC_4,             KC_5,             KC_6,             KC_NO,            KC_NO,            \
+KNUM_B1,          KNUM_B2,          KNUM_B3,          KNUM_B4,          KC_NO,            \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
 KC_NO,            KC_NO,            KC_NO,            KC_NO,            KC_NO,            \
 BIG_BETWEEN_ROW_THREE_THUMBS_NONES \
@@ -458,9 +461,9 @@ BIG_TRAILING_NONES
 
 #define ARTSEY_BIG_LAYER_MSE_RIGHT \
 BIG_LEADING_NONES \
-KC_BTN1,          KC_MS_U,          KC_BTN2,          KC_WH_U,          KC_NO,            \
+KMSE_T1,          KMSE_T2,          KMSE_T3,          KMSE_T4,          KC_NO,            \
 BIG_BETWEEN_ROW_ONE_TWO_NONES \
-KC_MS_L,          KC_MS_D,          KC_MS_R,          KC_WH_D,          KC_NO,            \
+KMSE_B1,          KMSE_B2,          KMSE_B3,          KMSE_B4,          KC_NO,            \
 BIG_BETWEEN_ROW_TWO_THREE_NONES \
 KC_NO,            KC_NO,            KC_NO,            KC_NO,            KC_NO,            \
 BIG_BETWEEN_ROW_THREE_THUMBS_NONES \

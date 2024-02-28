@@ -100,7 +100,7 @@ Note the line has 2 entries separated by double pipes `||`. Here is the descript
 1. The name of the key in the `keymap` and `key.txt`. Here it is the first row and first column key on the base layer. 
 2. What the key should do in terms of a QMK key code. Here it is a layer-tap key that sends "a" when tapped and moves to the ARTSEY symbol layer when held. 
 
-Once you are done editing `combos.txt`, and `key.txt` run `Rscript procressor.R` to generate a new `combos.c` and `aliases.c` file, then rebuild your firmware. To run this you will need to download and install **R**. [R Language](https://www.r-project.org/about.html).
+Once you are done editing `combos.txt`, and `key.txt` head over to the [ARTSEY Processor APP](https://40percent.shinyapps.io/ARTSEY_Processor/) and upload your `key.txt` and `combos.txt` to get updaded `combos.c` and `aliases.c`.
 
 ## Licensing
 

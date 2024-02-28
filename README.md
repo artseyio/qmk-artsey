@@ -1,41 +1,114 @@
-# QMK ARTSEY Implementation
+# Setting up ARTSEY on your Keyboard
 
-This repo contains the [QMK](https://qmk.fm/) ARTSEY implementation and pre-built firmware for boards that have been setup to use ARTSEY by the core ARTSEY development team.
+From the `Firmware Files` folder in this repository, pick your flavor of artsey and download the files in that folder. Each folder contains `combos.c` which is the main file you will need to add ARTSEY to your keyboard. Each folder also contains a `keymaps` subfolder with a sample keymap for that flavor. Finally, each folder contains `combos.txt`, `key.txt`, and `processor.R` which will allow you to modify or extend ARTSEY.
 
-## Prebuilt Firmware
+## Put combos.c in `\qmk_firmware\keyboards\your_board` folder.
 
-The `Releases` area of this repository contains the latest builds of the QMK ARTSEY implementation. You can click on the most recent release and download the appropriate artifact for your MCU + board combination.
+`combos.c` is the only file you will need from this repository unless you want to extend ARTSEY. 
 
-### Firmware Files
+## Enable Combos
 
-The firmware files are auto built for a variety of common boards as well as community requested/supported boards. Our builds do *NOT* override default mcu/bootloader/architecture. Please mind this fact if you've tweaked your board in any way relative to the official QMK sources.
+Ensure the following line appears somehwere in `rules.mk`:
+`COMBO_ENABLE = yes`
 
-### Flashing
+## Enumerate layers and include combos.c
 
-We recommend Windows and OSX users download the pre-built hex files and use [QMK Toolbox](https://github.com/qmk/qmk_toolbox). 
+In your `keymap.c` in the keymaps folder, add the following below the line `#include QMK_KEYBOARD_H`:
 
-If you are on Linux, you'll need to use the `qmk flash` command with the same options as we use to compile. The compile options can be found in  `DEVELOPMENT.md` and are compatible with the `qmk flash` command. If there is an alternative thats easier to use, please let us know on Discord or GitHub Issue.
+```
+enum layers {
+  _ART_BASE,
+  _ART_NUM,
+  _ART_CUS,
+  _ART_PUNC,
+  _ART_MOU,
+  _ART_NAV,
+  _ART_SYM,
+};
 
-**We are NOT responsible for any failed firmware flashes!**
+#include "combos.c"
+```
 
-## Adding ARTSEY support to an existing qmk board
+*Note that if you are adding artey to another keyboard, add these seven layers to the other layers you have enumerated.*
 
-See [DEVELOPMENT.md](DEVELOPMENT.md)
+## Create keymap. 
 
-## Tweaking and Remixing
+Use the following template to create your keymap. Note, you will need to update `LAYOUT_ortho_2x4` to whatever your layout name is. If you are making a dedicated 2x4 artsey board, you can duplicate the keymap below. If you are using an larger board, or adding ARTSEY to another board, make sure you have at least the keys outlined below in each respective layer. 
 
-See [REMIXING.md]
+You can use the example keymaps in this repository to get strated, but here is a sample for right handed basic ARTSEY. 
 
-## Inspiraion
+```
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-A lot of this work wouldn't be possible with outside inspiration. In no particular order:
+[_ART_BASE] = LAYOUT_ortho_2x4(
+LT(_ART_SYM,KC_A),KC_R,KC_T,LT(_ART_NUM,KC_S),
+LT(_ART_PUNC,KC_E),KC_Y,KC_I,LT(_ART_CUS,KC_O)
+),
 
-- The ARTSEY community for their help ensuring our code is maximally accessible
-- [filterpaper's QMK userspace](https://github.com/filterpaper/qmk_userspace)
-- [sungo's QMK userspace](https://git.sr.ht/~sungo/qmk_userspace)
+[_ART_NUM] = LAYOUT_ortho_2x4(
+KC_1,KC_2,KC_3,KC_TRNS,
+KC_4,KC_5,KC_6,KC_TRNS
+),
+
+
+[_ART_PUNC] = LAYOUT_ortho_2x4(
+KC_EXLM,KC_BSLS,KC_SCLN,KC_GRV,
+KC_TRNS,KC_QUES,KC_MINS,KC_EQL
+),
+
+[_ART_CUS] = LAYOUT_ortho_2x4(
+KC_MPLY,KC_MUTE,KC_KB_VOLUME_UP,KC_TRNS,
+KC_MPRV,KC_MNXT,KC_KB_VOLUME_DOWN,KC_TRNS
+),
+
+[_ART_SYM] = LAYOUT_ortho_2x4(
+KC_TRNS,KC_LPRN,KC_RPRN,KC_LCBR,
+KC_TRNS,KC_LBRC,KC_RBRC,KC_RCBR
+),
+
+[_ART_MOU] = LAYOUT_ortho_2x4(
+KC_BTN1,KC_MS_U,KC_BTN2,KC_WH_U,
+KC_MS_L,KC_MS_D,KC_MS_R,KC_WH_D
+),
+
+[_ART_NAV] = LAYOUT_ortho_2x4(
+KC_HOME,KC_UP,KC_END,KC_PGUP,
+KC_LEFT,KC_DOWN,KC_RIGHT,KC_PGDN
+),
+};
+```
+
+## Done
+
+**You are ready to build your firmware`!**
+
+## Extend or edit ARTSEY
+
+If you want to extend or edit artsey, modify combos.txt. The entries in this file look like this: 
+
+`artsey_f||SEND_STRING("f")||ARTSEY_A,ARTSEY_R||_ART_BASE`
+
+Note the line has 4 entries separated by double pipes `||`. Here is the description of each entry. 
+
+1. The name of the combo. It must be unique.
+2. The action for qmk to take when the combo is pressed. Here: sending the "f" key.
+3. What keys make up the combo. These keys can be short-hand for the actual keycode used in your keymap as laid out in `key.txt` (more on this below). 
+4. What layer the combo is active on. Here: the `_ART_BASE` layer (ARTSEY BASE).
+
+They `key.txt` file has entries that look like this:
+
+`ARTSEY_A|LT(_ART_SYM,KC_A)`
+
+Note the line has 2 entries separated by double pipes `||`. Here is the description of each entry. 
+
+1. The shorthand name you will use for the key in `combos.txt`.
+2. The actual keycode in your keymap.
+
+Once you are done editing `combos.txt`, run `Rscript procressor.R` to generate a new `combos.c` file, then rebuild your firmware. To run this you will need to download and install **R**. [R Language](https://www.r-project.org/about.html).
 
 ## Licensing
 
-Unless otherwise stated all source code is licensed under the [Apache 2 License](LICENSE-APACHE-2.0.txt).
+- Unless otherwise stated all source code is licensed under the Apache 2 License.
 
-Unless otherwise stated the non source code contents of this repository are licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](LICENSE-CC-Attribution-NonCommercial-ShareAlike-4.0-International.txt)
+- Unless otherwise stated the non source code contents of this repository are licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+

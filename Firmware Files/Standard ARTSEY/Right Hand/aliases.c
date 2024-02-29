@@ -2,7 +2,7 @@
 #define BASE_1_2 KC_R
 #define BASE_1_3 KC_T
 #define BASE_1_4 LT(_ART_NUM,KC_S)
-#define BASE_2_1 LT(_ART_SYM,KC_E)
+#define BASE_2_1 LT(_ART_PUNC,KC_E)
 #define BASE_2_2 KC_Y
 #define BASE_2_3 KC_I
 #define BASE_2_4 LT(_ART_CUS,KC_O)

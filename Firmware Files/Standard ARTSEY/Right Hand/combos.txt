@@ -24,7 +24,7 @@ artsey_escape||SEND_STRING(SS_TAP(X_ESC))||BASE_1_1,BASE_1_2,BASE_2_4
 artsey_quote||SEND_STRING("'")||BASE_1_1,BASE_2_2,BASE_2_3
 artsey_period||SEND_STRING(".")||BASE_1_1,BASE_2_3
 artsey_comma||SEND_STRING(",")||BASE_1_1,BASE_2_2
-artsey_slash||SEND_STRING("\\")||BASE_1_1,BASE_2_4
+artsey_slash||SEND_STRING("/")||BASE_1_1,BASE_2_4
 artsey_tab||SEND_STRING(SS_TAP(X_TAB))||BASE_1_1,BASE_1_2,BASE_1_3,BASE_2_4
 artsey_shift||add_oneshot_mods(MOD_BIT(KC_LSFT))||BASE_2_1,BASE_1_2,BASE_1_3,BASE_1_4
 artsey_ctrl||add_oneshot_mods(MOD_BIT(KC_LCTL))||BASE_1_4,BASE_2_1
@@ -37,3 +37,7 @@ artsey_nav||layer_move(_ART_NAV)||BASE_1_2,BASE_2_1,BASE_2_3
 artsey_main1||layer_move(_ART_BASE)||NAV_1_2,NAV_2_1,NAV_2_3
 artsey_mou||layer_move(_ART_MOU)||BASE_1_1,BASE_1_3,BASE_2_2
 artsey_main2||layer_move(_ART_BASE)||MOU_1_1,MOU_1_3,MOU_2_2
+artsey_7||SEND_STRING("7")||NUM_1_1,NUM_1_2
+artsey_8||SEND_STRING("8")||NUM_1_2,NUM_1_3
+artsey_9||SEND_STRING("9")||NUM_2_1,NUM_2_2
+artsey_0||SEND_STRING("0")||NUM_2_2,NUM_2_3

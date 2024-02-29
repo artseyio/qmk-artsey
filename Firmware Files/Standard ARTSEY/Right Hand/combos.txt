@@ -21,10 +21,10 @@ artsey_backspace||SEND_STRING(SS_TAP(X_BSPC))||BASE_2_1,BASE_1_2
 artsey_del||SEND_STRING(SS_TAP(X_DEL))||BASE_1_2,BASE_2_3
 artsey_enter||SEND_STRING(SS_TAP(X_ENTER))||BASE_1_1,BASE_2_1
 artsey_escape||SEND_STRING(SS_TAP(X_ESC))||BASE_1_1,BASE_1_2,BASE_2_4
-artsey_quote||SEND_STRING(SS_TAP(X_QUOT))||BASE_1_1,BASE_2_2,BASE_2_3
-artsey_period||SEND_STRING(SS_TAP(X_DOT))||BASE_1_1,BASE_2_3
-artsey_comma||SEND_STRING(SS_TAP(X_COMMA))||BASE_1_1,BASE_2_2
-artsey_slash||SEND_STRING(SS_TAP(X_SLSH))||BASE_1_1,BASE_2_4
+artsey_quote||SEND_STRING("'")||BASE_1_1,BASE_2_2,BASE_2_3
+artsey_period||SEND_STRING(".")||BASE_1_1,BASE_2_3
+artsey_comma||SEND_STRING(",")||BASE_1_1,BASE_2_2
+artsey_slash||SEND_STRING("\\")||BASE_1_1,BASE_2_4
 artsey_tab||SEND_STRING(SS_TAP(X_TAB))||BASE_1_1,BASE_1_2,BASE_1_3,BASE_2_4
 artsey_shift||add_oneshot_mods(MOD_BIT(KC_LSFT))||BASE_2_1,BASE_1_2,BASE_1_3,BASE_1_4
 artsey_ctrl||add_oneshot_mods(MOD_BIT(KC_LCTL))||BASE_1_4,BASE_2_1

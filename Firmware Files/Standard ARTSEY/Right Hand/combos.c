@@ -193,16 +193,16 @@ case COMBO_BASE_1_1_BASE_1_2_BASE_2_4:
 if (pressed) {SEND_STRING(SS_TAP(X_ESC));}
 break;
 case COMBO_BASE_1_1_BASE_2_2_BASE_2_3:
-if (pressed) {SEND_STRING(SS_TAP(X_QUOT));}
+if (pressed) {SEND_STRING("'");}
 break;
 case COMBO_BASE_1_1_BASE_2_3:
-if (pressed) {SEND_STRING(SS_TAP(X_DOT));}
+if (pressed) {SEND_STRING(".");}
 break;
 case COMBO_BASE_1_1_BASE_2_2:
-if (pressed) {SEND_STRING(SS_TAP(X_COMMA));}
+if (pressed) {SEND_STRING(",");}
 break;
 case COMBO_BASE_1_1_BASE_2_4:
-if (pressed) {SEND_STRING(SS_TAP(X_SLSH));}
+if (pressed) {SEND_STRING("\\");}
 break;
 case COMBO_BASE_1_1_BASE_1_2_BASE_1_3_BASE_2_4:
 if (pressed) {SEND_STRING(SS_TAP(X_TAB));}

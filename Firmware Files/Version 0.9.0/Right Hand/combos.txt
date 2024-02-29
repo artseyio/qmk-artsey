@@ -1,0 +1,73 @@
+artsey_h||SEND_STRING("h")||BASE_2_1,BASE_2_3
+artsey_q||SEND_STRING("q")||BASE_1_1,BASE_1_3,BASE_1_4
+artsey_u||SEND_STRING("u")||BASE_2_2,BASE_2_3
+artsey_c||SEND_STRING("c")||BASE_2_1,BASE_2_2
+artsey_k||SEND_STRING("k")||BASE_2_2,BASE_2_4
+artsey_b||SEND_STRING("b")||BASE_2_1,BASE_2_4
+artsey_w||SEND_STRING("w")||BASE_1_1,BASE_1_4
+artsey_n||SEND_STRING("n")||BASE_2_3,BASE_2_4
+artsey_f||SEND_STRING("f")||BASE_1_1,BASE_1_2
+artsey_x||SEND_STRING("x")||BASE_1_2,BASE_1_3,BASE_1_4
+artsey_j||SEND_STRING("j")||BASE_1_3,BASE_1_4
+artsey_m||SEND_STRING("m")||BASE_2_2,BASE_2_3,BASE_2_4
+artsey_p||SEND_STRING("p")||BASE_2_1,BASE_2_3,BASE_2_4
+artsey_v||SEND_STRING("v")||BASE_1_2,BASE_1_4
+artsey_l||SEND_STRING("l")||BASE_2_1,BASE_2_2,BASE_2_3
+artsey_z||SEND_STRING("z")||BASE_1_1,BASE_1_2,BASE_1_3,BASE_1_4
+artsey_d||SEND_STRING("d")||BASE_1_1,BASE_1_2,BASE_1_3
+artsey_g||SEND_STRING("g")||BASE_1_2,BASE_1_3
+
+artsey_space||SEND_STRING(" ")||BASE_2_1,BASE_2_2,BASE_2_3,BASE_2_4
+artsey_space_2||SEND_STRING(" ")||NAV_2_1,NAV_2_2,NAV_2_3,NAV_2_4
+
+artsey_backspace||SEND_STRING(SS_TAP(X_BSPC))||BASE_2_1,BASE_1_2
+artsey_backspace_2||SEND_STRING(SS_TAP(X_BSPC))||NAV_2_1,NAV_1_2
+artsey_del||SEND_STRING(SS_TAP(X_DEL))||BASE_1_2,BASE_2_3
+artsey_del_2||SEND_STRING(SS_TAP(X_DEL))||NAV_1_2,NAV_2_3
+
+artsey_enter||SEND_STRING(SS_TAP(X_ENTER))||BASE_1_1,BASE_2_1
+artsey_enter_2||SEND_STRING(SS_TAP(X_ENTER))||NAV_1_1,NAV_2_1
+artsey_escape||SEND_STRING(SS_TAP(X_ESC))||BASE_1_1,BASE_1_2,BASE_2_4
+artsey_escape_2||SEND_STRING(SS_TAP(X_ESC))||NAV_1_1,NAV_1_2,NAV_2_4
+
+
+artsey_quote||SEND_STRING("'")||BASE_1_2,BASE_2_2
+artsey_bang||SEND_STRING("!")||BASE_1_3,BASE_2_3
+artsey_quest||SEND_STRING("?")||BASE_1_4,BASE_2_4
+
+artsey_period||SEND_STRING(".")||BASE_1_1,BASE_2_3
+artsey_comma||SEND_STRING(",")||BASE_1_1,BASE_2_2
+artsey_slash||SEND_STRING("/")||BASE_1_1,BASE_2_4
+
+artsey_tab||SEND_STRING(SS_TAP(X_TAB))||BASE_1_1,BASE_1_2,BASE_1_3,BASE_2_4
+
+artsey_os_shift||add_oneshot_mods(MOD_BIT(KC_LSFT))||BASE_2_1,BASE_1_2,BASE_1_3,BASE_1_4
+
+artsey_ctrl||\n if (get_mods() & MOD_MASK_CTRL){\n del_mods(MOD_MASK_CTRL);;\n } else { \n add_mods(MOD_MASK_CTRL); } ||BASE_1_4,BASE_2_1
+artsey_ctrl_2||\n if (get_mods() & MOD_MASK_CTRL){\n del_mods(MOD_MASK_CTRL);;\n } else { \n add_mods(MOD_MASK_CTRL); } ||NAV_1_4,NAV_2_1
+artsey_ctrl_3||\n if (get_mods() & MOD_MASK_CTRL){\n del_mods(MOD_MASK_CTRL);;\n } else { \n add_mods(MOD_MASK_CTRL); } ||MOU_1_4,MOU_2_1
+
+artsey_gui||\n if (get_mods() & MOD_MASK_GUI){\n del_mods(MOD_MASK_GUI);;\n } else { \n add_mods(MOD_MASK_GUI); } ||BASE_1_4,BASE_2_2
+artsey_gui_2||\n if (get_mods() & MOD_MASK_GUI){\n del_mods(MOD_MASK_GUI);;\n } else { \n add_mods(MOD_MASK_GUI); } ||NAV_1_4,NAV_2_2
+artsey_gui_3||\n if (get_mods() & MOD_MASK_GUI){\n del_mods(MOD_MASK_GUI);;\n } else { \n add_mods(MOD_MASK_GUI); } ||MOU_1_4,MOU_2_2
+
+artsey_alt||\n if (get_mods() & MOD_MASK_ALT){\n del_mods(MOD_MASK_ALT);;\n } else { \n add_mods(MOD_MASK_ALT); } ||BASE_1_4,BASE_2_3
+artsey_alt_2||\n if (get_mods() & MOD_MASK_ALT){\n del_mods(MOD_MASK_ALT);;\n } else { \n add_mods(MOD_MASK_ALT); } ||NAV_1_4,NAV_2_3
+artsey_alt_3||\n if (get_mods() & MOD_MASK_ALT){\n del_mods(MOD_MASK_ALT);;\n } else { \n add_mods(MOD_MASK_ALT); } ||MOU_1_4,MOU_2_3
+
+artsey_shift||\n if (get_mods() & MOD_MASK_SHIFT){\n del_mods(MOD_MASK_SHIFT);;\n } else { \n add_mods(MOD_MASK_SHIFT); } ||BASE_1_1,BASE_2_2,BASE_2_3,BASE_2_4
+artsey_shift2||\n if (get_mods() & MOD_MASK_SHIFT){\n del_mods(MOD_MASK_SHIFT);;\n } else { \n add_mods(MOD_MASK_SHIFT); } ||NAV_1_1,NAV_2_2,NAV_2_3,NAV_2_4
+arsey_panic||clear_mods()||BASE_1_1,BASE_1_2,BASE_1_3,BASE_1_4,BASE_2_1,BASE_2_2,BASE_2_3,BASE_2_4
+arsey_panic_2||clear_mods()||NAV_1_1,NAV_1_2,NAV_1_3,NAV_1_4,NAV_2_1,NAV_2_2,NAV_2_3,NAV_2_4
+arsey_panic_3||clear_mods()||MOU_1_1,MOU_1_2,MOU_1_3,MOU_1_4,MOU_2_1,MOU_2_2,MOU_2_3,MOU_2_4
+
+
+artsey_nav||layer_move(_ART_NAV)||BASE_1_2,BASE_2_1,BASE_2_3
+artsey_main1||layer_move(_ART_BASE)||NAV_1_2,NAV_2_1,NAV_2_3
+artsey_mou||layer_move(_ART_MOU)||BASE_1_1,BASE_1_3,BASE_2_2
+artsey_main2||layer_move(_ART_BASE)||MOU_1_1,MOU_1_3,MOU_2_2
+
+artsey_7||SEND_STRING("7")||NUM_1_1,NUM_1_2
+artsey_8||SEND_STRING("8")||NUM_1_2,NUM_1_3
+artsey_9||SEND_STRING("9")||NUM_2_1,NUM_2_2
+artsey_0||SEND_STRING("0")||NUM_2_2,NUM_2_3

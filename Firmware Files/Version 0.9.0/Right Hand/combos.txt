@@ -57,9 +57,9 @@ artsey_alt_3||\n if (get_mods() & MOD_MASK_ALT){\n del_mods(MOD_MASK_ALT);;\n } 
 
 artsey_shift||\n if (get_mods() & MOD_MASK_SHIFT){\n del_mods(MOD_MASK_SHIFT);;\n } else { \n add_mods(MOD_MASK_SHIFT); } ||BASE_1_1,BASE_2_2,BASE_2_3,BASE_2_4
 artsey_shift2||\n if (get_mods() & MOD_MASK_SHIFT){\n del_mods(MOD_MASK_SHIFT);;\n } else { \n add_mods(MOD_MASK_SHIFT); } ||NAV_1_1,NAV_2_2,NAV_2_3,NAV_2_4
-arsey_panic||clear_mods()||BASE_1_1,BASE_1_2,BASE_1_3,BASE_1_4,BASE_2_1,BASE_2_2,BASE_2_3,BASE_2_4
-arsey_panic_2||clear_mods()||NAV_1_1,NAV_1_2,NAV_1_3,NAV_1_4,NAV_2_1,NAV_2_2,NAV_2_3,NAV_2_4
-arsey_panic_3||clear_mods()||MOU_1_1,MOU_1_2,MOU_1_3,MOU_1_4,MOU_2_1,MOU_2_2,MOU_2_3,MOU_2_4
+arsey_panic||clear_mods(); \n layer_move(_ART_BASE);||BASE_1_1,BASE_1_2,BASE_1_3,BASE_1_4,BASE_2_1,BASE_2_2,BASE_2_3,BASE_2_4
+arsey_panic_2||clear_mods(); \n layer_move(_ART_BASE);||NAV_1_1,NAV_1_2,NAV_1_3,NAV_1_4,NAV_2_1,NAV_2_2,NAV_2_3,NAV_2_4
+arsey_panic_3||clear_mods(); \n layer_move(_ART_BASE);||MOU_1_1,MOU_1_2,MOU_1_3,MOU_1_4,MOU_2_1,MOU_2_2,MOU_2_3,MOU_2_4
 
 
 artsey_nav||layer_move(_ART_NAV)||BASE_1_2,BASE_2_1,BASE_2_3

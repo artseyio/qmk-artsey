@@ -366,13 +366,16 @@ if (pressed) {
  add_mods(MOD_MASK_SHIFT); } ;}
 break;
 case ARSEY_PANIC:
-if (pressed) {clear_mods();}
+if (pressed) {clear_mods(); 
+ layer_move(_ART_BASE);;}
 break;
 case ARSEY_PANIC_2:
-if (pressed) {clear_mods();}
+if (pressed) {clear_mods(); 
+ layer_move(_ART_BASE);;}
 break;
 case ARSEY_PANIC_3:
-if (pressed) {clear_mods();}
+if (pressed) {clear_mods(); 
+ layer_move(_ART_BASE);;}
 break;
 case ARTSEY_NAV:
 if (pressed) {layer_move(_ART_NAV);}

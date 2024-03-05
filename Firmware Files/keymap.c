@@ -3,7 +3,6 @@
 
 #include QMK_KEYBOARD_H
 
-
 enum layers {
   _ART_BASE,
   _ART_NUM,
@@ -17,6 +16,18 @@ enum layers {
 #include "aliases.c"
 #include "combos.c"
 
+// copied from https://beta.docs.qmk.fm/faqs/faq_debug#which-matrix-position-is-this-keypress
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  // If console is enabled, it will print the matrix position and status of each key pressed
+#ifdef CONSOLE_ENABLE
+    uprintf("KL: kc: 0x%04X, col: %u, row: %u, pressed: %b, time: %u, interrupt: %b, count: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed, record->event.time, record->tap.interrupted, record->tap.count);
+#endif
+  return true;
+}
+
+
+
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_ART_BASE] = LAYOUT_ortho_2x4(
@@ -25,8 +36,8 @@ BASE_2_1,BASE_2_2,BASE_2_3,BASE_2_4
 ),
 
 [_ART_NUM] = LAYOUT_ortho_2x4(
-NUM_1_1,NUM_1_2,NUM_1_3,NAV_1_4,
-NUM_2_1,NUM_2_2,NUM_2_3,NAV_2_4
+NUM_1_1,NUM_1_2,NUM_1_3,NUM_1_4,
+NUM_2_1,NUM_2_2,NUM_2_3,NUM_2_4
 ),
 
 
